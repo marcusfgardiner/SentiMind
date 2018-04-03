@@ -18,3 +18,10 @@ to run the server:
 
 1. `cd fullstack_template/server`
 2. `python3 server.py`
+
+## Tests
+
+for Testing our ReactJS front end we used Jest with enzyme. To run the tests:
+
+1. `cd fullstack_template/static`
+2. `npm run test`
