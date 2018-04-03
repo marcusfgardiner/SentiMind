@@ -8,6 +8,7 @@ requests = "*"
 textblob = "*"
 pylint = "*"
 pytest = "*"
+flask = "*"
 
 [dev-packages]
 
