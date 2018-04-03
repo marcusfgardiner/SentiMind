@@ -5,6 +5,9 @@ name = "pypi"
 
 [packages]
 requests = "*"
+textblob = "*"
+pylint = "*"
+pytest = "*"
 flask = "*"
 
 [dev-packages]
