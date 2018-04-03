@@ -2,8 +2,8 @@ from textblob import TextBlob
 
 
 def polarity(text):
-    polarity_score = polarity_score(text)
-    return polarity_result(polarity_score)
+    score = polarity_score(text)
+    return polarity_result(score)
 
 
 def polarity_score(text):
