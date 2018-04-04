@@ -1,5 +1,5 @@
 .pytest_cache
 tests/pytest_cache
 .vscode
-/fullstack_template/static/node_modules
-/mypkg/credentials.py
+/app/static/node_modules
+/app/mypkg/credentials.py

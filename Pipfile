@@ -9,6 +9,7 @@ textblob = "*"
 pylint = "*"
 pytest = "*"
 flask = "*"
+tweepy = "*"
 
 [dev-packages]
 

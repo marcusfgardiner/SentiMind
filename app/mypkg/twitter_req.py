@@ -9,4 +9,3 @@ def get_tweets():
     for tweet in tweepy.Cursor(api.search,q='north korea').items(1):
         print (tweet.text)
 
-get_tweets()
