@@ -18,14 +18,5 @@ def index():
 def hello():
     return twitter_req.get_tweets()
 
-# def get_hello():
-#     greeting_list = ['Ciao', 'Hei', 'Salut', 'Hola', 'Hallo', 'Ni Hao']
-#     return random.choice(greeting_list)
-
-# @app.route('/twitter-req')
-#
-# def hello():
-#     return get_tweets()
-
 if __name__ == '__main__':
     app.run()
