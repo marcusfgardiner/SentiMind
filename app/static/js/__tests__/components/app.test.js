@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import app from '../../components/app';
+import App from '../../components/App';
 
 describe('app', () => {
-  const app = shallow(<app />);
+  const app = shallow(<App />);
 
   it('renders correctly', () => {
     expect(app).toMatchSnapshot();
