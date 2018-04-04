@@ -10,7 +10,11 @@
     "watch": "webpack --progress -d --config webpack.config.js --watch"
   },
   "babel": {
-    "presets": ["es2015", "react", "env"]
+    "presets": [
+      "es2015",
+      "react",
+      "env"
+    ]
   },
   "jest": {
     "setupTestFrameworkScriptFile": "./js/setupTests.js"
