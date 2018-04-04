@@ -12,4 +12,8 @@ describe('Wrapper', () => {
   it('renders a Header component', () => {
     expect(wrapper.find('Header').exists()).toBe(true)
   })
+
+  it('renders a SubHeader component', () => {
+    expect(wrapper.find('SubHeader').exists()).toBe(true)
+  })
 });
