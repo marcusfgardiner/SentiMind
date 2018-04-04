@@ -18,3 +18,8 @@ to run the server:
 
 1. `cd fullstack_template/server`
 2. `python3 server.py`
+
+To run python tests:
+1. Ensure you have run 'pipenv install requests' and 'npm install' as above to download dependencies
+2. 'pipenv shell' to set up the python environment
+3. 'nosetests' to run tests
