@@ -20,7 +20,7 @@ export default class Hello extends React.Component {
   }
 
   getPythonHello() {
-    $.get(window.location.href + 'hello', (data) => {
+    $.get("http://localhost:5000/hello", (data) => {
       console.log(data);
       this.personaliseGreeting(data);
     });

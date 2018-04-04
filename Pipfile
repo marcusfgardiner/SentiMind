@@ -11,6 +11,7 @@ pytest = "*"
 flask = "*"
 nose = "*"
 tweepy = "*"
+flask-cors = "*"
 
 [dev-packages]
 

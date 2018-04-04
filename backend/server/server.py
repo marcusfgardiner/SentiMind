@@ -1,5 +1,6 @@
 import random
-from flask import Flask, render_template
+from flask import Flask
+from flask_cors import CORS, cross_origin
 
 import sys
 import os
@@ -7,7 +8,8 @@ sys.path.insert(0, os.path.abspath('..'))
 
 from mypkg import twitter_req
 
-app = Flask(__name__, static_folder='../static/dist', template_folder='../static')
+app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def index():
