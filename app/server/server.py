@@ -3,7 +3,7 @@ from flask import Flask, render_template
 
 import sys
 import os
-sys.path.insert(0, os.path.abspath('../..'))
+sys.path.insert(0, os.path.abspath('..'))
 
 from mypkg import twitter_req
 
@@ -16,7 +16,7 @@ def index():
 @app.route('/hello')
 
 def hello():
-    return get_tweets()
+    return twitter_req.get_tweets()
 
 # def get_hello():
 #     greeting_list = ['Ciao', 'Hei', 'Salut', 'Hola', 'Hallo', 'Ni Hao']
