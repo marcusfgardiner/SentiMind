@@ -2,6 +2,11 @@
 
 A twitter sentiment analysis web app based on a hashtag (using machine learning to assess sentiment)
 
+# Warning
+
+## Local host currently hardcoded in /hello route
+## Deployment: can we deploy in one server and remove CORS from production enviornment?
+
 ## How To Use
 
 In the terminal:
