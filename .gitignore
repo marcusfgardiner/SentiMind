@@ -1,4 +1,5 @@
+
 .pytest_cache
 tests/pytest_cache
 .vscode
-/fullstack_template/static/node_modules
+/app/static/node_modules
