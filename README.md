@@ -12,7 +12,7 @@ In the terminal:
 
 In order to run the server, you will need to [download python](https://www.python.org/downloads/) and then run: `pip3 install pipenv`
 
-once pipenv is installed, run `pipenv install requests` to download the dependancies.
+once pipenv is installed, run `pipenv install requests` to download the dependencies.
 
 to run the server:
 

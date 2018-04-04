@@ -2,4 +2,4 @@
 .pytest_cache
 tests/pytest_cache
 .vscode
-/app/static/node_modules
+/backend/mypkg/credentials.py
