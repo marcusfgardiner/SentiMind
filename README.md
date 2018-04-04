@@ -25,3 +25,7 @@ for Testing our ReactJS front end we used Jest with enzyme. To run the tests:
 
 1. `cd fullstack_template/static`
 2. `npm run test`
+To run python tests:
+1. Ensure you have run 'pipenv install requests' and 'npm install' as above to download dependencies
+2. 'pipenv shell' to set up the python environment
+3. 'nosetests' to run tests
