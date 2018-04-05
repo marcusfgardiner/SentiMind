@@ -9,6 +9,10 @@ describe('InputView', () => {
     handleSubmit: mockHandleSubmit }
   const inputView = shallow(<InputView {...props} />);
 
+  it('renders correctly', () => {
+    expect(inputView).toMatchSnapshot();
+  })
+
   it('renders a SubHeader component', () => {
     expect(inputView.find('SubHeader').exists()).toBe(true);
   });
