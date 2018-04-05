@@ -13,7 +13,7 @@ describe('InputBox', () => {
 
   describe('when a user types into the input', () => {
     beforeEach(() => {
-      inputBox.find('input').simulate('change');
+      inputBox.find('#input-box').simulate('change');
     });
 
     it('calls the handleQueryInput function passed in from parent', () => {

@@ -19,6 +19,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
+      "id": "input-box",
       "onChange": [Function],
       "type": "text",
     },
@@ -32,6 +33,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "id": "input-box",
         "onChange": [Function],
         "type": "text",
       },
