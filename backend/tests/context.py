@@ -6,3 +6,4 @@ from mypkg import sentiment
 from mypkg import twitter_req
 from mypkg import tweet
 from mypkg.tweet import Tweet
+from mypkg.tweet_parser import TweetParser
