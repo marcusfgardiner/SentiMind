@@ -1,7 +1,8 @@
 import React from 'react';
+import StyledInputBox from './styled_components/InputBox';
 
 const InputBox = props => {
-  return <input onChange={props.handleQueryInput} type="text" />;
+  return <StyledInputBox onChange={props.handleQueryInput} type="text" />;
 };
 
 export default InputBox;

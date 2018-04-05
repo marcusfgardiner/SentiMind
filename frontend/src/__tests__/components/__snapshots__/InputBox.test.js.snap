@@ -17,27 +17,27 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "class",
     "props": Object {
       "onChange": [Function],
       "type": "text",
     },
     "ref": null,
     "rendered": null,
-    "type": "input",
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "class",
       "props": Object {
         "onChange": [Function],
         "type": "text",
       },
       "ref": null,
       "rendered": null,
-      "type": "input",
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {
