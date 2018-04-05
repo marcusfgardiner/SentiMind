@@ -1,0 +1,24 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  color: #f2e8e8;
+  height: 100%;
+  background: #2193b0;
+  background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#root {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
