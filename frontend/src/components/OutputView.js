@@ -1,10 +1,10 @@
 import React from 'react';
-import SubHeader from './SubHeader' 
+import SubHeader from './SubHeader'
 
 const OutputView = () => {
   return (
     <div>
-      <SubHeader />
+      <SubHeader subHeaderText='So, the world thinks...'/>
     </div>
   )
 };
