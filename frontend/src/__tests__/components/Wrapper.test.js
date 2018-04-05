@@ -30,4 +30,12 @@ describe('Wrapper', () => {
       expect(wrapper.state('query')).toEqual(undefined);
     });
   });
+
+  describe('handleQueryInput', () => {
+    it('sets `query` to the value input by the user', () => {
+      const event = { target: { value: 'hello' } };
+      wrapper.instance().handleQueryInput(event);
+      expect(wrapper.state('query')).toEqual('hello');
+    });
+  });
 });

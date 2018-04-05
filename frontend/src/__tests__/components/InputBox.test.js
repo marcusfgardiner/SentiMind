@@ -3,8 +3,8 @@ import { shallow } from 'enzyme';
 import InputBox from '../../components/InputBox';
 
 describe('InputBox', () => {
-  const mockHandleTextBoxInput = jest.fn();
-  const props = { handleTextBoxInput: mockHandleTextBoxInput };
+  const mockHandleQueryInput = jest.fn();
+  const props = { handleQueryInput: mockHandleQueryInput };
   const inputBox = shallow(<InputBox {...props} />);
 
   it('renders correctly', () => {
@@ -16,8 +16,8 @@ describe('InputBox', () => {
       inputBox.find('input').simulate('change');
     });
 
-    it('calls the handleTextBoxInput function passed in from parent', () => {
-      expect(mockHandleTextBoxInput).toHaveBeenCalled();
+    it('calls the handleQueryInput function passed in from parent', () => {
+      expect(mockHandleQueryInput).toHaveBeenCalled();
     });
   });
 });
