@@ -4,7 +4,9 @@ exports[`InputBox renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <InputBox />,
+  Symbol(enzyme.__unrendered__): <InputBox
+    handleTextBoxInput={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
