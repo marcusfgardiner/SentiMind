@@ -53,7 +53,7 @@ describe('Wrapper', () => {
     });
   });
 
-  describe('passing props', () => {
+  describe('passing props to input', () => {
     describe('InputBox props', () => {
       it('passes handleQueryInput down to InputView', () => {
         expect(wrapper.find('InputView').prop('handleQueryInput')).toBe(
@@ -68,6 +68,19 @@ describe('Wrapper', () => {
           );
         });
       });
+    });
+  });
+
+  describe('passing props to output', () => {
+    beforeEach(() => {
+      wrapper.setState({buttonClicked: true})
+    })
+      describe('Button props', () => {
+        it('passes handleSubmit down to OutputView', () => {
+          expect(wrapper.find('OutputView').prop('handleSubmit')).toBe(
+            wrapper.instance().handleSubmit
+          );
+        });
     });
   });
 
