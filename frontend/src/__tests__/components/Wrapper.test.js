@@ -16,4 +16,8 @@ describe('Wrapper', () => {
   it('renders a SubHeader component', () => {
     expect(wrapper.find('SubHeader').exists()).toBe(true)
   })
+
+  it ('renders a InputBox component', () => {
+    expect(wrapper.find('InputBox').exists()).toBe(true)
+  })
 });
