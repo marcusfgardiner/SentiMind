@@ -10,18 +10,24 @@ describe('Wrapper', () => {
   });
 
   it('renders a Header component', () => {
-    expect(wrapper.find('Header').exists()).toBe(true)
-  })
+    expect(wrapper.find('Header').exists()).toBe(true);
+  });
 
   it('renders a SubHeader component', () => {
-    expect(wrapper.find('SubHeader').exists()).toBe(true)
-  })
+    expect(wrapper.find('SubHeader').exists()).toBe(true);
+  });
 
   it('renders a InputBox component', () => {
-    expect(wrapper.find('InputBox').exists()).toBe(true)
-  })
+    expect(wrapper.find('InputBox').exists()).toBe(true);
+  });
 
   it('renders a Button component', () => {
-    expect(wrapper.find('Button').exists()).toBe(true)
-  })
+    expect(wrapper.find('Button').exists()).toBe(true);
+  });
+
+  describe('state initialization', () => {
+    it('has a `query` piece of state initialized as undefined', () => {
+      expect(wrapper.state('query')).toEqual(undefined);
+    });
+  });
 });
