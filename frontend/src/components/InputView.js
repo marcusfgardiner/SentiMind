@@ -9,7 +9,10 @@ const InputView = props => {
       <SubHeader subHeaderText="Type in a topic, find out what the twitter-verse thinks" />
       <InputBox handleQueryInput={props.handleQueryInput} />
       <br />
-      <Button buttonText="Go!" handleSubmit={props.handleSubmit} />
+      <Button
+        buttonText="Click to find out!"
+        handleSubmit={props.handleSubmit}
+      />
     </div>
   );
 };

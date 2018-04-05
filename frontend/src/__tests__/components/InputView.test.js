@@ -51,7 +51,9 @@ describe('InputView', () => {
         });
 
         it('passes buttonText down', () => {
-          expect(inputView.find('Button').prop('buttonText')).toEqual('Go!');
+          expect(inputView.find('Button').prop('buttonText')).toEqual(
+            'Click to find out!'
+          );
         });
       });
     });

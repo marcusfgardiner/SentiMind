@@ -29,7 +29,7 @@ ShallowWrapper {
 />,
         <br />,
         <Button
-          buttonText="Go!"
+          buttonText="Click to find out!"
           handleSubmit={[Function]}
 />,
       ],
@@ -72,7 +72,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "buttonText": "Go!",
+          "buttonText": "Click to find out!",
           "handleSubmit": [Function],
         },
         "ref": null,
@@ -97,7 +97,7 @@ ShallowWrapper {
 />,
           <br />,
           <Button
-            buttonText="Go!"
+            buttonText="Click to find out!"
             handleSubmit={[Function]}
 />,
         ],
@@ -140,7 +140,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "buttonText": "Go!",
+            "buttonText": "Click to find out!",
             "handleSubmit": [Function],
           },
           "ref": null,
