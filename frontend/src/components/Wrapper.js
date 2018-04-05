@@ -15,7 +15,8 @@ class Wrapper extends Component {
   };
 
   handleSubmit = () => {
-    this.setState({ buttonClicked: true, query: undefined });
+    let {buttonClicked} = this.state;
+    this.setState({ buttonClicked: !buttonClicked, query: undefined });
     //get function twitter api needs to be called before clearing query this.state
   };
 

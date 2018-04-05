@@ -81,6 +81,7 @@ describe('Wrapper', () => {
 
   describe('handleSubmit()', () => {
     beforeEach(() => {
+      wrapper = shallow(<Wrapper />)
       wrapper.setState({ query: 'hello' });
       wrapper.instance().handleSubmit();
     });
