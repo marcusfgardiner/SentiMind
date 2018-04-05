@@ -48,4 +48,12 @@ describe('Wrapper', () => {
       expect(wrapper.state('query')).toEqual('hello');
     });
   });
+
+  describe('handleSubmitClick()', () => {
+    it('prints `query` to the page', () => {
+      wrapper.setState({ query: 'hello' });
+      wrapper.instance().handleSubmitClick();
+      expect(wrapper.find('#output').text()).toEqual('hello');
+    });
+  });
 });
