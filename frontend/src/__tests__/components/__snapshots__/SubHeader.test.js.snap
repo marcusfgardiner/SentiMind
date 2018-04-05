@@ -5,7 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SubHeader
-    text="Flexible Subheader"
+    subHeaderText="Flexible Subheader"
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -20,7 +20,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <h3>
-        Type in a topic, find out what the twitterverse thinks
+        Flexible Subheader
 </h3>,
     },
     "ref": null,
@@ -29,10 +29,10 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "Type in a topic, find out what the twitterverse thinks",
+        "children": "Flexible Subheader",
       },
       "ref": null,
-      "rendered": "Type in a topic, find out what the twitterverse thinks",
+      "rendered": "Flexible Subheader",
       "type": "h3",
     },
     "type": "div",
@@ -44,7 +44,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <h3>
-          Type in a topic, find out what the twitterverse thinks
+          Flexible Subheader
 </h3>,
       },
       "ref": null,
@@ -53,10 +53,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Type in a topic, find out what the twitterverse thinks",
+          "children": "Flexible Subheader",
         },
         "ref": null,
-        "rendered": "Type in a topic, find out what the twitterverse thinks",
+        "rendered": "Flexible Subheader",
         "type": "h3",
       },
       "type": "div",

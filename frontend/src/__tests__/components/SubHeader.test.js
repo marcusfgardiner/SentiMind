@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import SubHeader from '../../components/SubHeader';
 
 describe('SubHeader', () => {
-  const props = {text: 'Flexible Subheader'}
+  const props = {subHeaderText: 'Flexible Subheader'}
   const subHeader = shallow(<SubHeader {...props}/>)
 
   it('renders correctly', () => {
