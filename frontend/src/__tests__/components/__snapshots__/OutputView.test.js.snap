@@ -22,7 +22,9 @@ ShallowWrapper {
           subHeaderText="So, the world thinks..."
 />,
         <Sentiment />,
-        <Button />,
+        <Button
+          buttonText="Choose another topic"
+/>,
       ],
     },
     "ref": null,
@@ -51,7 +53,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "buttonText": "Choose another topic",
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -70,7 +74,9 @@ ShallowWrapper {
             subHeaderText="So, the world thinks..."
 />,
           <Sentiment />,
-          <Button />,
+          <Button
+            buttonText="Choose another topic"
+/>,
         ],
       },
       "ref": null,
@@ -99,7 +105,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "buttonText": "Choose another topic",
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

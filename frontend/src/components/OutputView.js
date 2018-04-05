@@ -8,7 +8,7 @@ const OutputView = () => {
     <div>
       <SubHeader subHeaderText="So, the world thinks..." />
       <Sentiment />
-      <Button />
+      <Button buttonText="Choose another topic" />
     </div>
   );
 };
