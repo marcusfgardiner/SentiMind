@@ -1,11 +1,12 @@
 import React from 'react';
+import StyledSubHeader from './styled_components/SubHeader';
 
 const SubHeader = props => {
   return (
     <div>
-      <h3>{props.subHeaderText}</h3>
+      <StyledSubHeader>{props.subHeaderText}</StyledSubHeader>
     </div>
   );
-}
+};
 
 export default SubHeader;

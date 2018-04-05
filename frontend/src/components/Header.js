@@ -1,7 +1,8 @@
 import React from 'react';
+import StyledHeader from './styled_components/Header';
 
 const Header = () => {
-  return <h1>SentiMind</h1>;
+  return <StyledHeader>SentiMind</StyledHeader>;
 };
 
 export default Header;
