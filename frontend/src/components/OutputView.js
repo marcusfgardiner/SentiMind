@@ -1,9 +1,10 @@
 import React from 'react';
+import SubHeader from './SubHeader' 
 
 const OutputView = () => {
   return (
     <div>
-      <h1> Output View is Output View </h1>
+      <SubHeader />
     </div>
   )
 };
