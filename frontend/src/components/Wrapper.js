@@ -15,9 +15,9 @@ class Wrapper extends Component {
     this.setState({ query: event.target.value });
   };
 
-  handleSubmitClick() {
+  handleSubmitClick = () => {
     this.setState({ buttonClicked: true });
-  }
+  };
 
   render() {
     return (
@@ -25,7 +25,7 @@ class Wrapper extends Component {
         <Header />
         <SubHeader />
         <InputBox handleQueryInput={this.handleQueryInput} />
-        <Button />
+        <Button handleSubmit={this.handleSubmitClick} />
       </div>
     );
   }
