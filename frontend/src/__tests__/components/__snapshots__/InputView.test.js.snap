@@ -28,6 +28,7 @@ ShallowWrapper {
           handleQueryInput={[Function]}
 />,
         <Button
+          buttonText="Go!"
           handleSubmit={[Function]}
 />,
       ],
@@ -61,6 +62,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "buttonText": "Go!",
           "handleSubmit": [Function],
         },
         "ref": null,
@@ -84,6 +86,7 @@ ShallowWrapper {
             handleQueryInput={[Function]}
 />,
           <Button
+            buttonText="Go!"
             handleSubmit={[Function]}
 />,
         ],
@@ -117,6 +120,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "buttonText": "Go!",
             "handleSubmit": [Function],
           },
           "ref": null,
