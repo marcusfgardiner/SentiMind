@@ -4,9 +4,9 @@ import InputView from '../../components/InputView';
 
 describe('InputView', () => {
   const mockHandleQueryInput = jest.fn();
-  const mockHandleSubmitClick = jest.fn();
+  const mockHandleSubmit = jest.fn();
   const props = { handleQueryInput: mockHandleQueryInput,
-    handleSubmit: mockHandleSubmitClick }
+    handleSubmit: mockHandleSubmit }
   const inputView = shallow(<InputView {...props} />);
 
   it('renders a SubHeader component', () => {
@@ -30,9 +30,9 @@ describe('InputView', () => {
       });
 
       describe('Button props', () => {
-        it('passes handleSubmitClick down to Button', () => {
+        it('passes handleSubmit down to Button', () => {
           expect(inputView.find('Button').prop('handleSubmit')).toBe(
-            mockHandleSubmitClick
+            mockHandleSubmit
           );
         });
       });

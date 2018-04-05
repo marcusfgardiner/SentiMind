@@ -19,11 +19,8 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Header />,
-        <SubHeader />,
-        <InputBox
+        <InputView
           handleQueryInput={[Function]}
-/>,
-        <Button
           handleSubmit={[Function]}
 />,
       ],
@@ -43,27 +40,8 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
         "props": Object {
           "handleQueryInput": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
           "handleSubmit": [Function],
         },
         "ref": null,
@@ -81,11 +59,8 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Header />,
-          <SubHeader />,
-          <InputBox
+          <InputView
             handleQueryInput={[Function]}
-/>,
-          <Button
             handleSubmit={[Function]}
 />,
         ],
@@ -105,27 +80,8 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
           "props": Object {
             "handleQueryInput": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
             "handleSubmit": [Function],
           },
           "ref": null,

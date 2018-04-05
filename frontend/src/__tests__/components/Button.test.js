@@ -3,8 +3,8 @@ import { shallow } from 'enzyme';
 import Button from '../../components/Button';
 
 describe('Button', () => {
-  const mockHandleSubmitClick = jest.fn();
-  const props = { handleSubmit: mockHandleSubmitClick };
+  const mockHandleSubmit = jest.fn();
+  const props = { handleSubmit: mockHandleSubmit };
   const button = shallow(<Button {...props} />);
 
   it('renders correctly', () => {
@@ -17,7 +17,7 @@ describe('Button', () => {
     });
 
     it('fires handleSubmit()', () => {
-      expect(mockHandleSubmitClick).toHaveBeenCalled();
+      expect(mockHandleSubmit).toHaveBeenCalled();
     });
   });
 });

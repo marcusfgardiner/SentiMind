@@ -32,9 +32,9 @@ describe('Wrapper', () => {
       });
 
       describe('Button props', () => {
-        it('passes handleSubmitClick down to InputView', () => {
+        it('passes handleSubmit down to InputView', () => {
           expect(wrapper.find('InputView').prop('handleSubmit')).toBe(
-            wrapper.instance().handleSubmitClick
+            wrapper.instance().handleSubmit
           );
         });
       });
@@ -49,9 +49,9 @@ describe('Wrapper', () => {
     });
   });
 
-  describe('handleSubmitClick()', () => {
+  describe('handleSubmit()', () => {
     it('changes `buttonClicked` to true', () => {
-      wrapper.instance().handleSubmitClick();
+      wrapper.instance().handleSubmit();
       expect(wrapper.state('buttonClicked')).toBe(true);
     });
   });

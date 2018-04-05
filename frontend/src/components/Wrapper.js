@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import SubHeader from './SubHeader';
-import InputBox from './InputBox';
-import Button from './Button';
+import InputView from './InputView'
 
 class Wrapper extends Component {
   constructor() {
@@ -15,7 +13,7 @@ class Wrapper extends Component {
     this.setState({ query: event.target.value });
   };
 
-  handleSubmitClick = () => {
+  handleSubmit = () => {
     this.setState({ buttonClicked: true });
   };
 
@@ -23,9 +21,7 @@ class Wrapper extends Component {
     return (
       <div>
         <Header />
-        <SubHeader />
-        <InputBox handleQueryInput={this.handleQueryInput} />
-        <Button handleSubmit={this.handleSubmitClick} />
+        <InputView handleQueryInput={this.handleQueryInput} handleSubmit={this.handleSubmit}/>
       </div>
     );
   }
