@@ -13,6 +13,10 @@ describe('OutputView', () => {
     expect(outputView.find('SubHeader').exists()).toBe(true)
   })
 
+  it('renders sentiment component', () => {
+    expect(outputView.find('Sentiment').exists()).toBe(true)
+  })
+
   describe('SubHeader props', () => {
     it('passes flexible SubHeaderText down to SubHeader', () => {
       expect(outputView.find('SubHeader').prop('subHeaderText')).toBe(
