@@ -43,6 +43,7 @@ describe('Wrapper', () => {
     beforeEach(() => {
       wrapper = shallow(<Wrapper />);
     });
+
     it('has a `query` piece of state initialized as undefined', () => {
       expect(wrapper.state('query')).toEqual(undefined);
     });
