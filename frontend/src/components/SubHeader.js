@@ -9,5 +9,3 @@ const SubHeader = props => {
 }
 
 export default SubHeader;
-
-// Type in a topic, find out what the twitterverse thinks

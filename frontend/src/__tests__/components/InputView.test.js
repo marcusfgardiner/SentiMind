@@ -33,6 +33,14 @@ describe('InputView', () => {
         );
       });
 
+    describe('SubHeader props', () => {
+      it('passes flexible SubHeaderText down to SubHeader', () => {
+        expect(inputView.find('SubHeader').prop('subHeaderText')).toBe(
+          'Type in a topic, find out what the twitterverse thinks'
+        );
+      });
+    });
+
       describe('Button props', () => {
         it('passes handleSubmit down to Button', () => {
           expect(inputView.find('Button').prop('handleSubmit')).toBe(
