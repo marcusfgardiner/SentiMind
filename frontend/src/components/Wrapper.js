@@ -36,7 +36,11 @@ class Wrapper extends Component {
           handleSubmit={this.handleSubmit}
         />
       ),
-      output: <OutputView />
+      output: (
+        <OutputView
+          handleSubmit={this.handleSubmit}
+        />
+      ),
     };
     return (
       <div>
