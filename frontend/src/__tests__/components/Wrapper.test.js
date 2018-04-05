@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import Wrapper from '../../components/Wrapper';
 
 describe('Wrapper', () => {
-  const wrapper = shallow(<Wrapper />);
+  let wrapper = shallow(<Wrapper />);
 
   describe('rendering', () => {
     it('renders correctly', () => {
@@ -18,10 +18,31 @@ describe('Wrapper', () => {
       it('renders an InputView component', () => {
         expect(wrapper.find('InputView').exists()).toBe(true);
       });
+
+      it('doesnt render an OutputView component', () => {
+        expect(wrapper.find('OutputView').exists()).toBe(false);
+      });
+
+      describe('button is clicked', () => {
+        beforeEach(() => {
+          wrapper.setState({ buttonClicked: true });
+        });
+
+        it('renders an OutputView component', () => {
+          expect(wrapper.find('OutputView').exists()).toBe(true);
+        });
+
+        it('doesnt render an InputView component', () => {
+          expect(wrapper.find('InputView').exists()).toBe(false);
+        });
+      });
     });
   });
 
   describe('state initialization', () => {
+    beforeEach(() => {
+      wrapper = shallow(<Wrapper />);
+    });
     it('has a `query` piece of state initialized as undefined', () => {
       expect(wrapper.state('query')).toEqual(undefined);
     });
