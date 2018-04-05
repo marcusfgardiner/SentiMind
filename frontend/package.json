@@ -7,7 +7,8 @@
     "react-dom": "^16.3.1",
     "enzyme-adapter-react-16": "^1.1.1",
     "react-bootstrap": "^0.31.0",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "styled-components": "^3.2.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -18,7 +19,6 @@
   "devDependencies": {
     "enzyme": "^3.3.0",
     "jest-cli": "^20.0.4",
-    "react-test-renderer": "^16.2.0",
-    "jquery": "^3.3.1"
+    "react-test-renderer": "^16.2.0"
   }
 }
