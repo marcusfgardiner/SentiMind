@@ -13,18 +13,6 @@ describe('Wrapper', () => {
     expect(wrapper.find('Header').exists()).toBe(true);
   });
 
-  it('renders a SubHeader component', () => {
-    expect(wrapper.find('SubHeader').exists()).toBe(true);
-  });
-
-  it('renders a InputBox component', () => {
-    expect(wrapper.find('InputBox').exists()).toBe(true);
-  });
-
-  it('renders a Button component', () => {
-    expect(wrapper.find('Button').exists()).toBe(true);
-  });
-
   describe('state initialization', () => {
     it('has a `query` piece of state initialized as undefined', () => {
       expect(wrapper.state('query')).toEqual(undefined);
@@ -37,15 +25,15 @@ describe('Wrapper', () => {
 
   describe('passing props', () => {
     describe('InputBox props', () => {
-      it('passes handleQueryInput down to InputBox', () => {
-        expect(wrapper.find('InputBox').prop('handleQueryInput')).toBe(
+      it('passes handleQueryInput down to InputView', () => {
+        expect(wrapper.find('InputView').prop('handleQueryInput')).toBe(
           wrapper.instance().handleQueryInput
         );
       });
 
       describe('Button props', () => {
-        it('passes handleSubmitClick down to Button', () => {
-          expect(wrapper.find('Button').prop('handleSubmit')).toBe(
+        it('passes handleSubmitClick down to InputView', () => {
+          expect(wrapper.find('InputView').prop('handleSubmit')).toBe(
             wrapper.instance().handleSubmitClick
           );
         });
