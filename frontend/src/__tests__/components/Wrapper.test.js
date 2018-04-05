@@ -5,12 +5,20 @@ import Wrapper from '../../components/Wrapper';
 describe('Wrapper', () => {
   const wrapper = shallow(<Wrapper />);
 
-  it('renders correctly', () => {
-    expect(wrapper).toMatchSnapshot();
-  });
+  describe('rendering', () => {
+    it('renders correctly', () => {
+      expect(wrapper).toMatchSnapshot();
+    });
 
-  it('renders a Header component', () => {
-    expect(wrapper.find('Header').exists()).toBe(true);
+    it('renders a Header component', () => {
+      expect(wrapper.find('Header').exists()).toBe(true);
+    });
+
+    describe('conditional rendering', () => {
+      it('renders an InputView component', () => {
+        expect(wrapper.find('InputView').exists()).toBe(true);
+      });
+    });
   });
 
   describe('state initialization', () => {
