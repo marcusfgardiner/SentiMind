@@ -10,6 +10,11 @@ class Wrapper extends Component {
 
     this.state = { query: undefined };
   }
+
+  handleQueryInput = event => {
+    this.setState({ query: event.target.value });
+  };
+
   render() {
     return (
       <div>
