@@ -34,3 +34,7 @@ To run python tests:
 1. Ensure you have run 'pipenv install requests' and 'npm install' as above to download dependencies
 2. 'pipenv shell' to set up the python environment
 3. 'nosetests' to run tests
+
+## Challenges
+
+* Sticking to the single responsibility principle while designing the GET request -method using Tweepy
