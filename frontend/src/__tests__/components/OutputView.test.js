@@ -8,4 +8,8 @@ describe('OutputView', () => {
   it('renders correctly', () => {
     expect(outputView).toMatchSnapshot();
   })
+
+  it('renders subheader component', () => {
+    expect(outputView.find('SubHeader').exists()).toBe(true)
+  })
 })
