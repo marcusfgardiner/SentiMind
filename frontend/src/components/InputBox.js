@@ -1,7 +1,7 @@
 import React from 'react';
 
-const InputBox = () => {
-  return <input type='text'/>
+const InputBox = props => {
+  return <input onChange={props.handleTextBoxInput} type="text" />;
 };
 
-export default InputBox
+export default InputBox;
