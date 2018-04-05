@@ -26,6 +26,7 @@ ShallowWrapper {
         <Sentiment />,
         <Button
           buttonText="Choose another topic"
+          handleSubmit={[Function]}
 />,
       ],
     },
@@ -57,6 +58,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "buttonText": "Choose another topic",
+          "handleSubmit": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -78,6 +80,7 @@ ShallowWrapper {
           <Sentiment />,
           <Button
             buttonText="Choose another topic"
+            handleSubmit={[Function]}
 />,
         ],
       },
@@ -109,6 +112,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "buttonText": "Choose another topic",
+            "handleSubmit": [Function],
           },
           "ref": null,
           "rendered": null,
