@@ -9,7 +9,6 @@ class Wrapper extends Component {
       <div>
         <Header />
         <SubHeader />
-          <Hello name='Jimmy' />
       </div>
     );
   }
