@@ -31,6 +31,16 @@ describe('Wrapper', () => {
     });
   });
 
+  describe('passing props', () => {
+    describe('InputBox props', () => {
+      it('passes handleQueryInput down to InputBox', () => {
+        expect(wrapper.find('InputBox').prop('handleQueryInput')).toBe(
+          wrapper.instance().handleQueryInput
+        );
+      });
+    });
+  });
+
   describe('handleQueryInput', () => {
     it('sets `query` to the value input by the user', () => {
       const event = { target: { value: 'hello' } };
