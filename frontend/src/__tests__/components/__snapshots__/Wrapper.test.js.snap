@@ -20,10 +20,20 @@ ShallowWrapper {
       "children": Array [
         <Header />,
         <SubHeader />,
+        <InputBox />,
       ],
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -54,10 +64,20 @@ ShallowWrapper {
         "children": Array [
           <Header />,
           <SubHeader />,
+          <InputBox />,
         ],
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         Object {
           "instance": null,
           "key": undefined,
