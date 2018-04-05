@@ -12,4 +12,12 @@ describe('OutputView', () => {
   it('renders subheader component', () => {
     expect(outputView.find('SubHeader').exists()).toBe(true)
   })
+
+  describe('SubHeader props', () => {
+    it('passes flexible SubHeaderText down to SubHeader', () => {
+      expect(outputView.find('SubHeader').prop('subHeaderText')).toBe(
+        'So, the world thinks...'
+      );
+    });
+  });
 })
