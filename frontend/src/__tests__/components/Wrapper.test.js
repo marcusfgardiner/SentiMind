@@ -85,12 +85,22 @@ describe('Wrapper', () => {
       wrapper.instance().handleSubmit();
     });
 
-    it('changes `buttonClicked` to true', () => {
-      expect(wrapper.state('buttonClicked')).toBe(true);
-    });
-
     it('changes `query` to undefined', () => {
       expect(wrapper.state('query')).toBe(undefined);
     });
+
+    describe('switches `buttonClicked` between true/false', () => {
+
+      it('clicked once - expect to be true', () => {
+        expect(wrapper.state('buttonClicked')).toBe(true);
+      });
+
+      it('clicked twice - expect to be false', () => {
+        wrapper.instance().handleSubmit();
+        expect(wrapper.state('buttonClicked')).toBe(false);
+      });
+
+    });
+
   });
 });
