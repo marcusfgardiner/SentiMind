@@ -42,6 +42,14 @@ describe('Wrapper', () => {
           wrapper.instance().handleQueryInput
         );
       });
+
+      describe('Button props', () => {
+        it('passes handleSubmitClick down to Button', () => {
+          expect(wrapper.find('Button').prop('handleSubmit')).toBe(
+            wrapper.instance().handleSubmitClick
+          );
+        });
+      });
     });
   });
 
