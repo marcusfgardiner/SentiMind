@@ -20,7 +20,7 @@ class Wrapper extends Component {
       <div>
         <Header />
         <SubHeader />
-        <InputBox />
+        <InputBox handleQueryInput={this.handleQueryInput} />
         <Button />
       </div>
     );

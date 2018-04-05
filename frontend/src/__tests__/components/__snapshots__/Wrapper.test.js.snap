@@ -20,7 +20,9 @@ ShallowWrapper {
       "children": Array [
         <Header />,
         <SubHeader />,
-        <InputBox />,
+        <InputBox
+          handleQueryInput={[Function]}
+/>,
         <Button />,
       ],
     },
@@ -48,7 +50,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "handleQueryInput": [Function],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -74,7 +78,9 @@ ShallowWrapper {
         "children": Array [
           <Header />,
           <SubHeader />,
-          <InputBox />,
+          <InputBox
+            handleQueryInput={[Function]}
+/>,
           <Button />,
         ],
       },
@@ -102,7 +108,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "handleQueryInput": [Function],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
