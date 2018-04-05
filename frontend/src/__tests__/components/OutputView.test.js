@@ -21,11 +21,21 @@ describe('OutputView', () => {
     expect(outputView.find('Button').exists()).toBe(true);
   });
 
-  describe('SubHeader props', () => {
-    it('passes flexible SubHeaderText down to SubHeader', () => {
-      expect(outputView.find('SubHeader').prop('subHeaderText')).toBe(
-        'So, the world thinks...'
-      );
+  describe('passing props', () => {
+    describe('SubHeader props', () => {
+      it('passes flexible SubHeaderText down to SubHeader', () => {
+        expect(outputView.find('SubHeader').prop('subHeaderText')).toBe(
+          'So, the world thinks...'
+        );
+      });
+    });
+
+    describe('Button props', () => {
+      it('passes flexible buttonText down to Button', () => {
+        expect(outputView.find('Button').prop('buttonText')).toBe(
+          'Choose another topic'
+        );
+      });
     });
   });
 });
