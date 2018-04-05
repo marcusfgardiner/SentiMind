@@ -80,9 +80,17 @@ describe('Wrapper', () => {
   });
 
   describe('handleSubmit()', () => {
-    it('changes `buttonClicked` to true', () => {
+    beforeEach(() => {
+      wrapper.setState({ query: 'hello' });
       wrapper.instance().handleSubmit();
+    });
+
+    it('changes `buttonClicked` to true', () => {
       expect(wrapper.state('buttonClicked')).toBe(true);
+    });
+
+    it('changes `query` to undefined', () => {
+      expect(wrapper.state('query')).toBe(undefined);
     });
   });
 });
