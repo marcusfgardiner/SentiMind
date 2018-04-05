@@ -8,12 +8,16 @@ class Wrapper extends Component {
   constructor() {
     super();
 
-    this.state = { query: undefined };
+    this.state = { query: undefined, buttonClicked: false };
   }
 
   handleQueryInput = event => {
     this.setState({ query: event.target.value });
   };
+
+  handleSubmitClick() {
+    this.setState({ buttonClicked: true });
+  }
 
   render() {
     return (

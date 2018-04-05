@@ -29,6 +29,10 @@ describe('Wrapper', () => {
     it('has a `query` piece of state initialized as undefined', () => {
       expect(wrapper.state('query')).toEqual(undefined);
     });
+
+    it('has a `buttonClicked` piece of state initialized as false', () => {
+      expect(wrapper.state('buttonClicked')).toEqual(false);
+    });
   });
 
   describe('passing props', () => {
@@ -50,10 +54,9 @@ describe('Wrapper', () => {
   });
 
   describe('handleSubmitClick()', () => {
-    it('prints `query` to the page', () => {
-      wrapper.setState({ query: 'hello' });
+    it('changes `buttonClicked` to true', () => {
       wrapper.instance().handleSubmitClick();
-      expect(wrapper.find('#output').text()).toEqual('hello');
+      expect(wrapper.state('buttonClicked')).toBe(true);
     });
   });
 });
