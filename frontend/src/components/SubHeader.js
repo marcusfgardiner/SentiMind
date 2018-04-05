@@ -4,7 +4,9 @@ import StyledSubHeader from './styled_components/SubHeader';
 const SubHeader = props => {
   return (
     <div>
-      <StyledSubHeader>{props.subHeaderText}</StyledSubHeader>
+      <StyledSubHeader>
+        <p id="subheader">{props.subHeaderText}</p>
+      </StyledSubHeader>
     </div>
   );
 };

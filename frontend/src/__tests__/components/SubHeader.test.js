@@ -3,14 +3,14 @@ import { shallow } from 'enzyme';
 import SubHeader from '../../components/SubHeader';
 
 describe('SubHeader', () => {
-  const props = {subHeaderText: 'Flexible Subheader'}
-  const subHeader = shallow(<SubHeader {...props}/>)
+  const props = { subHeaderText: 'Flexible Subheader' };
+  const subHeader = shallow(<SubHeader {...props} />);
 
   it('renders correctly', () => {
-    expect(subHeader).toMatchSnapshot()
-  })
+    expect(subHeader).toMatchSnapshot();
+  });
 
   it('renders flexible subheader', () => {
-    expect(subHeader.find('h3').text()).toEqual('Flexible Subheader')
-  })
-})
+    expect(subHeader.find('#subheader').text()).toEqual('Flexible Subheader');
+  });
+});

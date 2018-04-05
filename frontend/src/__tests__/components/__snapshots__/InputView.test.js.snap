@@ -22,11 +22,12 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <SubHeader
-          subHeaderText="Type in a topic, find out what the twitterverse thinks"
+          subHeaderText="Type in a topic, find out what the twitter-verse thinks"
 />,
         <InputBox
           handleQueryInput={[Function]}
 />,
+        <br />,
         <Button
           buttonText="Go!"
           handleSubmit={[Function]}
@@ -40,7 +41,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "subHeaderText": "Type in a topic, find out what the twitterverse thinks",
+          "subHeaderText": "Type in a topic, find out what the twitter-verse thinks",
         },
         "ref": null,
         "rendered": null,
@@ -56,6 +57,15 @@ ShallowWrapper {
         "ref": null,
         "rendered": null,
         "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "br",
       },
       Object {
         "instance": null,
@@ -80,11 +90,12 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <SubHeader
-            subHeaderText="Type in a topic, find out what the twitterverse thinks"
+            subHeaderText="Type in a topic, find out what the twitter-verse thinks"
 />,
           <InputBox
             handleQueryInput={[Function]}
 />,
+          <br />,
           <Button
             buttonText="Go!"
             handleSubmit={[Function]}
@@ -98,7 +109,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "subHeaderText": "Type in a topic, find out what the twitterverse thinks",
+            "subHeaderText": "Type in a topic, find out what the twitter-verse thinks",
           },
           "ref": null,
           "rendered": null,
@@ -114,6 +125,15 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
         },
         Object {
           "instance": null,

@@ -38,7 +38,7 @@ describe('InputView', () => {
       describe('SubHeader props', () => {
         it('passes flexible SubHeaderText down to SubHeader', () => {
           expect(inputView.find('SubHeader').prop('subHeaderText')).toBe(
-            'Type in a topic, find out what the twitterverse thinks'
+            'Type in a topic, find out what the twitter-verse thinks'
           );
         });
       });

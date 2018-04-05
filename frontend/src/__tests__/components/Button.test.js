@@ -12,12 +12,12 @@ describe('Button', () => {
   });
 
   it('renders buttonText as its text', () => {
-    expect(button.find('button').text()).toEqual('Go');
+    expect(button.find('#text').text()).toEqual('Go');
   });
 
   describe('when clicked', () => {
     beforeEach(() => {
-      button.find('button').prop('onClick')();
+      button.find('#btn').prop('onClick')();
     });
 
     it('fires handleSubmit()', () => {

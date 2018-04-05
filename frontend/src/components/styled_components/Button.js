@@ -4,7 +4,8 @@ const StyledButton = styled.button`
   background: transparent;
   font-family: 'Nunito', sans-serif;
   font-size: 18px;
-  padding: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
   margin-top: 20px;
   border: 3px solid;
   border-radius: 32px;

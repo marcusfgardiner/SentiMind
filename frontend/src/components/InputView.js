@@ -6,7 +6,7 @@ import Button from './Button';
 const InputView = props => {
   return (
     <div>
-      <SubHeader subHeaderText="Type in a topic, find out what the twitterverse thinks" />
+      <SubHeader subHeaderText="Type in a topic, find out what the twitter-verse thinks" />
       <InputBox handleQueryInput={props.handleQueryInput} />
       <br />
       <Button buttonText="Go!" handleSubmit={props.handleSubmit} />
