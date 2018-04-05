@@ -1,12 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SubHeader renders correctly 1`] = `
+exports[`OutputView renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SubHeader
-    text="Flexible Subheader"
-/>,
+  Symbol(enzyme.__unrendered__): <OutputView />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -19,9 +17,9 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <h3>
-        Type in a topic, find out what the twitterverse thinks
-</h3>,
+      "children": <h1>
+         Output View is Output View 
+</h1>,
     },
     "ref": null,
     "rendered": Object {
@@ -29,11 +27,11 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "Type in a topic, find out what the twitterverse thinks",
+        "children": " Output View is Output View ",
       },
       "ref": null,
-      "rendered": "Type in a topic, find out what the twitterverse thinks",
-      "type": "h3",
+      "rendered": " Output View is Output View ",
+      "type": "h1",
     },
     "type": "div",
   },
@@ -43,9 +41,9 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <h3>
-          Type in a topic, find out what the twitterverse thinks
-</h3>,
+        "children": <h1>
+           Output View is Output View 
+</h1>,
       },
       "ref": null,
       "rendered": Object {
@@ -53,11 +51,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Type in a topic, find out what the twitterverse thinks",
+          "children": " Output View is Output View ",
         },
         "ref": null,
-        "rendered": "Type in a topic, find out what the twitterverse thinks",
-        "type": "h3",
+        "rendered": " Output View is Output View ",
+        "type": "h1",
       },
       "type": "div",
     },
