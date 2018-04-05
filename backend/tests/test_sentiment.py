@@ -1,6 +1,5 @@
 from .context import sentiment
 
-
 def test_pos_polarity_score():
     assert sentiment.polarity_score('I am awesome') >= 0.3
 
