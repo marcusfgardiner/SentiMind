@@ -21,7 +21,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <SubHeader />,
+        <SubHeader
+          subHeaderText="Type in a topic, find out what the twitterverse thinks"
+/>,
         <InputBox
           handleQueryInput={[Function]}
 />,
@@ -36,7 +38,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "subHeaderText": "Type in a topic, find out what the twitterverse thinks",
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -73,7 +77,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <SubHeader />,
+          <SubHeader
+            subHeaderText="Type in a topic, find out what the twitterverse thinks"
+/>,
           <InputBox
             handleQueryInput={[Function]}
 />,
@@ -88,7 +94,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "subHeaderText": "Type in a topic, find out what the twitterverse thinks",
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
