@@ -18,7 +18,7 @@ def index():
 @app.route('/hello')
 
 def hello():
-    return twitter_req.parse_tweets()
+    return twitter_req.get_tweets()
 
 if __name__ == '__main__':
     app.run()
