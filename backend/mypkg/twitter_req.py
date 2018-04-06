@@ -8,6 +8,6 @@ api = tweepy.API(auth)
 
 def get_tweets():
     tweets = []
-    for tweet in tweepy.Cursor(api.search,q='north korea').items(1):
+    for tweet in tweepy.Cursor(api.search,q='north korea').items(10):
         tweets.append(tweet._json)
     return tweets
