@@ -1,5 +1,5 @@
 from .tweet import Tweet
-from .sentiment import *
+from .polarity import *
 import re
 
 class TweetParser:

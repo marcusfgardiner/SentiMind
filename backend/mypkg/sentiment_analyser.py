@@ -19,6 +19,5 @@ class SentimentAnalyser:
       avg_sentiment = 0
       tweets = self.populate()
       for tweet in tweets:
-          avg_sentiment += tweet.sentiment
-      print(avg_sentiment / len(tweets)) 
-      return avg_sentiment / len(tweets)    
+          avg_sentiment += round(tweet.sentiment, 2)
+      return avg_sentiment/len(tweets)   

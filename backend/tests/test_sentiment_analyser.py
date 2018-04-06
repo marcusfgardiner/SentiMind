@@ -15,5 +15,5 @@ def test_sentiment_analyser():
 def test_average_sentiment():
     sentiment_analyser = SentimentAnalyser()
     avg_sentiment = sentiment_analyser.average_sentiment()
-    assert avg_sentiment == pytest.approx(-1.000000, 1.0000000)
+    assert avg_sentiment == pytest.approx(-1.00, 1.00)
     
