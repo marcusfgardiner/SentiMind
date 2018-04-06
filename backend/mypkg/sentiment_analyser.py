@@ -1,5 +1,6 @@
 from .tweet_parser import TweetParser
 from .twitter_req import *
+from .polarity import *
 
 class SentimentAnalyser:
     'Requests tweets, cleans them, assigns sentiment and averages them'
@@ -20,4 +21,7 @@ class SentimentAnalyser:
       tweets = self.populate()
       for tweet in tweets:
           avg_sentiment += round(tweet.sentiment, 2)
-      return avg_sentiment/len(tweets)   
+      return round(avg_sentiment/len(tweets), 2)
+
+    def general_polarity_result(self):
+        return polarity_result(self.average_sentiment())

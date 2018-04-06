@@ -15,5 +15,9 @@ def test_sentiment_analyser():
 def test_average_sentiment():
     sentiment_analyser = SentimentAnalyser()
     avg_sentiment = sentiment_analyser.average_sentiment()
-    assert avg_sentiment == pytest.approx(-1.00, 1.00)
-    
+    assert avg_sentiment == pytest.approx(-1, 1)
+
+
+def test_general_polarity_result():
+    sentiment_analyser = SentimentAnalyser()
+    assert sentiment_analyser.general_polarity_result() == 'positive' or 'negative' or 'neutral'
