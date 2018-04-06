@@ -1,4 +1,5 @@
 from .tweet import Tweet
+from .sentiment import *
 import re
 
 class TweetParser:
@@ -7,10 +8,10 @@ class TweetParser:
     def parse_tweet(self, tweet_data):
         new_tweet = Tweet(tweet_data['user']['screen_name'], tweet_data['text'])
         new_tweet.text = self.clean_tweet(new_tweet)
+        new_tweet.sentiment = polarity_score(new_tweet.text)
         return new_tweet
 
     def clean_tweet(self, tweet):
         tweet_string = tweet.text
         tweet.text = ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)", " ", tweet_string).split())
         return tweet.text
-    
