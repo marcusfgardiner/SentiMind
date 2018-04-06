@@ -5,9 +5,6 @@ from .polarity import *
 class SentimentAnalyser:
     'Requests tweets, cleans them, assigns sentiment and averages them'
 
-    # def __init__(self):
-    #     instance = self
-
     def populate(self):
       cleaned_tweets = []
       tweet_parser = TweetParser()
