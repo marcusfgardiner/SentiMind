@@ -13,4 +13,4 @@ class SentimentAnalyser:
       tweets = get_tweets()
       for tweet in tweets:
           cleaned_tweets.append(tweet_parser.parse_tweet(tweet))
-      return cleaned_tweets    
+      return cleaned_tweets

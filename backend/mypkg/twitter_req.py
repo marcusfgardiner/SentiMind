@@ -1,4 +1,5 @@
 import tweepy
+import json
 from .credentials import *
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -8,5 +9,5 @@ api = tweepy.API(auth)
 def get_tweets():
     tweets = []
     for tweet in tweepy.Cursor(api.search,q='north korea').items(1):
-        tweets.append(tweet)
+        tweets.append(tweet._json)
     return tweets
