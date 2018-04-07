@@ -19,6 +19,14 @@ class Wrapper extends Component {
   };
 
   fetchSentiment = async () => {
+    let { query } = this.state;
+    const request = await fetch('http://localhost:5000/sendjson', {
+      method: 'POST',
+      body: JSON.stringify(query),
+      headers: new Headers({
+        'Content-Type': 'application/json'
+      })
+    });
     const response = await fetch('http://localhost:5000');
     const json = await response.json();
     this.setState({ sentiment: json.sentiment });
