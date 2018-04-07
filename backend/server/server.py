@@ -1,5 +1,7 @@
 import random
+import json
 from flask import Flask
+from flask import jsonify
 from flask_cors import CORS, cross_origin
 
 import sys
@@ -14,7 +16,9 @@ CORS(app)
 @app.route('/')
 def index():
     sentiment_analyser = SentimentAnalyser()
-    return sentiment_analyser.general_polarity_result()
+    result = sentiment_analyser.general_polarity_result()
+    json_string = {"sentiment": "%(result)s" % locals()} 
+    return jsonify(json_string)
 
 if __name__ == '__main__':
     app.run()

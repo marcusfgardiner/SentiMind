@@ -23,5 +23,4 @@ class SentimentAnalyser:
 
     def general_polarity_result(self):
         result = polarity_result(self.average_sentiment())
-        string = '{sentiment: %s}' % result
-        return json.load(string)
+        return result
