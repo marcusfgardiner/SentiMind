@@ -28,17 +28,18 @@ class Wrapper extends Component {
       })
     });
     const json = await request.json();
-    // const response = await fetch('http://localhost:5000');
-    // const json = await response.json();
     this.setState({ sentiment: json.sentiment });
   };
 
   handleSubmit = () => {
     let { buttonClicked } = this.state;
-    this.fetchSentiment();
+    if (!buttonClicked) {
+      this.fetchSentiment();
+    }
     this.setState({
       buttonClicked: !buttonClicked,
-      query: undefined
+      query: undefined,
+      sentiment: undefined
     });
   };
 
