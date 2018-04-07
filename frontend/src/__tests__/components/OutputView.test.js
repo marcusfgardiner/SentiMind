@@ -4,8 +4,8 @@ import OutputView from '../../components/OutputView';
 
 describe('OutputView', () => {
   const mockHandleSubmit = jest.fn();
-  const props = {handleSubmit: mockHandleSubmit}
-  const outputView = shallow(<OutputView {...props}/>);
+  const props = { handleSubmit: mockHandleSubmit, sentiment: 'negative' };
+  const outputView = shallow(<OutputView {...props} />);
 
   it('renders correctly', () => {
     expect(outputView).toMatchSnapshot();
@@ -29,6 +29,12 @@ describe('OutputView', () => {
         expect(outputView.find('SubHeader').prop('subHeaderText')).toBe(
           'So, the world thinks...'
         );
+      });
+    });
+
+    describe('Sentiment props', () => {
+      it('passes sentiment down to Sentiment', () => {
+        expect(outputView.find('Sentiment').prop('sentiment')).toBe('negative');
       });
     });
 

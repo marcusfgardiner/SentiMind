@@ -49,7 +49,12 @@ class Wrapper extends Component {
           handleSubmit={this.handleSubmit}
         />
       ),
-      output: <OutputView handleSubmit={this.handleSubmit} />
+      output: (
+        <OutputView
+          handleSubmit={this.handleSubmit}
+          sentiment={this.state.sentiment}
+        />
+      )
     };
     return (
       <div>
