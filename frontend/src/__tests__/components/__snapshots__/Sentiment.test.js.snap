@@ -4,7 +4,9 @@ exports[`Sentiment renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Sentiment />,
+  Symbol(enzyme.__unrendered__): <Sentiment
+    sentiment="negative"
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
