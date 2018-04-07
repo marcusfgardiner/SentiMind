@@ -5,6 +5,7 @@ RUN apt-get install -y python3-pip python3-dev build-essential
 
 RUN python3 -m pip install pip --upgrade
 
+# Copy the current directory contents into the container at /app
 COPY . /server
 
 # Set the working directory to /server

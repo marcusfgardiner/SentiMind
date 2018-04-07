@@ -16,6 +16,9 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+  "optionalDependencies": {
+    "fsevents": "*"
+  },
   "devDependencies": {
     "enzyme": "^3.3.0",
     "jest-cli": "^20.0.4",
