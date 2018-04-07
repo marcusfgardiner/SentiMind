@@ -12,13 +12,12 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+def hello():
+    return 'Hello World'
 
 @app.route('/hello')
-
-def hello():
-    return twitter_req.parse_tweets()
+def hello2():
+    return twitter_req.get_tweets()
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host="0.0.0.0")

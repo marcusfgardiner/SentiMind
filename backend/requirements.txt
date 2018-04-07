@@ -1,0 +1,6 @@
+flask
+textblob
+tweepy
+flask-cors
+nose
+pytest
