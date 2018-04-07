@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Sentiment = () => {
-  return <h2> Positive, Negative, Neutral </h2>
-}
+const Sentiment = props => {
+  return <h2>{props.sentiment}</h2>;
+};
 
-export default Sentiment
+export default Sentiment;

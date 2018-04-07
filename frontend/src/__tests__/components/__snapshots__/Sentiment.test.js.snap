@@ -19,10 +19,10 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": " Positive, Negative, Neutral ",
+      "children": "negative",
     },
     "ref": null,
-    "rendered": " Positive, Negative, Neutral ",
+    "rendered": "negative",
     "type": "h2",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -31,10 +31,10 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": " Positive, Negative, Neutral ",
+        "children": "negative",
       },
       "ref": null,
-      "rendered": " Positive, Negative, Neutral ",
+      "rendered": "negative",
       "type": "h2",
     },
   ],
