@@ -20,11 +20,18 @@ class Wrapper extends Component {
 
   handleSubmit = () => {
     let { buttonClicked } = this.state;
-    fetch('http://54.83.153.126/').then(response => {
-      console.log(response.blob());
-    });
+    fetch('http://localhost:5000')
+      .then(response => {
+        return response.json();
+      })
+      .then(json => {
+        this.setState({ sentiment: json.sentiment });
+      });
 
-    this.setState({ buttonClicked: !buttonClicked, query: undefined });
+    this.setState({
+      buttonClicked: !buttonClicked,
+      query: undefined
+    });
     //get function twitter api needs to be called before clearing query this.state
   };
 
