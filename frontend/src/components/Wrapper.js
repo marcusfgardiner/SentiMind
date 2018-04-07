@@ -18,16 +18,15 @@ class Wrapper extends Component {
     this.setState({ query: event.target.value });
   };
 
+  fetchSentiment = async () => {
+    const response = await fetch('http://localhost:5000');
+    const json = await response.json();
+    this.setState({ sentiment: json.sentiment });
+  };
+
   handleSubmit = () => {
     let { buttonClicked } = this.state;
-    fetch('http://localhost:5000')
-      .then(response => {
-        return response.json();
-      })
-      .then(json => {
-        this.setState({ sentiment: json.sentiment });
-      });
-
+    this.fetchSentiment();
     this.setState({
       buttonClicked: !buttonClicked,
       query: undefined

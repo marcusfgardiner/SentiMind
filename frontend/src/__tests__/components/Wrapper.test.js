@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import fetchMock from 'fetch-mock';
 import Wrapper from '../../components/Wrapper';
 
 describe('Wrapper', () => {
+  fetch.mockResponse(JSON.stringify({ sentiment: 'good' }));
   let wrapper = shallow(<Wrapper />);
 
   describe('rendering', () => {
@@ -94,12 +94,8 @@ describe('Wrapper', () => {
   });
 
   describe('fetchSentiment()', () => {
-    it('sets the sentiment state to the response recieved', () => {
-      const mockResponse = { sentiment: 'good' };
-      wrapper
-        .instance()
-        .fetchSentiment(fetchMock.get('http://localhost:5000', mockResponse));
-
+    it('sets the sentiment state to the response received', async () => {
+      await wrapper.instance().fetchSentiment();
       expect(wrapper.state('sentiment')).toEqual('good');
     });
   });
