@@ -1,18 +1,16 @@
 # base image
 FROM node:8.9.4
 
-# set working directory
-RUN mkdir /usr/src/app
-WORKDIR /usr/src/app
-
-# add `/usr/src/app/node_modules/.bin` to $PATH
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
+# add `/usr/src/app/node_modules/.bin` to $PATH.
+# This prevents node modules being saved in container and loading up docker
+ENV NODE_PATH=/node_modules
+ENV PATH=$PATH:/node_modules/.bin
 
 # install and cache app dependencies
-COPY package.json /usr/src/app/package.json
+WORKDIR /app
+COPY . /app
 RUN npm install
 RUN npm install react-scripts@1.1.1 -g
-COPY .
 
 # Install any needed packages specified in requirements.txt
 # RUN npm install -r requirements.txt
