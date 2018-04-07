@@ -17,7 +17,8 @@ CORS(app)
 @app.route('/')
 def index():
     sentiment_analyser = SentimentAnalyser()
-    result = sentiment_analyser.general_polarity_result()
+    params = 'ronaldo'
+    result = sentiment_analyser.general_polarity_result(params)
     json_string = {"sentiment": "%(result)s" % locals()}
     return Response(json.dumps(json_string), mimetype='application/json')
 
