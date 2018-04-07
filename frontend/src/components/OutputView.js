@@ -7,8 +7,11 @@ const OutputView = props => {
   return (
     <div>
       <SubHeader subHeaderText="So, the world thinks..." />
-      <Sentiment />
-      <Button buttonText="Choose another topic" handleSubmit={props.handleSubmit} />
+      <Sentiment sentiment={props.sentiment} />
+      <Button
+        buttonText="Choose another topic"
+        handleSubmit={props.handleSubmit}
+      />
     </div>
   );
 };

@@ -24,7 +24,9 @@ ShallowWrapper {
         <SubHeader
           subHeaderText="So, the world thinks..."
 />,
-        <Sentiment />,
+        <Sentiment
+          sentiment="negative"
+/>,
         <Button
           buttonText="Choose another topic"
           handleSubmit={[Function]}
@@ -48,7 +50,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "sentiment": "negative",
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -78,7 +82,9 @@ ShallowWrapper {
           <SubHeader
             subHeaderText="So, the world thinks..."
 />,
-          <Sentiment />,
+          <Sentiment
+            sentiment="negative"
+/>,
           <Button
             buttonText="Choose another topic"
             handleSubmit={[Function]}
@@ -102,7 +108,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "sentiment": "negative",
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
