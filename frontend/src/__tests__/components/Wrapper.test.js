@@ -52,6 +52,10 @@ describe('Wrapper', () => {
     it('has a `buttonClicked` piece of state initialized as false', () => {
       expect(wrapper.state('buttonClicked')).toEqual(false);
     });
+
+    it('has a `sentiment` state initialized as undefined', () => {
+      expect(wrapper.state('sentiment')).toEqual(undefined);
+    });
   });
 
   describe('passing props to input', () => {
