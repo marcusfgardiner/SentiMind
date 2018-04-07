@@ -20,7 +20,7 @@ class Wrapper extends Component {
 
   handleSubmit = () => {
     let { buttonClicked } = this.state;
-    let sentiment = fetch('http://localhost:5000')
+    fetch('http://localhost:5000')
       .then(response => {
         return response.json();
       })
