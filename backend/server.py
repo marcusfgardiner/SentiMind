@@ -11,7 +11,7 @@ from mypkg import twitter_req
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/')
+@app.route('/backend')
 def hello():
     return 'Hello World'
 
