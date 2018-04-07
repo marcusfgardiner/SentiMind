@@ -20,6 +20,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": "negative",
+      "id": "sentiment",
     },
     "ref": null,
     "rendered": "negative",
@@ -32,6 +33,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": "negative",
+        "id": "sentiment",
       },
       "ref": null,
       "rendered": "negative",
