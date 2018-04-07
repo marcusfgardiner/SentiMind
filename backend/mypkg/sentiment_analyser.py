@@ -1,6 +1,7 @@
 from .tweet_parser import TweetParser
 from .twitter_req import *
 from .polarity import *
+import json
 
 class SentimentAnalyser:
     'Requests tweets, cleans them, assigns sentiment and averages them'
@@ -21,4 +22,6 @@ class SentimentAnalyser:
       return round(avg_sentiment/len(tweets), 2)
 
     def general_polarity_result(self):
-        return polarity_result(self.average_sentiment())
+        result = polarity_result(self.average_sentiment())
+        string = '{sentiment: %s}' % result
+        return json.load(string)

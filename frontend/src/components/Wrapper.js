@@ -7,7 +7,11 @@ class Wrapper extends Component {
   constructor() {
     super();
 
-    this.state = { query: undefined, buttonClicked: false };
+    this.state = {
+      query: undefined,
+      buttonClicked: false,
+      sentiment: undefined
+    };
   }
 
   handleQueryInput = event => {
@@ -15,7 +19,15 @@ class Wrapper extends Component {
   };
 
   handleSubmit = () => {
-    let {buttonClicked} = this.state;
+    let { buttonClicked } = this.state;
+    fetch('http://54.83.153.126/')
+      .then(response => {
+        console.log(response.body);
+        return response.body;
+      })
+      .then(body => {
+        console.log(body.read());
+      });
     this.setState({ buttonClicked: !buttonClicked, query: undefined });
     //get function twitter api needs to be called before clearing query this.state
   };
@@ -36,11 +48,7 @@ class Wrapper extends Component {
           handleSubmit={this.handleSubmit}
         />
       ),
-      output: (
-        <OutputView
-          handleSubmit={this.handleSubmit}
-        />
-      ),
+      output: <OutputView handleSubmit={this.handleSubmit} />
     };
     return (
       <div>

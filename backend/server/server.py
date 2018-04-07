@@ -14,7 +14,7 @@ CORS(app)
 @app.route('/')
 def index():
     sentiment_analyser = SentimentAnalyser()
-    sentiment_analyser.general_polarity_result()
+    return sentiment_analyser.general_polarity_result()
 
 if __name__ == '__main__':
     app.run()
