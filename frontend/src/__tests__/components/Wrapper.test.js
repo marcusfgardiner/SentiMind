@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import fetchMock from 'fetch-mock';
 import Wrapper from '../../components/Wrapper';
 
 describe('Wrapper', () => {
@@ -73,14 +74,14 @@ describe('Wrapper', () => {
 
   describe('passing props to output', () => {
     beforeEach(() => {
-      wrapper.setState({buttonClicked: true})
-    })
-      describe('Button props', () => {
-        it('passes handleSubmit down to OutputView', () => {
-          expect(wrapper.find('OutputView').prop('handleSubmit')).toBe(
-            wrapper.instance().handleSubmit
-          );
-        });
+      wrapper.setState({ buttonClicked: true });
+    });
+    describe('Button props', () => {
+      it('passes handleSubmit down to OutputView', () => {
+        expect(wrapper.find('OutputView').prop('handleSubmit')).toBe(
+          wrapper.instance().handleSubmit
+        );
+      });
     });
   });
 
@@ -92,9 +93,20 @@ describe('Wrapper', () => {
     });
   });
 
+  describe('fetchSentiment()', () => {
+    it('sets the sentiment state to the response recieved', () => {
+      const mockResponse = { sentiment: 'good' };
+      wrapper
+        .instance()
+        .fetchSentiment(fetchMock.get('http://localhost:5000', mockResponse));
+
+      expect(wrapper.state('sentiment')).toEqual('good');
+    });
+  });
+
   describe('handleSubmit()', () => {
     beforeEach(() => {
-      wrapper = shallow(<Wrapper />)
+      wrapper = shallow(<Wrapper />);
       wrapper.setState({ query: 'hello' });
       wrapper.instance().handleSubmit();
     });
@@ -104,7 +116,6 @@ describe('Wrapper', () => {
     });
 
     describe('switches `buttonClicked` between true/false', () => {
-
       it('clicked once - expect to be true', () => {
         expect(wrapper.state('buttonClicked')).toBe(true);
       });
@@ -113,8 +124,6 @@ describe('Wrapper', () => {
         wrapper.instance().handleSubmit();
         expect(wrapper.state('buttonClicked')).toBe(false);
       });
-
     });
-
   });
 });
