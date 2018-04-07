@@ -80,10 +80,19 @@ describe('Wrapper', () => {
     beforeEach(() => {
       wrapper.setState({ buttonClicked: true });
     });
-    describe('Button props', () => {
+    describe('handleSubmit props', () => {
       it('passes handleSubmit down to OutputView', () => {
         expect(wrapper.find('OutputView').prop('handleSubmit')).toBe(
           wrapper.instance().handleSubmit
+        );
+      });
+    });
+
+    describe('sentiment props', () => {
+      it('passes sentiment state down to OutputView', () => {
+        wrapper.setState({ sentiment: 'hi' });
+        expect(wrapper.find('OutputView').prop('sentiment')).toBe(
+          wrapper.state('sentiment')
         );
       });
     });
