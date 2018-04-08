@@ -19,4 +19,4 @@ RUN npm install react-scripts@1.1.1 -g
 EXPOSE 3000
 
 # start app
-CMD ["npm", "run", "build"]
+CMD ["npm", "start"]
