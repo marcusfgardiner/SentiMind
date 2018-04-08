@@ -16,7 +16,7 @@ RUN npm install react-scripts@1.1.1 -g
 # RUN npm install -r requirements.txt
 
 # replace this with your application's default port
-EXPOSE 8888
+EXPOSE 3000
 
 # start app
 CMD ["npm", "start"]
