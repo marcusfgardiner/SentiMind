@@ -22,5 +22,11 @@ class SentimentAnalyser:
       return round(avg_sentiment/len(tweets), 2)
 
     def general_polarity_result(self, query):
-        result = polarity_result(self.average_sentiment(query))
-        return result
+        average = self.average_sentiment(query)
+        result = polarity_result(average)
+        positivity_percentage = self.polarity_converter(average)
+        json_string = {"sentiment": "%(result)s" % locals(), "positivity_percentage": "%(positivity_percentage)s" % locals()}
+        return json_string
+
+    def polarity_converter(self, polarity):
+      return (polarity + 1) * 50

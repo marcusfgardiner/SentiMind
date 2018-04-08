@@ -22,9 +22,8 @@ def index():
     content = request.get_json()
     query = json.dumps(content)
     sentiment_analyser = SentimentAnalyser()
-    result = sentiment_analyser.general_polarity_result(query)
-    json_string = {"sentiment": "%(result)s" % locals()}
-    return Response(json.dumps(json_string), mimetype='application/json')
+    result = sentiment_analyser.general_polarity_result("sad")
+    return Response(json.dumps(result), mimetype='application/json')
 
 if __name__ == '__main__':
     app.run()

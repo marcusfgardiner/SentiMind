@@ -20,7 +20,12 @@ def test_average_sentiment():
     assert isinstance(avg_sentiment, (int, float, complex))
 
 
+def test_polarity_converter():
+  sentiment_analyser = SentimentAnalyser()
+  assert sentiment_analyser.polarity_converter(-0.5) == 25
+
 def test_general_polarity_result():
     query = 'easter'
     sentiment_analyser = SentimentAnalyser()
-    assert sentiment_analyser.general_polarity_result(query) == 'positive' or 'negative' or 'neutral'
+    return_json = sentiment_analyser.general_polarity_result(query)
+    assert return_json['sentiment'] == 'positive' or 'negative' or 'neutral'
