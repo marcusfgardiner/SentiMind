@@ -8,14 +8,13 @@ const OutputView = props => {
     <div>
       <SubHeader subHeaderText="So, the world thinks..." />
       <Sentiment sentiment={props.sentiment} />
-      <BarChart
+      <BarChart positivity_percentage={props.positivity_percentage}
         axes
         height={350}
         width={650}
         data={[
-          { x: 'Positive', y: 60, color: 'green' },
-          { x: 'Negative', y: 30, color: 'red' },
-          { x: 'Neutral', y: 10, color: 'yellow' }
+          { x: 'Positive', y: props.positivity_percentage, color: 'green' },
+          { x: 'Negative', y: 100 - props.positivity_percentage, color: 'red' },
         ]}
       />
       <Button

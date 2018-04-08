@@ -10,7 +10,8 @@ class Wrapper extends Component {
     this.state = {
       query: undefined,
       buttonClicked: false,
-      sentiment: undefined
+      sentiment: undefined,
+      positivity_percentage: undefined
     };
   }
 
@@ -28,7 +29,7 @@ class Wrapper extends Component {
       })
     });
     const json = await request.json();
-    this.setState({ sentiment: json.sentiment });
+    this.setState({ sentiment: json.sentiment, positivity_percentage: json.positivity_percentage });
   };
 
   handleSubmit = () => {
@@ -63,6 +64,7 @@ class Wrapper extends Component {
         <OutputView
           handleSubmit={this.handleSubmit}
           sentiment={this.state.sentiment}
+          positivity_percentage={this.state.positivity_percentage}
         />
       )
     };
