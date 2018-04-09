@@ -21,6 +21,18 @@ def test_average_sentiment():
     avg_polarity = sentiment_analyser.average_polarity(tweets)
     assert isinstance(avg_polarity, (int, float, complex))
 
+def test_top_tweets():
+  pos_tweet = Tweet("@dumb", "pos", 967824267948773377)
+  neut_tweet = Tweet("@dumb", "neut", 967824267948773378)
+  neg_tweet = Tweet("@dumb", "neg", 967824267948773379)
+  pos_tweet.polarity = 1
+  neut_tweet.polarity = 0
+  neg_tweet.polarity = -1
+  tweets = [pos_tweet, neut_tweet, neg_tweet]
+  sentiment_analyser = SentimentAnalyser()
+  result = sentiment_analyser.top_tweets(tweets)
+  assert result["negative"] == 967824267948773379
+
 def test_sentiment_counter():
   tweet = Tweet("@dumb", "heyo", 967824267948773377)
   tweet.sentiment = "positive"
