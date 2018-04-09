@@ -7,7 +7,7 @@ const OutputView = props => {
   return (
     <div>
       <SubHeader subHeaderText="So, the world thinks..." />
-      <Sentiment sentiment={props.sentiment} />
+      <Sentiment average_sentiment={props.average_sentiment} />
       <BarChart
         axes
         height={350}

@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import Sentiment from '../../components/Sentiment';
 
 describe('Sentiment', () => {
-  const props = { sentiment: 'negative' };
+  const props = { average_sentiment: 'negative' };
   const sentiment = shallow(<Sentiment {...props} />);
 
   it('renders correctly', () => {

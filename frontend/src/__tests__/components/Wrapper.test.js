@@ -55,12 +55,12 @@ describe('Wrapper', () => {
       expect(wrapper.state('buttonClicked')).toEqual(false);
     });
 
-    it('has a `sentiment` state initialized as undefined', () => {
-      expect(wrapper.state('sentiment')).toEqual(undefined);
+    it('has a `average_sentiment` state initialized as undefined', () => {
+      expect(wrapper.state('average_sentiment')).toEqual(undefined);
     });
 
     it('has a `positive` state initialized as 0', () => {
-      expect(wrapper.state('positive')).toEqual(0);
+      expect(wrapper.state('positive')).toEqual(undefined);
     });
   });
 
@@ -102,10 +102,10 @@ describe('Wrapper', () => {
     });
 
     describe('sentiment props', () => {
-      it('passes sentiment state down to OutputView', () => {
-        wrapper.setState({ sentiment: 'hi' });
-        expect(wrapper.find('OutputView').prop('sentiment')).toBe(
-          wrapper.state('sentiment')
+      it('passes average_sentiment state down to OutputView', () => {
+        wrapper.setState({ average_sentiment: 'hi' });
+        expect(wrapper.find('OutputView').prop('average_sentiment')).toBe(
+          wrapper.state('average_sentiment')
         );
       });
     });
@@ -122,7 +122,7 @@ describe('Wrapper', () => {
   describe('fetchSentiment()', () => {
     it('sets the sentiment state to the response received', async () => {
       await wrapper.instance().fetchSentiment();
-      expect(wrapper.state('sentiment')).toEqual('good');
+      expect(wrapper.state('average_sentiment')).toEqual('good');
     });
 
     it('sets the positivity_percentage state to the response received', async () => {

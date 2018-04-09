@@ -4,7 +4,10 @@ import OutputView from '../../components/OutputView';
 
 describe('OutputView', () => {
   const mockHandleSubmit = jest.fn();
-  const props = { handleSubmit: mockHandleSubmit, sentiment: 'negative' };
+  const props = {
+    handleSubmit: mockHandleSubmit,
+    average_sentiment: 'negative'
+  };
   const outputView = shallow(<OutputView {...props} />);
 
   it('renders correctly', () => {
@@ -38,7 +41,9 @@ describe('OutputView', () => {
 
     describe('Sentiment props', () => {
       it('passes sentiment down to Sentiment', () => {
-        expect(outputView.find('Sentiment').prop('sentiment')).toBe('negative');
+        expect(outputView.find('Sentiment').prop('average_sentiment')).toBe(
+          'negative'
+        );
       });
     });
 

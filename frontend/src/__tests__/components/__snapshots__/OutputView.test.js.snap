@@ -5,8 +5,8 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <OutputView
+    average_sentiment="negative"
     handleSubmit={[Function]}
-    sentiment="negative"
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -25,7 +25,7 @@ ShallowWrapper {
           subHeaderText="So, the world thinks..."
 />,
         <Sentiment
-          sentiment="negative"
+          average_sentiment="negative"
 />,
         <BarChart
           axes={true}
@@ -87,7 +87,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "sentiment": "negative",
+          "average_sentiment": "negative",
         },
         "ref": null,
         "rendered": null,
@@ -159,7 +159,7 @@ ShallowWrapper {
             subHeaderText="So, the world thinks..."
 />,
           <Sentiment
-            sentiment="negative"
+            average_sentiment="negative"
 />,
           <BarChart
             axes={true}
@@ -221,7 +221,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "sentiment": "negative",
+            "average_sentiment": "negative",
           },
           "ref": null,
           "rendered": null,
