@@ -30,7 +30,7 @@ class Wrapper extends Component {
     });
     const json = await request.json();
     this.setState({
-      sentiment: json.sentiment,
+      sentiment: json.polarity,
       positivity_percentage: json.positivity_percentage
     });
   };
