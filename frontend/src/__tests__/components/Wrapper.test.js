@@ -58,6 +58,10 @@ describe('Wrapper', () => {
     it('has a `sentiment` state initialized as undefined', () => {
       expect(wrapper.state('sentiment')).toEqual(undefined);
     });
+
+    it('has a `positive` state initialized as 0', () => {
+      expect(wrapper.state('positive')).toEqual(0);
+    });
   });
 
   describe('passing props to input', () => {

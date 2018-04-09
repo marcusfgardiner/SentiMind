@@ -27,6 +27,10 @@ describe('InputView', () => {
     expect(inputView.find('Button').exists()).toBe(true);
   });
 
+  it('renders a TwitterTweetEmbed component', () => {
+    expect(inputView.find('TwitterTweetEmbed').exists()).toBe(true);
+  });
+
   describe('passing props', () => {
     describe('InputBox props', () => {
       it('passes handleQueryInput down to InputBox', () => {
