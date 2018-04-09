@@ -12,10 +12,13 @@ class OutputView extends Component {
     } else {
       return (
         <div>
+          <SubHeader subHeaderText="Most Positive Tweet" />
           <TwitterTweetEmbed
             id="positiveTweet"
             tweetId={this.props.top_tweets.positive}
           />
+          <br />
+          <SubHeader subHeaderText="Most Negative Tweet" />
           <TwitterTweetEmbed
             id="negativeTweet"
             tweetId={this.props.top_tweets.negative}
@@ -29,6 +32,7 @@ class OutputView extends Component {
       <div>
         <SubHeader subHeaderText="So, the world thinks..." />
         <Sentiment average_sentiment={this.props.average_sentiment} />
+        <br />
         {this.tweets()}
         <BarChart
           axes
