@@ -34,6 +34,9 @@ ShallowWrapper {
         <Sentiment
           average_sentiment="negative"
 />,
+        <TwitterTweetEmbed
+          tweetId="983343562736717825"
+/>,
         <BarChart
           axes={true}
           axisLabels={
@@ -123,6 +126,17 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "average_sentiment": "negative",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "tweetId": "983343562736717825",
         },
         "ref": null,
         "rendered": null,
@@ -230,6 +244,9 @@ ShallowWrapper {
           <Sentiment
             average_sentiment="negative"
 />,
+          <TwitterTweetEmbed
+            tweetId="983343562736717825"
+/>,
           <BarChart
             axes={true}
             axisLabels={
@@ -319,6 +336,17 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "average_sentiment": "negative",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "tweetId": "983343562736717825",
           },
           "ref": null,
           "rendered": null,

@@ -3,11 +3,14 @@ import SubHeader from './SubHeader';
 import Sentiment from './Sentiment';
 import Button from './Button';
 import { BarChart, PieChart } from 'react-easy-chart';
+import { TwitterTweetEmbed } from 'react-twitter-embed';
+
 const OutputView = props => {
   return (
     <div>
       <SubHeader subHeaderText="So, the world thinks..." />
       <Sentiment average_sentiment={props.average_sentiment} />
+      <TwitterTweetEmbed tweetId={'983343562736717825'} />
       <BarChart
         axes
         height={350}

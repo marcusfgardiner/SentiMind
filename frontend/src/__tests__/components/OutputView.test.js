@@ -35,6 +35,10 @@ describe('OutputView', () => {
     expect(outputView.find('PieChart').exists()).toBe(true);
   });
 
+  it('renders a TwitterTweetEmbed component', () => {
+    expect(outputView.find('TwitterTweetEmbed').exists()).toBe(true);
+  });
+
   describe('passing props', () => {
     describe('SubHeader props', () => {
       it('passes flexible SubHeaderText down to SubHeader', () => {
