@@ -8,18 +8,23 @@ services:
    volumes:
     - /var/run/docker.sock:/tmp/docker.sock:ro
   frontend:
+    container_name: frontend
     build:
       context:  ./frontend
       dockerfile: Dockerfile
+    expose:
+      - "3000"
     ports:
       - "3000:3000"
     environment:
       - VIRTUAL_HOST=frontend.localhost
-
   backend:
+    container_name: backend
     build:
       context:  ./backend
       dockerfile: Dockerfile
+    expose:
+      - "5000"
     ports:
       - "5000:5000"
     environment:
