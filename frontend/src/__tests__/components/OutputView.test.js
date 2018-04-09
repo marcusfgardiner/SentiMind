@@ -31,6 +31,10 @@ describe('OutputView', () => {
     expect(outputView.find('BarChart').exists()).toBe(true);
   });
 
+  it('renders a PieChart component', () => {
+    expect(outputView.find('PieChart').exists()).toBe(true);
+  });
+
   describe('passing props', () => {
     describe('SubHeader props', () => {
       it('passes flexible SubHeaderText down to SubHeader', () => {

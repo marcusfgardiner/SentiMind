@@ -79,6 +79,7 @@ class Wrapper extends Component {
           handleSubmit={this.handleSubmit}
           average_sentiment={this.state.average_sentiment}
           sentiments={this.state.sentiments}
+          positivity_percentage={this.state.positivity_percentage}
         />
       )
     };

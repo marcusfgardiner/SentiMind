@@ -2,7 +2,7 @@ import React from 'react';
 import SubHeader from './SubHeader';
 import Sentiment from './Sentiment';
 import Button from './Button';
-import { BarChart } from 'react-easy-chart';
+import { BarChart, PieChart } from 'react-easy-chart';
 const OutputView = props => {
   return (
     <div>
@@ -28,6 +28,13 @@ const OutputView = props => {
             y: props.sentiments.negative,
             color: 'red'
           }
+        ]}
+      />
+      <PieChart
+        labels
+        data={[
+          { key: 'Positive', value: props.positivity_percentage },
+          { key: 'Negative', value: 100 - props.positivity_percentage }
         ]}
       />
       <Button

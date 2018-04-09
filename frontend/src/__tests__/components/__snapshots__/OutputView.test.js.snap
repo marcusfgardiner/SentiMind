@@ -75,6 +75,29 @@ ShallowWrapper {
           y2Type="linear"
           yType="linear"
 />,
+        <PieChart
+          clickHandler={[Function]}
+          data={
+                    Array [
+                              Object {
+                                "key": "Positive",
+                                "value": undefined,
+                              },
+                              Object {
+                                "key": "Negative",
+                                "value": NaN,
+                              },
+                            ]
+          }
+          innerHoleSize={0}
+          labels={true}
+          mouseMoveHandler={[Function]}
+          mouseOutHandler={[Function]}
+          mouseOverHandler={[Function]}
+          padding={2}
+          size={400}
+          styles={Object {}}
+/>,
         <Button
           buttonText="Choose another topic"
           handleSubmit={[Function]}
@@ -153,6 +176,35 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "clickHandler": [Function],
+          "data": Array [
+            Object {
+              "key": "Positive",
+              "value": undefined,
+            },
+            Object {
+              "key": "Negative",
+              "value": NaN,
+            },
+          ],
+          "innerHoleSize": 0,
+          "labels": true,
+          "mouseMoveHandler": [Function],
+          "mouseOutHandler": [Function],
+          "mouseOverHandler": [Function],
+          "padding": 2,
+          "size": 400,
+          "styles": Object {},
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
         "nodeType": "function",
         "props": Object {
           "buttonText": "Choose another topic",
@@ -218,6 +270,29 @@ ShallowWrapper {
             xType="text"
             y2Type="linear"
             yType="linear"
+/>,
+          <PieChart
+            clickHandler={[Function]}
+            data={
+                        Array [
+                                    Object {
+                                      "key": "Positive",
+                                      "value": undefined,
+                                    },
+                                    Object {
+                                      "key": "Negative",
+                                      "value": NaN,
+                                    },
+                                  ]
+            }
+            innerHoleSize={0}
+            labels={true}
+            mouseMoveHandler={[Function]}
+            mouseOutHandler={[Function]}
+            mouseOverHandler={[Function]}
+            padding={2}
+            size={400}
+            styles={Object {}}
 />,
           <Button
             buttonText="Choose another topic"
@@ -289,6 +364,35 @@ ShallowWrapper {
             "xType": "text",
             "y2Type": "linear",
             "yType": "linear",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "clickHandler": [Function],
+            "data": Array [
+              Object {
+                "key": "Positive",
+                "value": undefined,
+              },
+              Object {
+                "key": "Negative",
+                "value": NaN,
+              },
+            ],
+            "innerHoleSize": 0,
+            "labels": true,
+            "mouseMoveHandler": [Function],
+            "mouseOutHandler": [Function],
+            "mouseOverHandler": [Function],
+            "padding": 2,
+            "size": 400,
+            "styles": Object {},
           },
           "ref": null,
           "rendered": null,
