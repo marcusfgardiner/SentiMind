@@ -48,10 +48,22 @@ describe('OutputView', () => {
 
   describe('passing props', () => {
     describe('SubHeader props', () => {
-      it('passes flexible SubHeaderText down to SubHeader', () => {
-        expect(outputView.find('SubHeader').prop('subHeaderText')).toBe(
+      it('passes flexible SubHeaderText down to main-subheader', () => {
+        expect(outputView.find('#main-subheader').prop('subHeaderText')).toBe(
           'So, the world thinks...'
         );
+      });
+
+      it('passes flexible SubHeaderText down to positiveTweet subheader', () => {
+        expect(
+          outputView.find('#positiveTweet-subheader').prop('subHeaderText')
+        ).toBe('Most Positive Tweet');
+      });
+
+      it('passes flexible SubHeaderText down to negativeTweet subheader', () => {
+        expect(
+          outputView.find('#negativeTweet-subheader').prop('subHeaderText')
+        ).toBe('Most Negative Tweet');
       });
     });
 

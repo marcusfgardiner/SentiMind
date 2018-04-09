@@ -35,15 +35,26 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <SubHeader
+          id="main-subheader"
           subHeaderText="So, the world thinks..."
 />,
         <Sentiment
           average_sentiment="negative"
 />,
+        <br />,
         <div>
+          <SubHeader
+                    id="positiveTweet-subheader"
+                    subHeaderText="Most Positive Tweet"
+          />
           <TwitterTweetEmbed
                     id="positiveTweet"
                     tweetId="102389292"
+          />
+          <br />
+          <SubHeader
+                    id="negativeTweet-subheader"
+                    subHeaderText="Most Negative Tweet"
           />
           <TwitterTweetEmbed
                     id="negativeTweet"
@@ -127,6 +138,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "id": "main-subheader",
           "subHeaderText": "So, the world thinks...",
         },
         "ref": null,
@@ -148,11 +160,29 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "br",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
         "props": Object {
           "children": Array [
+            <SubHeader
+              id="positiveTweet-subheader"
+              subHeaderText="Most Positive Tweet"
+/>,
             <TwitterTweetEmbed
               id="positiveTweet"
               tweetId="102389292"
+/>,
+            <br />,
+            <SubHeader
+              id="negativeTweet-subheader"
+              subHeaderText="Most Negative Tweet"
 />,
             <TwitterTweetEmbed
               id="negativeTweet"
@@ -165,10 +195,43 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "id": "positiveTweet-subheader",
+              "subHeaderText": "Most Positive Tweet",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
             "nodeType": "class",
             "props": Object {
               "id": "positiveTweet",
               "tweetId": "102389292",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "id": "negativeTweet-subheader",
+              "subHeaderText": "Most Negative Tweet",
             },
             "ref": null,
             "rendered": null,
@@ -286,15 +349,26 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <SubHeader
+            id="main-subheader"
             subHeaderText="So, the world thinks..."
 />,
           <Sentiment
             average_sentiment="negative"
 />,
+          <br />,
           <div>
+            <SubHeader
+                        id="positiveTweet-subheader"
+                        subHeaderText="Most Positive Tweet"
+            />
             <TwitterTweetEmbed
                         id="positiveTweet"
                         tweetId="102389292"
+            />
+            <br />
+            <SubHeader
+                        id="negativeTweet-subheader"
+                        subHeaderText="Most Negative Tweet"
             />
             <TwitterTweetEmbed
                         id="negativeTweet"
@@ -378,6 +452,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "id": "main-subheader",
             "subHeaderText": "So, the world thinks...",
           },
           "ref": null,
@@ -399,11 +474,29 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
           "props": Object {
             "children": Array [
+              <SubHeader
+                id="positiveTweet-subheader"
+                subHeaderText="Most Positive Tweet"
+/>,
               <TwitterTweetEmbed
                 id="positiveTweet"
                 tweetId="102389292"
+/>,
+              <br />,
+              <SubHeader
+                id="negativeTweet-subheader"
+                subHeaderText="Most Negative Tweet"
 />,
               <TwitterTweetEmbed
                 id="negativeTweet"
@@ -416,10 +509,43 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "id": "positiveTweet-subheader",
+                "subHeaderText": "Most Positive Tweet",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
               "nodeType": "class",
               "props": Object {
                 "id": "positiveTweet",
                 "tweetId": "102389292",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "id": "negativeTweet-subheader",
+                "subHeaderText": "Most Negative Tweet",
               },
               "ref": null,
               "rendered": null,
