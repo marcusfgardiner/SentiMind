@@ -5,4 +5,5 @@ class Tweet:
       self.user = user
       self.text = text
       self.polarity = None
+      self.sentiment = None
       

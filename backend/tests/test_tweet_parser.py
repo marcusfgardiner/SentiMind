@@ -24,3 +24,8 @@ def test_polarity_of_tweet():
     dummy_tweet = tweet_parser.parse_tweet(tweet_data)
     dummy_tweet_polarity = dummy_tweet.polarity
     assert dummy_tweet_polarity == 0.08333333333333333
+
+def test_sentiment_of_tweet():
+    dummy_tweet = tweet_parser.parse_tweet(tweet_data)
+    dummy_tweet_sentiment = dummy_tweet.sentiment
+    assert dummy_tweet_sentiment == "neutral"

@@ -9,6 +9,7 @@ class TweetParser:
         new_tweet = Tweet(tweet_data['user']['screen_name'], tweet_data['text'])
         new_tweet.text = self.clean_tweet(new_tweet)
         new_tweet.polarity = polarity_score(new_tweet.text)
+        new_tweet.sentiment = polarity_result(new_tweet.polarity)
         return new_tweet
 
     def clean_tweet(self, tweet):

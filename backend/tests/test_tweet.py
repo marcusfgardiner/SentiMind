@@ -8,6 +8,10 @@ def test_tweet_initialize_text():
     tweet = Tweet("@user", "Life is caffeine")
     assert tweet.text == "Life is caffeine"
 
-def test_tweet_initialize_sentiment():
+def test_tweet_initialize_polarity():
     tweet = Tweet("@user", "Life is caffeine")
     assert tweet.polarity == None
+
+def test_tweet_initialize_sentiment():
+    tweet = Tweet("@user", "Life is caffeine")
+    assert tweet.sentiment == None
