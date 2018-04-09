@@ -12,7 +12,8 @@ class Wrapper extends Component {
       buttonClicked: false,
       average_sentiment: undefined,
       positivity_percentage: 0,
-      sentiments: { positive: 0, neutral: 0, negative: 0 }
+      sentiments: { positive: 0, neutral: 0, negative: 0 },
+      top_tweets: { positive: undefined, negative: undefined }
     };
   }
 
@@ -33,7 +34,8 @@ class Wrapper extends Component {
     this.setState({
       average_sentiment: json.polarity,
       positivity_percentage: json.positivity_percentage,
-      sentiments: json.sentiments
+      sentiments: json.sentiments,
+      top_tweets: json.top_tweets
     });
   };
 
