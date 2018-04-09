@@ -11,7 +11,8 @@ class Wrapper extends Component {
       query: undefined,
       buttonClicked: false,
       sentiment: undefined,
-      positivity_percentage: 0
+      positivity_percentage: 0,
+      positive: 0
     };
   }
 
