@@ -14,7 +14,7 @@ def test_sentiment_analyser():
     assert isinstance(populate[0], Tweet)
 
 def test_average_sentiment():
-    tweet = Tweet("@dumb", "heyo")
+    tweet = Tweet("@dumb", "heyo", 967824267948773377)
     tweet.polarity = 1
     tweets = [tweet]
     sentiment_analyser = SentimentAnalyser()
@@ -22,7 +22,7 @@ def test_average_sentiment():
     assert isinstance(avg_polarity, (int, float, complex))
 
 def test_sentiment_counter():
-  tweet = Tweet("@dumb", "heyo")
+  tweet = Tweet("@dumb", "heyo", 967824267948773377)
   tweet.sentiment = "positive"
   tweets = [tweet]
   sentiment_analyser = SentimentAnalyser()
