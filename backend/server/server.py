@@ -22,7 +22,7 @@ def index():
     content = request.get_json()
     query = json.dumps(content)
     sentiment_analyser = SentimentAnalyser()
-    result = sentiment_analyser.general_polarity_result("sad")
+    result = sentiment_analyser.general_polarity_result(query)
     return Response(json.dumps(result), mimetype='application/json')
 
 if __name__ == '__main__':

@@ -8,7 +8,7 @@ api = tweepy.API(auth)
 
 def get_tweets(query):
     tweets = []
-    max_tweets = 100
-    for tweet in tweepy.Cursor(api.search,q=query, lang='en').items(max_tweets):
+    max_tweets = 15
+    for tweet in tweepy.Cursor(api.search,q=query + ' -RT', lang='en').items(max_tweets):
         tweets.append(tweet._json)
     return tweets
