@@ -35,8 +35,14 @@ describe('OutputView', () => {
     expect(outputView.find('PieChart').exists()).toBe(true);
   });
 
-  it('renders a TwitterTweetEmbed component', () => {
-    expect(outputView.find('TwitterTweetEmbed').exists()).toBe(true);
+  describe('tweets', () => {
+    it('renders a TwitterTweetEmbed component for positive tweet', () => {
+      expect(outputView.find('#positiveTweet').exists()).toBe(true);
+    });
+
+    it('renders a TwitterTweetEmbed component for negative tweet', () => {
+      expect(outputView.find('#negativeTweet').exists()).toBe(true);
+    });
   });
 
   describe('passing props', () => {
