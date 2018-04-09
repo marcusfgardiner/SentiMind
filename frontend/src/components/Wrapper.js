@@ -41,14 +41,16 @@ class Wrapper extends Component {
     let { buttonClicked } = this.state;
     if (!buttonClicked) {
       this.fetchSentiment();
+      this.setState({ buttonClicked: !buttonClicked });
+    } else {
+      this.setState({
+        buttonClicked: !buttonClicked,
+        query: undefined,
+        average_sentiment: undefined,
+        positivity_percentage: 0,
+        sentiments: undefined
+      });
     }
-    this.setState({
-      buttonClicked: !buttonClicked,
-      query: undefined,
-      average_sentiment: undefined,
-      positivity_percentage: 0,
-      sentiments: undefined
-    });
   };
 
   conditionalRendering = () => {

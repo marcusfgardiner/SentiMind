@@ -144,18 +144,35 @@ describe('Wrapper', () => {
       wrapper.instance().handleSubmit();
     });
 
-    it('changes `query` to undefined', () => {
-      expect(wrapper.state('query')).toBe(undefined);
-    });
-
     describe('switches `buttonClicked` between true/false', () => {
       it('clicked once - expect to be true', () => {
         expect(wrapper.state('buttonClicked')).toBe(true);
       });
 
-      it('clicked twice - expect to be false', () => {
-        wrapper.instance().handleSubmit();
-        expect(wrapper.state('buttonClicked')).toBe(false);
+      describe('when true', () => {
+        beforeEach(() => {
+          wrapper.instance().handleSubmit();
+        });
+
+        it('clicked twice - expect to be false', () => {
+          expect(wrapper.state('buttonClicked')).toBe(false);
+        });
+
+        it('changes `query` to undefined', () => {
+          expect(wrapper.state('query')).toBe(undefined);
+        });
+
+        it('changes `average_sentiment` to undefined', () => {
+          expect(wrapper.state('average_sentiment')).toBe(undefined);
+        });
+
+        it('changes `sentiments` to undefined', () => {
+          expect(wrapper.state('sentiments')).toBe(undefined);
+        });
+
+        it('changes `positivity_percentage` to 0', () => {
+          expect(wrapper.state('positivity_percentage')).toBe(0);
+        });
       });
     });
   });
