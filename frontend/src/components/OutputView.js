@@ -15,12 +15,17 @@ const OutputView = props => {
         data={[
           {
             x: 'Positive',
-            y: props.positivity_percentage,
+            y: props.sentiments.positive,
             color: 'green'
           },
           {
+            x: 'Neutral',
+            y: props.sentiments.neutral,
+            color: 'yellow'
+          },
+          {
             x: 'Negative',
-            y: 100 - props.positivity_percentage,
+            y: props.sentiments.negative,
             color: 'red'
           }
         ]}

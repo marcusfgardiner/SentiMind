@@ -6,7 +6,8 @@ describe('OutputView', () => {
   const mockHandleSubmit = jest.fn();
   const props = {
     handleSubmit: mockHandleSubmit,
-    average_sentiment: 'negative'
+    average_sentiment: 'negative',
+    sentiments: { positive: 0, neutral: 0, negative: 0 }
   };
   const outputView = shallow(<OutputView {...props} />);
 

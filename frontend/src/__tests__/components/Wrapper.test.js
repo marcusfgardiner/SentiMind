@@ -61,7 +61,11 @@ describe('Wrapper', () => {
     });
 
     it('has a `sentiments` state initialized as undefined', () => {
-      expect(wrapper.state('positive')).toEqual(undefined);
+      expect(wrapper.state('sentiments')).toEqual({
+        positive: 0,
+        neutral: 0,
+        negative: 0
+      });
     });
   });
 
@@ -167,7 +171,11 @@ describe('Wrapper', () => {
         });
 
         it('changes `sentiments` to undefined', () => {
-          expect(wrapper.state('sentiments')).toBe(undefined);
+          expect(wrapper.state('sentiments')).toEqual({
+            positive: 0,
+            neutral: 0,
+            negative: 0
+          });
         });
 
         it('changes `positivity_percentage` to 0', () => {

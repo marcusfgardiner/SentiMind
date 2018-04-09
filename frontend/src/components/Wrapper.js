@@ -12,7 +12,7 @@ class Wrapper extends Component {
       buttonClicked: false,
       average_sentiment: undefined,
       positivity_percentage: 0,
-      sentiments: undefined
+      sentiments: { positive: 0, neutral: 0, negative: 0 }
     };
   }
 
@@ -44,7 +44,7 @@ class Wrapper extends Component {
       query: undefined,
       average_sentiment: undefined,
       positivity_percentage: 0,
-      sentiments: undefined
+      sentiments: { positive: 0, neutral: 0, negative: 0 }
     });
   };
 
@@ -78,7 +78,7 @@ class Wrapper extends Component {
         <OutputView
           handleSubmit={this.handleSubmit}
           average_sentiment={this.state.average_sentiment}
-          positivity_percentage={this.state.positivity_percentage}
+          sentiments={this.state.sentiments}
         />
       )
     };

@@ -7,6 +7,13 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <OutputView
     average_sentiment="negative"
     handleSubmit={[Function]}
+    sentiments={
+        Object {
+            "negative": 0,
+            "neutral": 0,
+            "positive": 0,
+          }
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -42,12 +49,17 @@ ShallowWrapper {
                               Object {
                                 "color": "green",
                                 "x": "Positive",
-                                "y": undefined,
+                                "y": 0,
+                              },
+                              Object {
+                                "color": "yellow",
+                                "x": "Neutral",
+                                "y": 0,
                               },
                               Object {
                                 "color": "red",
                                 "x": "Negative",
-                                "y": NaN,
+                                "y": 0,
                               },
                             ]
           }
@@ -109,12 +121,17 @@ ShallowWrapper {
             Object {
               "color": "green",
               "x": "Positive",
-              "y": undefined,
+              "y": 0,
+            },
+            Object {
+              "color": "yellow",
+              "x": "Neutral",
+              "y": 0,
             },
             Object {
               "color": "red",
               "x": "Negative",
-              "y": NaN,
+              "y": 0,
             },
           ],
           "datePattern": "%d-%b-%y",
@@ -176,12 +193,17 @@ ShallowWrapper {
                                     Object {
                                       "color": "green",
                                       "x": "Positive",
-                                      "y": undefined,
+                                      "y": 0,
+                                    },
+                                    Object {
+                                      "color": "yellow",
+                                      "x": "Neutral",
+                                      "y": 0,
                                     },
                                     Object {
                                       "color": "red",
                                       "x": "Negative",
-                                      "y": NaN,
+                                      "y": 0,
                                     },
                                   ]
             }
@@ -243,12 +265,17 @@ ShallowWrapper {
               Object {
                 "color": "green",
                 "x": "Positive",
-                "y": undefined,
+                "y": 0,
+              },
+              Object {
+                "color": "yellow",
+                "x": "Neutral",
+                "y": 0,
               },
               Object {
                 "color": "red",
                 "x": "Negative",
-                "y": NaN,
+                "y": 0,
               },
             ],
             "datePattern": "%d-%b-%y",
