@@ -124,6 +124,13 @@ describe('Wrapper', () => {
           wrapper.state('positivity_percentage')
         );
       });
+
+      it('passes top_tweets down to OutputView', () => {
+        wrapper.setState({ sentiments });
+        expect(wrapper.find('OutputView').prop('top_tweets')).toBe(
+          wrapper.state('top_tweets')
+        );
+      });
     });
 
     describe('sentiment props', () => {
