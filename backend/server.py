@@ -17,15 +17,6 @@ from mypkg.sentiment_analyser import SentimentAnalyser
 app = Flask(__name__)
 CORS(app)
 
-<<<<<<< HEAD:backend/server.py
-@app.route('/')
-def hello():
-    return 'Hello World'
-
-@app.route('/hello')
-def hello2():
-    return twitter_req.get_tweets()
-=======
 @app.route('/', methods=['GET', 'POST'])
 def index():
     content = request.get_json()
@@ -33,7 +24,6 @@ def index():
     sentiment_analyser = SentimentAnalyser()
     result = sentiment_analyser.general_polarity_result(query)
     return Response(json.dumps(result), mimetype='application/json')
->>>>>>> master:backend/server/server.py
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0")
