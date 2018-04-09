@@ -26,8 +26,10 @@ class SentimentAnalyser:
         sentiments = self.sentiment_counter(tweets)
         result = polarity_result(average)
         positivity_percentage = self.polarity_converter(average)
-        json_string = {"sentiments": sentiments, "polarity": "%(result)s" % locals(
-        ), "positivity_percentage": "%(positivity_percentage)s" % locals()}
+        json_string = {"sentiments": sentiments,
+                       "polarity": "%(result)s" % locals(),
+                       "positivity_percentage": "%(positivity_percentage)s" % locals()
+                       }
         return json_string
 
     def sentiment_counter(self, tweets):

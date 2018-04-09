@@ -29,3 +29,8 @@ def test_sentiment_of_tweet():
     dummy_tweet = tweet_parser.parse_tweet(tweet_data)
     dummy_tweet_sentiment = dummy_tweet.sentiment
     assert dummy_tweet_sentiment == "neutral"
+
+def test_id_of_tweet():
+    dummy_tweet = tweet_parser.parse_tweet(tweet_data)
+    dummy_tweet_id = dummy_tweet.id
+    assert dummy_tweet_id == 967824267948773377
