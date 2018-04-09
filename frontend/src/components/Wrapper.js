@@ -32,7 +32,8 @@ class Wrapper extends Component {
     const json = await request.json();
     this.setState({
       average_sentiment: json.polarity,
-      positivity_percentage: json.positivity_percentage
+      positivity_percentage: json.positivity_percentage,
+      sentiments: json.sentiments
     });
   };
 
@@ -44,8 +45,9 @@ class Wrapper extends Component {
     this.setState({
       buttonClicked: !buttonClicked,
       query: undefined,
-      sentiment: undefined,
-      positivity_percentage: 0
+      average_sentiment: undefined,
+      positivity_percentage: 0,
+      sentiments: undefined
     });
   };
 

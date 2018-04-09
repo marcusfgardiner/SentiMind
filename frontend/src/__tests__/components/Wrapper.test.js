@@ -3,8 +3,9 @@ import { shallow } from 'enzyme';
 import Wrapper from '../../components/Wrapper';
 
 describe('Wrapper', () => {
+  const sentiments = { positive: 3, neutral: 3, negative: 4 };
   fetch.mockResponse(
-    JSON.stringify({ polarity: 'good', positivity_percentage: 30 })
+    JSON.stringify({ polarity: 'good', positivity_percentage: 30, sentiments })
   );
   let wrapper = shallow(<Wrapper />);
 
@@ -120,14 +121,19 @@ describe('Wrapper', () => {
   });
 
   describe('fetchSentiment()', () => {
-    it('sets the sentiment state to the response received', async () => {
+    beforeEach(async () => {
       await wrapper.instance().fetchSentiment();
+    });
+    it('sets the sentiment state to the response received', () => {
       expect(wrapper.state('average_sentiment')).toEqual('good');
     });
 
-    it('sets the positivity_percentage state to the response received', async () => {
-      await wrapper.instance().fetchSentiment();
+    it('sets the positivity_percentage state to the response received', () => {
       expect(wrapper.state('positivity_percentage')).toEqual(30);
+    });
+
+    it('sets the sentiments state to sentiments response', () => {
+      expect(wrapper.state('sentiments')).toEqual(sentiments);
     });
   });
 
