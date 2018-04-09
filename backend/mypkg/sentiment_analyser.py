@@ -12,6 +12,8 @@ class SentimentAnalyser:
       tweets = get_tweets(query)
       for tweet in tweets:
           cleaned_tweets.append(tweet_parser.parse_tweet(tweet))
+      print(cleaned_tweets[0].text)
+      print(cleaned_tweets[0].sentiment)
       return cleaned_tweets
 
     def average_sentiment(self, query):

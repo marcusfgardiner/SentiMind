@@ -11,7 +11,7 @@ class Wrapper extends Component {
       query: undefined,
       buttonClicked: false,
       sentiment: undefined,
-      positivity_percentage: undefined
+      positivity_percentage: 0
     };
   }
 
@@ -33,6 +33,7 @@ class Wrapper extends Component {
       sentiment: json.sentiment,
       positivity_percentage: json.positivity_percentage
     });
+    console.log(this.state.positivity_percentage);
   };
 
   handleSubmit = () => {
@@ -44,7 +45,7 @@ class Wrapper extends Component {
       buttonClicked: !buttonClicked,
       query: undefined,
       sentiment: undefined,
-      positivity_percentage: undefined
+      positivity_percentage: 0
     });
   };
 
