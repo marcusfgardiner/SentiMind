@@ -209,10 +209,10 @@ describe('Wrapper', () => {
           });
         });
 
-        it('changes `top_tweets` to undefined', () => {
+        it('changes `top_tweets` to 0', () => {
           expect(wrapper.state('top_tweets')).toEqual({
-            positive: undefined,
-            negative: undefined
+            positive: '0',
+            negative: '0'
           });
         });
 

@@ -42,7 +42,7 @@ class SentimentAnalyser:
           positive_tweet = tweet
         elif negative_tweet == None or tweet.polarity < negative_tweet.polarity:
           negative_tweet = tweet
-      top_tweets = {"positive": positive_tweet.id, "negative": negative_tweet.id}
+      top_tweets = {"positive": str(positive_tweet.id), "negative": str(negative_tweet.id)}
       return top_tweets
 
     def sentiment_counter(self, tweets):
@@ -54,7 +54,7 @@ class SentimentAnalyser:
           result["neutral"] += 1
         else:
           result["negative"] += 1
-      return result    
+      return result
 
     def polarity_converter(self, polarity):
       return (polarity + 1) * 50

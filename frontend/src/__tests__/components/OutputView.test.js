@@ -7,7 +7,8 @@ describe('OutputView', () => {
   const props = {
     handleSubmit: mockHandleSubmit,
     average_sentiment: 'negative',
-    sentiments: { positive: 0, neutral: 0, negative: 0 }
+    sentiments: { positive: 0, neutral: 0, negative: 0 },
+    top_tweets: { positive: '102389292', negative: '02392039420' }
   };
   const outputView = shallow(<OutputView {...props} />);
 

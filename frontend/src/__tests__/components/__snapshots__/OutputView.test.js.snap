@@ -14,6 +14,12 @@ ShallowWrapper {
             "positive": 0,
           }
     }
+    top_tweets={
+        Object {
+            "negative": "02392039420",
+            "positive": "102389292",
+          }
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -35,7 +41,12 @@ ShallowWrapper {
           average_sentiment="negative"
 />,
         <TwitterTweetEmbed
-          tweetId="983343562736717825"
+          id="positiveTweet"
+          tweetId="102389292"
+/>,
+        <TwitterTweetEmbed
+          id="negativeTweet"
+          tweetId="02392039420"
 />,
         <BarChart
           axes={true}
@@ -136,7 +147,20 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "tweetId": "983343562736717825",
+          "id": "positiveTweet",
+          "tweetId": "102389292",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "id": "negativeTweet",
+          "tweetId": "02392039420",
         },
         "ref": null,
         "rendered": null,
@@ -245,7 +269,12 @@ ShallowWrapper {
             average_sentiment="negative"
 />,
           <TwitterTweetEmbed
-            tweetId="983343562736717825"
+            id="positiveTweet"
+            tweetId="102389292"
+/>,
+          <TwitterTweetEmbed
+            id="negativeTweet"
+            tweetId="02392039420"
 />,
           <BarChart
             axes={true}
@@ -346,7 +375,20 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "tweetId": "983343562736717825",
+            "id": "positiveTweet",
+            "tweetId": "102389292",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "id": "negativeTweet",
+            "tweetId": "02392039420",
           },
           "ref": null,
           "rendered": null,

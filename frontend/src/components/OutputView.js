@@ -10,7 +10,14 @@ const OutputView = props => {
     <div>
       <SubHeader subHeaderText="So, the world thinks..." />
       <Sentiment average_sentiment={props.average_sentiment} />
-      <TwitterTweetEmbed tweetId={'983343562736717825'} />
+      <TwitterTweetEmbed
+        id="positiveTweet"
+        tweetId={props.top_tweets.positive}
+      />
+      <TwitterTweetEmbed
+        id="negativeTweet"
+        tweetId={props.top_tweets.negative}
+      />
       <BarChart
         axes
         height={350}
