@@ -209,6 +209,13 @@ describe('Wrapper', () => {
           });
         });
 
+        it('changes `top_tweets` to undefined', () => {
+          expect(wrapper.state('top_tweets')).toEqual({
+            positive: undefined,
+            negative: undefined
+          });
+        });
+
         it('changes `positivity_percentage` to 0', () => {
           expect(wrapper.state('positivity_percentage')).toBe(0);
         });
