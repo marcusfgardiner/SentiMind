@@ -95,9 +95,9 @@ describe('Wrapper', () => {
       });
 
       it('passes positivity_percentage down to OutputView', () => {
-        wrapper.setState({ positivity_percentage: 10 });
-        expect(wrapper.find('OutputView').prop('positivity_percentage')).toBe(
-          wrapper.state('positivity_percentage')
+        wrapper.setState({ sentiments });
+        expect(wrapper.find('OutputView').prop('sentiments')).toBe(
+          wrapper.state('sentiments')
         );
       });
     });
