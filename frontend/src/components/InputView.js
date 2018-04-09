@@ -2,6 +2,7 @@ import React from 'react';
 import SubHeader from './SubHeader';
 import InputBox from './InputBox';
 import Button from './Button';
+import { TwitterTweetEmbed } from 'react-twitter-embed';
 
 const InputView = props => {
   return (
@@ -9,6 +10,7 @@ const InputView = props => {
       <SubHeader subHeaderText="Type in a topic, find out what the twitter-verse thinks" />
       <InputBox handleQueryInput={props.handleQueryInput} />
       <br />
+      <TwitterTweetEmbed tweetId={'983343562736717825'} />
       <Button
         buttonText="Click to find out!"
         handleSubmit={props.handleSubmit}
