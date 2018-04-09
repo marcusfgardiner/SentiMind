@@ -59,7 +59,7 @@ describe('Wrapper', () => {
       expect(wrapper.state('average_sentiment')).toEqual(undefined);
     });
 
-    it('has a `positive` state initialized as 0', () => {
+    it('has a `sentiments` state initialized as undefined', () => {
       expect(wrapper.state('positive')).toEqual(undefined);
     });
   });
