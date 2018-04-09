@@ -4,7 +4,7 @@ import Wrapper from '../../components/Wrapper';
 
 describe('Wrapper', () => {
   fetch.mockResponse(
-    JSON.stringify({ sentiment: 'good', positivity_percentage: 30 })
+    JSON.stringify({ polarity: 'good', positivity_percentage: 30 })
   );
   let wrapper = shallow(<Wrapper />);
 
