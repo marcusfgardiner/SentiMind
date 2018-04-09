@@ -40,14 +40,16 @@ ShallowWrapper {
         <Sentiment
           average_sentiment="negative"
 />,
-        <TwitterTweetEmbed
-          id="positiveTweet"
-          tweetId="102389292"
-/>,
-        <TwitterTweetEmbed
-          id="negativeTweet"
-          tweetId="02392039420"
-/>,
+        <div>
+          <TwitterTweetEmbed
+                    id="positiveTweet"
+                    tweetId="102389292"
+          />
+          <TwitterTweetEmbed
+                    id="negativeTweet"
+                    tweetId="02392039420"
+          />
+</div>,
         <BarChart
           axes={true}
           axisLabels={
@@ -145,26 +147,47 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "host",
         "props": Object {
-          "id": "positiveTweet",
-          "tweetId": "102389292",
+          "children": Array [
+            <TwitterTweetEmbed
+              id="positiveTweet"
+              tweetId="102389292"
+/>,
+            <TwitterTweetEmbed
+              id="negativeTweet"
+              tweetId="02392039420"
+/>,
+          ],
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "id": "negativeTweet",
-          "tweetId": "02392039420",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "id": "positiveTweet",
+              "tweetId": "102389292",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "id": "negativeTweet",
+              "tweetId": "02392039420",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
       },
       Object {
         "instance": null,
@@ -268,14 +291,16 @@ ShallowWrapper {
           <Sentiment
             average_sentiment="negative"
 />,
-          <TwitterTweetEmbed
-            id="positiveTweet"
-            tweetId="102389292"
-/>,
-          <TwitterTweetEmbed
-            id="negativeTweet"
-            tweetId="02392039420"
-/>,
+          <div>
+            <TwitterTweetEmbed
+                        id="positiveTweet"
+                        tweetId="102389292"
+            />
+            <TwitterTweetEmbed
+                        id="negativeTweet"
+                        tweetId="02392039420"
+            />
+</div>,
           <BarChart
             axes={true}
             axisLabels={
@@ -373,26 +398,47 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "host",
           "props": Object {
-            "id": "positiveTweet",
-            "tweetId": "102389292",
+            "children": Array [
+              <TwitterTweetEmbed
+                id="positiveTweet"
+                tweetId="102389292"
+/>,
+              <TwitterTweetEmbed
+                id="negativeTweet"
+                tweetId="02392039420"
+/>,
+            ],
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "id": "negativeTweet",
-            "tweetId": "02392039420",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "id": "positiveTweet",
+                "tweetId": "102389292",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "id": "negativeTweet",
+                "tweetId": "02392039420",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
         },
         Object {
           "instance": null,
