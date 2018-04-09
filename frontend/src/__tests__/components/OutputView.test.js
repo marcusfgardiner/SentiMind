@@ -23,6 +23,10 @@ describe('OutputView', () => {
     expect(outputView.find('Button').exists()).toBe(true);
   });
 
+  it('renders a BarChart component', () => {
+    expect(outputView.find('BarChart').exists()).toBe(true);
+  });
+
   describe('passing props', () => {
     describe('SubHeader props', () => {
       it('passes flexible SubHeaderText down to SubHeader', () => {
