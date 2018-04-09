@@ -14,15 +14,15 @@ class SentimentAnalyser:
           cleaned_tweets.append(tweet_parser.parse_tweet(tweet))
       return cleaned_tweets
 
-    def average_polarity(self, query):
+    def average_polarity(self, tweets):
       avg_polarity = 0
-      tweets = self.populate(query)
       for tweet in tweets:
           avg_polarity += round(tweet.polarity, 2)
       return round(avg_polarity/len(tweets), 2)
 
     def general_polarity_result(self, query):
-        average = self.average_polarity(query)
+        tweets = self.populate(query)
+        average = self.average_polarity(tweets)
         result = polarity_result(average)
         positivity_percentage = self.polarity_converter(average)
         json_string = {"polarity": "%(result)s" % locals(), "positivity_percentage": "%(positivity_percentage)s" % locals()}
