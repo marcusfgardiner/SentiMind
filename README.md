@@ -38,3 +38,4 @@ To run python tests:
 ## Challenges
 
 * Sticking to the single responsibility principle while designing the GET request -method using Tweepy
+* Hard coding the word "sad" into the query for test purposes and then forget we did it, causing a minor breakdown and assuming "Twitter is just a really depressing place"
