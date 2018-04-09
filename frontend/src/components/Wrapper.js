@@ -29,7 +29,10 @@ class Wrapper extends Component {
       })
     });
     const json = await request.json();
-    this.setState({ sentiment: json.sentiment, positivity_percentage: json.positivity_percentage });
+    this.setState({
+      sentiment: json.sentiment,
+      positivity_percentage: json.positivity_percentage
+    });
   };
 
   handleSubmit = () => {
@@ -40,7 +43,8 @@ class Wrapper extends Component {
     this.setState({
       buttonClicked: !buttonClicked,
       query: undefined,
-      sentiment: undefined
+      sentiment: undefined,
+      positivity_percentage: undefined
     });
   };
 

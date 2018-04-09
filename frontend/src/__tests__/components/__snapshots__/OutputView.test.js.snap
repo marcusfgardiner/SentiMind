@@ -27,6 +27,42 @@ ShallowWrapper {
         <Sentiment
           sentiment="negative"
 />,
+        <BarChart
+          axes={true}
+          axisLabels={
+                    Object {
+                              "x": "",
+                              "y": "",
+                            }
+          }
+          barWidth={10}
+          clickHandler={[Function]}
+          data={
+                    Array [
+                              Object {
+                                "color": "green",
+                                "x": "Positive",
+                                "y": undefined,
+                              },
+                              Object {
+                                "color": "red",
+                                "x": "Negative",
+                                "y": NaN,
+                              },
+                            ]
+          }
+          datePattern="%d-%b-%y"
+          height={350}
+          interpolate="linear"
+          lineData={Array []}
+          mouseMoveHandler={[Function]}
+          mouseOutHandler={[Function]}
+          mouseOverHandler={[Function]}
+          width={650}
+          xType="text"
+          y2Type="linear"
+          yType="linear"
+/>,
         <Button
           buttonText="Choose another topic"
           handleSubmit={[Function]}
@@ -60,6 +96,46 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "axes": true,
+          "axisLabels": Object {
+            "x": "",
+            "y": "",
+          },
+          "barWidth": 10,
+          "clickHandler": [Function],
+          "data": Array [
+            Object {
+              "color": "green",
+              "x": "Positive",
+              "y": undefined,
+            },
+            Object {
+              "color": "red",
+              "x": "Negative",
+              "y": NaN,
+            },
+          ],
+          "datePattern": "%d-%b-%y",
+          "height": 350,
+          "interpolate": "linear",
+          "lineData": Array [],
+          "mouseMoveHandler": [Function],
+          "mouseOutHandler": [Function],
+          "mouseOverHandler": [Function],
+          "width": 650,
+          "xType": "text",
+          "y2Type": "linear",
+          "yType": "linear",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
         "nodeType": "function",
         "props": Object {
           "buttonText": "Choose another topic",
@@ -84,6 +160,42 @@ ShallowWrapper {
 />,
           <Sentiment
             sentiment="negative"
+/>,
+          <BarChart
+            axes={true}
+            axisLabels={
+                        Object {
+                                    "x": "",
+                                    "y": "",
+                                  }
+            }
+            barWidth={10}
+            clickHandler={[Function]}
+            data={
+                        Array [
+                                    Object {
+                                      "color": "green",
+                                      "x": "Positive",
+                                      "y": undefined,
+                                    },
+                                    Object {
+                                      "color": "red",
+                                      "x": "Negative",
+                                      "y": NaN,
+                                    },
+                                  ]
+            }
+            datePattern="%d-%b-%y"
+            height={350}
+            interpolate="linear"
+            lineData={Array []}
+            mouseMoveHandler={[Function]}
+            mouseOutHandler={[Function]}
+            mouseOverHandler={[Function]}
+            width={650}
+            xType="text"
+            y2Type="linear"
+            yType="linear"
 />,
           <Button
             buttonText="Choose another topic"
@@ -110,6 +222,46 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "sentiment": "negative",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "axes": true,
+            "axisLabels": Object {
+              "x": "",
+              "y": "",
+            },
+            "barWidth": 10,
+            "clickHandler": [Function],
+            "data": Array [
+              Object {
+                "color": "green",
+                "x": "Positive",
+                "y": undefined,
+              },
+              Object {
+                "color": "red",
+                "x": "Negative",
+                "y": NaN,
+              },
+            ],
+            "datePattern": "%d-%b-%y",
+            "height": 350,
+            "interpolate": "linear",
+            "lineData": Array [],
+            "mouseMoveHandler": [Function],
+            "mouseOutHandler": [Function],
+            "mouseOverHandler": [Function],
+            "width": 650,
+            "xType": "text",
+            "y2Type": "linear",
+            "yType": "linear",
           },
           "ref": null,
           "rendered": null,
