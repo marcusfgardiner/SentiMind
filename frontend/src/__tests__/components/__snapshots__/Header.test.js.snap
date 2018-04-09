@@ -17,6 +17,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
+      "alt": "Sentimind logo",
       "src": "logo.png",
     },
     "ref": null,
@@ -29,6 +30,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
+        "alt": "Sentimind logo",
         "src": "logo.png",
       },
       "ref": null,
