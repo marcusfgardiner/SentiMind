@@ -33,7 +33,6 @@ class Wrapper extends Component {
       sentiment: json.sentiment,
       positivity_percentage: json.positivity_percentage
     });
-    console.log(this.state.positivity_percentage);
   };
 
   handleSubmit = () => {
