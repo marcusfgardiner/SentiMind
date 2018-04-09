@@ -4,8 +4,14 @@ import Wrapper from '../../components/Wrapper';
 
 describe('Wrapper', () => {
   const sentiments = { positive: 3, neutral: 3, negative: 4 };
+  const top_tweets = { positive: '124434343', negative: '12435532222' };
   fetch.mockResponse(
-    JSON.stringify({ polarity: 'good', positivity_percentage: 30, sentiments })
+    JSON.stringify({
+      polarity: 'good',
+      positivity_percentage: 30,
+      sentiments,
+      top_tweets
+    })
   );
   let wrapper = shallow(<Wrapper />);
 
@@ -60,11 +66,18 @@ describe('Wrapper', () => {
       expect(wrapper.state('average_sentiment')).toEqual(undefined);
     });
 
-    it('has a `sentiments` state initialized as undefined', () => {
+    it('has a `sentiments` state initialized as object', () => {
       expect(wrapper.state('sentiments')).toEqual({
         positive: 0,
         neutral: 0,
         negative: 0
+      });
+
+      it('has a `top_tweets` state initialized as object', () => {
+        expect(wrapper.state('top_tweets')).toEqual({
+          positive: undefined,
+          negative: undefined
+        });
       });
     });
   });
@@ -145,6 +158,10 @@ describe('Wrapper', () => {
 
     it('sets the sentiments state to sentiments response', () => {
       expect(wrapper.state('sentiments')).toEqual(sentiments);
+    });
+
+    it('sets the top_tweets state to top_tweets response', () => {
+      expect(wrapper.state('top_tweets')).toEqual(top_tweets);
     });
   });
 
