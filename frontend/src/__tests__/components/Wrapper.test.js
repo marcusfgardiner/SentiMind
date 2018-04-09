@@ -88,6 +88,13 @@ describe('Wrapper', () => {
           wrapper.instance().handleSubmit
         );
       });
+
+      it('passes positivity_percentage down to OutputView', () => {
+        wrapper.setState({ positivity_percentage: 10 });
+        expect(wrapper.find('OutputView').prop('positivity_percentage')).toBe(
+          wrapper.state('positivity_percentage')
+        );
+      });
     });
 
     describe('sentiment props', () => {
