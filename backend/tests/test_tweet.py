@@ -10,4 +10,4 @@ def test_tweet_initialize_text():
 
 def test_tweet_initialize_sentiment():
     tweet = Tweet("@user", "Life is caffeine")
-    assert tweet.sentiment == None
+    assert tweet.polarity == None

@@ -4,5 +4,5 @@ class Tweet:
    def __init__(self, user, text):
       self.user = user
       self.text = text
-      self.sentiment = None
+      self.polarity = None
       
