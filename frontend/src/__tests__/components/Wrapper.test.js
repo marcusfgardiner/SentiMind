@@ -3,6 +3,9 @@ import { shallow } from 'enzyme';
 import Wrapper from '../../components/Wrapper';
 
 describe('Wrapper', () => {
+  fetch.mockResponse(
+    JSON.stringify({ sentiment: 'good', positivity_percentage: 30 })
+  );
   let wrapper = shallow(<Wrapper />);
 
   describe('rendering', () => {
@@ -51,6 +54,10 @@ describe('Wrapper', () => {
     it('has a `buttonClicked` piece of state initialized as false', () => {
       expect(wrapper.state('buttonClicked')).toEqual(false);
     });
+
+    it('has a `sentiment` state initialized as undefined', () => {
+      expect(wrapper.state('sentiment')).toEqual(undefined);
+    });
   });
 
   describe('passing props to input', () => {
@@ -73,14 +80,30 @@ describe('Wrapper', () => {
 
   describe('passing props to output', () => {
     beforeEach(() => {
-      wrapper.setState({buttonClicked: true})
-    })
-      describe('Button props', () => {
-        it('passes handleSubmit down to OutputView', () => {
-          expect(wrapper.find('OutputView').prop('handleSubmit')).toBe(
-            wrapper.instance().handleSubmit
-          );
-        });
+      wrapper.setState({ buttonClicked: true });
+    });
+    describe('handleSubmit props', () => {
+      it('passes handleSubmit down to OutputView', () => {
+        expect(wrapper.find('OutputView').prop('handleSubmit')).toBe(
+          wrapper.instance().handleSubmit
+        );
+      });
+
+      it('passes positivity_percentage down to OutputView', () => {
+        wrapper.setState({ positivity_percentage: 10 });
+        expect(wrapper.find('OutputView').prop('positivity_percentage')).toBe(
+          wrapper.state('positivity_percentage')
+        );
+      });
+    });
+
+    describe('sentiment props', () => {
+      it('passes sentiment state down to OutputView', () => {
+        wrapper.setState({ sentiment: 'hi' });
+        expect(wrapper.find('OutputView').prop('sentiment')).toBe(
+          wrapper.state('sentiment')
+        );
+      });
     });
   });
 
@@ -92,9 +115,21 @@ describe('Wrapper', () => {
     });
   });
 
+  describe('fetchSentiment()', () => {
+    it('sets the sentiment state to the response received', async () => {
+      await wrapper.instance().fetchSentiment();
+      expect(wrapper.state('sentiment')).toEqual('good');
+    });
+
+    it('sets the positivity_percentage state to the response received', async () => {
+      await wrapper.instance().fetchSentiment();
+      expect(wrapper.state('positivity_percentage')).toEqual(30);
+    });
+  });
+
   describe('handleSubmit()', () => {
     beforeEach(() => {
-      wrapper = shallow(<Wrapper />)
+      wrapper = shallow(<Wrapper />);
       wrapper.setState({ query: 'hello' });
       wrapper.instance().handleSubmit();
     });
@@ -104,7 +139,6 @@ describe('Wrapper', () => {
     });
 
     describe('switches `buttonClicked` between true/false', () => {
-
       it('clicked once - expect to be true', () => {
         expect(wrapper.state('buttonClicked')).toBe(true);
       });
@@ -113,8 +147,6 @@ describe('Wrapper', () => {
         wrapper.instance().handleSubmit();
         expect(wrapper.state('buttonClicked')).toBe(false);
       });
-
     });
-
   });
 });

@@ -1,16 +1,23 @@
 import random
+import json
 from flask import Flask
+from flask import jsonify
+from flask import Response
+from flask import request
+from flask import session
+
 from flask_cors import CORS, cross_origin
 
 import sys
 import os
 sys.path.insert(0, os.path.abspath('..'))
 
-from mypkg import twitter_req
+from mypkg.sentiment_analyser import SentimentAnalyser
 
 app = Flask(__name__)
 CORS(app)
 
+<<<<<<< HEAD:backend/server.py
 @app.route('/')
 def hello():
     return 'Hello World'
@@ -18,6 +25,15 @@ def hello():
 @app.route('/hello')
 def hello2():
     return twitter_req.get_tweets()
+=======
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    content = request.get_json()
+    query = json.dumps(content)
+    sentiment_analyser = SentimentAnalyser()
+    result = sentiment_analyser.general_polarity_result(query)
+    return Response(json.dumps(result), mimetype='application/json')
+>>>>>>> master:backend/server/server.py
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0")

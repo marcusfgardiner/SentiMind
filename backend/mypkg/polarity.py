@@ -12,7 +12,7 @@ def polarity_score(text):
 
 
 def polarity_result(score):
-    if score == 0:
+    if score >= -0.10 and score <= 0.10:
         return "neutral"
     elif score <= 0:
         return "negative"
