@@ -1,9 +1,5 @@
-html {
-  height: 100%;
-}
-
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
   color: #f2e8e8;
   height: 100%;
@@ -14,11 +10,12 @@ body {
   background-attachment: fixed;
 }
 
-#root {
-  height: 80%;
-  width: 100%;
-  display: flex;
-  position: fixed;
-  align-items: center;
-  justify-content: center;
+body,
+html {
+  height: 100%;
+  display: grid;
+}
+
+#input {
+  margin: auto;
 }

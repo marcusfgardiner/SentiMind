@@ -15,25 +15,27 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "host",
     "props": Object {
-      "children": "SentiMind",
+      "alt": "Sentimind logo",
+      "src": "logo.png",
     },
     "ref": null,
-    "rendered": "SentiMind",
-    "type": [Function],
+    "rendered": null,
+    "type": "img",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "host",
       "props": Object {
-        "children": "SentiMind",
+        "alt": "Sentimind logo",
+        "src": "logo.png",
       },
       "ref": null,
-      "rendered": "SentiMind",
-      "type": [Function],
+      "rendered": null,
+      "type": "img",
     },
   ],
   Symbol(enzyme.__options__): Object {

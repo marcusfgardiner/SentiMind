@@ -33,6 +33,7 @@ ShallowWrapper {
           handleSubmit={[Function]}
 />,
       ],
+      "id": "input",
     },
     "ref": null,
     "rendered": Array [
@@ -101,6 +102,7 @@ ShallowWrapper {
             handleSubmit={[Function]}
 />,
         ],
+        "id": "input",
       },
       "ref": null,
       "rendered": Array [

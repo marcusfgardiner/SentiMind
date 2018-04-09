@@ -10,8 +10,10 @@ class Wrapper extends Component {
     this.state = {
       query: undefined,
       buttonClicked: false,
-      sentiment: undefined,
-      positivity_percentage: 0
+      average_sentiment: undefined,
+      positivity_percentage: 0,
+      sentiments: { positive: 0, neutral: 0, negative: 0 },
+      top_tweets: undefined
     };
   }
 
@@ -30,8 +32,22 @@ class Wrapper extends Component {
     });
     const json = await request.json();
     this.setState({
-      sentiment: json.sentiment,
-      positivity_percentage: json.positivity_percentage
+      average_sentiment: json.polarity,
+      positivity_percentage: json.positivity_percentage,
+      sentiments: json.sentiments,
+      top_tweets: json.top_tweets
+    });
+  };
+
+  resetState = () => {
+    let { buttonClicked } = this.state;
+    this.setState({
+      buttonClicked: !buttonClicked,
+      query: undefined,
+      average_sentiment: undefined,
+      positivity_percentage: 0,
+      sentiments: { positive: 0, neutral: 0, negative: 0 },
+      top_tweets: { positive: '0', negative: '0' }
     });
   };
 
@@ -39,13 +55,10 @@ class Wrapper extends Component {
     let { buttonClicked } = this.state;
     if (!buttonClicked) {
       this.fetchSentiment();
+      this.setState({ buttonClicked: !buttonClicked });
+    } else {
+      this.resetState();
     }
-    this.setState({
-      buttonClicked: !buttonClicked,
-      query: undefined,
-      sentiment: undefined,
-      positivity_percentage: 0
-    });
   };
 
   conditionalRendering = () => {
@@ -67,8 +80,10 @@ class Wrapper extends Component {
       output: (
         <OutputView
           handleSubmit={this.handleSubmit}
-          sentiment={this.state.sentiment}
+          average_sentiment={this.state.average_sentiment}
+          sentiments={this.state.sentiments}
           positivity_percentage={this.state.positivity_percentage}
+          top_tweets={this.state.top_tweets}
         />
       )
     };

@@ -22,5 +22,15 @@ def test_clean_tweet():
 
 def test_polarity_of_tweet():
     dummy_tweet = tweet_parser.parse_tweet(tweet_data)
+    dummy_tweet_polarity = dummy_tweet.polarity
+    assert dummy_tweet_polarity == 0.08333333333333333
+
+def test_sentiment_of_tweet():
+    dummy_tweet = tweet_parser.parse_tweet(tweet_data)
     dummy_tweet_sentiment = dummy_tweet.sentiment
-    assert dummy_tweet_sentiment == 0.08333333333333333
+    assert dummy_tweet_sentiment == "neutral"
+
+def test_id_of_tweet():
+    dummy_tweet = tweet_parser.parse_tweet(tweet_data)
+    dummy_tweet_id = dummy_tweet.id
+    assert dummy_tweet_id == 967824267948773377

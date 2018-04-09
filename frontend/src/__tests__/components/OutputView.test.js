@@ -4,7 +4,12 @@ import OutputView from '../../components/OutputView';
 
 describe('OutputView', () => {
   const mockHandleSubmit = jest.fn();
-  const props = { handleSubmit: mockHandleSubmit, sentiment: 'negative' };
+  const props = {
+    handleSubmit: mockHandleSubmit,
+    average_sentiment: 'negative',
+    sentiments: { positive: 0, neutral: 0, negative: 0 },
+    top_tweets: { positive: '102389292', negative: '02392039420' }
+  };
   const outputView = shallow(<OutputView {...props} />);
 
   it('renders correctly', () => {
@@ -27,18 +32,46 @@ describe('OutputView', () => {
     expect(outputView.find('BarChart').exists()).toBe(true);
   });
 
+  it('renders a PieChart component', () => {
+    expect(outputView.find('PieChart').exists()).toBe(true);
+  });
+
+  describe('tweets', () => {
+    it('renders a TwitterTweetEmbed component for positive tweet', () => {
+      expect(outputView.find('#positiveTweet').exists()).toBe(true);
+    });
+
+    it('renders a TwitterTweetEmbed component for negative tweet', () => {
+      expect(outputView.find('#negativeTweet').exists()).toBe(true);
+    });
+  });
+
   describe('passing props', () => {
     describe('SubHeader props', () => {
-      it('passes flexible SubHeaderText down to SubHeader', () => {
-        expect(outputView.find('SubHeader').prop('subHeaderText')).toBe(
+      it('passes flexible SubHeaderText down to main-subheader', () => {
+        expect(outputView.find('#main-subheader').prop('subHeaderText')).toBe(
           'So, the world thinks...'
         );
+      });
+
+      it('passes flexible SubHeaderText down to positiveTweet subheader', () => {
+        expect(
+          outputView.find('#positiveTweet-subheader').prop('subHeaderText')
+        ).toBe('Most Positive Tweet');
+      });
+
+      it('passes flexible SubHeaderText down to negativeTweet subheader', () => {
+        expect(
+          outputView.find('#negativeTweet-subheader').prop('subHeaderText')
+        ).toBe('Most Negative Tweet');
       });
     });
 
     describe('Sentiment props', () => {
       it('passes sentiment down to Sentiment', () => {
-        expect(outputView.find('Sentiment').prop('sentiment')).toBe('negative');
+        expect(outputView.find('Sentiment').prop('average_sentiment')).toBe(
+          'negative'
+        );
       });
     });
 

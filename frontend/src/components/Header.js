@@ -1,8 +1,8 @@
 import React from 'react';
-import StyledHeader from './styled_components/Header';
+import logo from '../logo.png';
 
 const Header = () => {
-  return <StyledHeader>SentiMind</StyledHeader>;
+  return <img alt="Sentimind logo" src={logo} />;
 };
 
 export default Header;
