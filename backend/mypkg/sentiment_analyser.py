@@ -1,8 +1,8 @@
 from .tweet_parser import TweetParser
 from .twitter_req import *
 from .polarity import *
-import nltk
-from nltk.corpus import stopwords
+# import nltk
+# from nltk.corpus import stopwords
 from collections import Counter
 import json
 
@@ -55,7 +55,7 @@ class SentimentAnalyser:
       for tweet in tweets:
         combined_words = combined_words + ' ' + tweet.text
       combined_words_array = combined_words.split(' ')
-      self.filter_stop_words(combined_words_array)
+      # self.filter_stop_words(combined_words_array)
       return Counter(combined_words_array)
 
     def filter_stop_words(self, combined_words_array):

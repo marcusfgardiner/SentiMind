@@ -87,5 +87,19 @@ describe('OutputView', () => {
         );
       });
     });
+
+    describe('formatTopWords()', () => {
+      it('correctly formats json data', () => {
+        const json_data = { hello: 4, goodbye: 3, again: 2 };
+        const formatted_data = [
+          { text: 'hello', value: 4 },
+          { text: 'goodbye', value: 3 },
+          { text: 'again', value: 2 }
+        ];
+        expect(outputView.instance().formatTopWords(json_data)).toEqual(
+          formatted_data
+        );
+      });
+    });
   });
 });

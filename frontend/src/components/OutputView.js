@@ -43,6 +43,19 @@ class OutputView extends Component {
       </div>
     );
   };
+
+  formatTopWords = (words = this.props.top_words) => {
+    let words_arr = [];
+    for (var key in words) {
+      if (words.hasOwnProperty(key)) {
+        if (words[key] > 1) {
+          words_arr.push({ text: `${key}`, value: words[key] * 100 });
+        }
+      }
+    }
+    console.log(words_arr);
+    return words_arr;
+  };
   render() {
     const fontSizeMapper = word => Math.log2(word.value) * 5;
     const rotate = word => word.value % 360;
@@ -99,13 +112,7 @@ class OutputView extends Component {
             </div>
             <div id="word-cloud">
               <WordCloud
-                data={[
-                  { text: 'Hey', value: 1000 },
-                  { text: 'lol', value: 200 },
-                  { text: 'first impression', value: 800 },
-                  { text: 'very cool', value: 1000000 },
-                  { text: 'duck', value: 10 }
-                ]}
+                data={this.formatTopWords()}
                 fontSizeMapper={fontSizeMapper}
                 rotate={rotate}
               />
