@@ -77,7 +77,7 @@ ShallowWrapper {
                                                               "sentiment": "Positive",
                                                             },
                                                             Object {
-                                                              "fill": "#FFFCEF",
+                                                              "fill": "#bfb7b7",
                                                               "percentage": 0,
                                                               "sentiment": "Neutral",
                                                             },
@@ -645,7 +645,7 @@ ShallowWrapper {
                     className="tweets-container"
           >
                     <div
-                              id="first-tweet"
+                              id="first-tweet "
                     >
                               <div>
                                         <SubHeader
@@ -653,13 +653,14 @@ ShallowWrapper {
                                                   subHeaderText="Most Positive Tweet"
                                         />
                                         <TwitterTweetEmbed
+                                                  className="twitter-tweet tw-align-center"
                                                   id="positiveTweet"
                                                   tweetId="102389292"
                                         />
                               </div>
                     </div>
                     <div
-                              id="second-tweet"
+                              id="second-tweet "
                     >
                               <div>
                                         <SubHeader
@@ -667,6 +668,7 @@ ShallowWrapper {
                                                   subHeaderText="Most Negative Tweet"
                                         />
                                         <TwitterTweetEmbed
+                                                  className="twitter-tweet tw-align-center"
                                                   id="negativeTweet"
                                                   tweetId="02392039420"
                                         />
@@ -729,7 +731,7 @@ ShallowWrapper {
                                                                         "sentiment": "Positive",
                                                                       },
                                                                       Object {
-                                                                        "fill": "#FFFCEF",
+                                                                        "fill": "#bfb7b7",
                                                                         "percentage": 0,
                                                                         "sentiment": "Neutral",
                                                                       },
@@ -1297,7 +1299,7 @@ ShallowWrapper {
               className="tweets-container"
 >
               <div
-                            id="first-tweet"
+                            id="first-tweet "
               >
                             <div>
                                           <SubHeader
@@ -1305,13 +1307,14 @@ ShallowWrapper {
                                                         subHeaderText="Most Positive Tweet"
                                           />
                                           <TwitterTweetEmbed
+                                                        className="twitter-tweet tw-align-center"
                                                         id="positiveTweet"
                                                         tweetId="102389292"
                                           />
                             </div>
               </div>
               <div
-                            id="second-tweet"
+                            id="second-tweet "
               >
                             <div>
                                           <SubHeader
@@ -1319,6 +1322,7 @@ ShallowWrapper {
                                                         subHeaderText="Most Negative Tweet"
                                           />
                                           <TwitterTweetEmbed
+                                                        className="twitter-tweet tw-align-center"
                                                         id="negativeTweet"
                                                         tweetId="02392039420"
                                           />
@@ -1410,7 +1414,7 @@ ShallowWrapper {
                                                                           "sentiment": "Positive",
                                                                         },
                                                                         Object {
-                                                                          "fill": "#FFFCEF",
+                                                                          "fill": "#bfb7b7",
                                                                           "percentage": 0,
                                                                           "sentiment": "Neutral",
                                                                         },
@@ -2006,7 +2010,7 @@ ShallowWrapper {
                                                               "sentiment": "Positive",
                                                             },
                                                             Object {
-                                                              "fill": "#FFFCEF",
+                                                              "fill": "#bfb7b7",
                                                               "percentage": 0,
                                                               "sentiment": "Neutral",
                                                             },
@@ -2556,7 +2560,7 @@ ShallowWrapper {
                         "sentiment": "Positive",
                       },
                       Object {
-                        "fill": "#FFFCEF",
+                        "fill": "#bfb7b7",
                         "percentage": 0,
                         "sentiment": "Neutral",
                       },
@@ -3168,7 +3172,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <div
-                  id="first-tweet"
+                  id="first-tweet "
 >
                   <div>
                                     <SubHeader
@@ -3176,13 +3180,14 @@ ShallowWrapper {
                                                       subHeaderText="Most Positive Tweet"
                                     />
                                     <TwitterTweetEmbed
+                                                      className="twitter-tweet tw-align-center"
                                                       id="positiveTweet"
                                                       tweetId="102389292"
                                     />
                   </div>
 </div>,
                 <div
-                  id="second-tweet"
+                  id="second-tweet "
 >
                   <div>
                                     <SubHeader
@@ -3190,6 +3195,7 @@ ShallowWrapper {
                                                       subHeaderText="Most Negative Tweet"
                                     />
                                     <TwitterTweetEmbed
+                                                      className="twitter-tweet tw-align-center"
                                                       id="negativeTweet"
                                                       tweetId="02392039420"
                                     />
@@ -3211,11 +3217,12 @@ ShallowWrapper {
                                         subHeaderText="Most Positive Tweet"
                     />
                     <TwitterTweetEmbed
+                                        className="twitter-tweet tw-align-center"
                                         id="positiveTweet"
                                         tweetId="102389292"
                     />
 </div>,
-                  "id": "first-tweet",
+                  "id": "first-tweet ",
                 },
                 "ref": null,
                 "rendered": Object {
@@ -3229,6 +3236,7 @@ ShallowWrapper {
                         subHeaderText="Most Positive Tweet"
 />,
                       <TwitterTweetEmbed
+                        className="twitter-tweet tw-align-center"
                         id="positiveTweet"
                         tweetId="102389292"
 />,
@@ -3253,6 +3261,7 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
+                        "className": "twitter-tweet tw-align-center",
                         "id": "positiveTweet",
                         "tweetId": "102389292",
                       },
@@ -3276,11 +3285,12 @@ ShallowWrapper {
                                         subHeaderText="Most Negative Tweet"
                     />
                     <TwitterTweetEmbed
+                                        className="twitter-tweet tw-align-center"
                                         id="negativeTweet"
                                         tweetId="02392039420"
                     />
 </div>,
-                  "id": "second-tweet",
+                  "id": "second-tweet ",
                 },
                 "ref": null,
                 "rendered": Object {
@@ -3294,6 +3304,7 @@ ShallowWrapper {
                         subHeaderText="Most Negative Tweet"
 />,
                       <TwitterTweetEmbed
+                        className="twitter-tweet tw-align-center"
                         id="negativeTweet"
                         tweetId="02392039420"
 />,
@@ -3318,6 +3329,7 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
+                        "className": "twitter-tweet tw-align-center",
                         "id": "negativeTweet",
                         "tweetId": "02392039420",
                       },
@@ -3410,7 +3422,7 @@ ShallowWrapper {
                                                                           "sentiment": "Positive",
                                                                         },
                                                                         Object {
-                                                                          "fill": "#FFFCEF",
+                                                                          "fill": "#bfb7b7",
                                                                           "percentage": 0,
                                                                           "sentiment": "Neutral",
                                                                         },
@@ -3978,7 +3990,7 @@ ShallowWrapper {
                         className="tweets-container"
             >
                         <div
-                                    id="first-tweet"
+                                    id="first-tweet "
                         >
                                     <div>
                                                 <SubHeader
@@ -3986,13 +3998,14 @@ ShallowWrapper {
                                                             subHeaderText="Most Positive Tweet"
                                                 />
                                                 <TwitterTweetEmbed
+                                                            className="twitter-tweet tw-align-center"
                                                             id="positiveTweet"
                                                             tweetId="102389292"
                                                 />
                                     </div>
                         </div>
                         <div
-                                    id="second-tweet"
+                                    id="second-tweet "
                         >
                                     <div>
                                                 <SubHeader
@@ -4000,6 +4013,7 @@ ShallowWrapper {
                                                             subHeaderText="Most Negative Tweet"
                                                 />
                                                 <TwitterTweetEmbed
+                                                            className="twitter-tweet tw-align-center"
                                                             id="negativeTweet"
                                                             tweetId="02392039420"
                                                 />
@@ -4062,7 +4076,7 @@ ShallowWrapper {
                                                                                   "sentiment": "Positive",
                                                                                 },
                                                                                 Object {
-                                                                                  "fill": "#FFFCEF",
+                                                                                  "fill": "#bfb7b7",
                                                                                   "percentage": 0,
                                                                                   "sentiment": "Neutral",
                                                                                 },
@@ -4630,7 +4644,7 @@ ShallowWrapper {
                 className="tweets-container"
 >
                 <div
-                                id="first-tweet"
+                                id="first-tweet "
                 >
                                 <div>
                                                 <SubHeader
@@ -4638,13 +4652,14 @@ ShallowWrapper {
                                                                 subHeaderText="Most Positive Tweet"
                                                 />
                                                 <TwitterTweetEmbed
+                                                                className="twitter-tweet tw-align-center"
                                                                 id="positiveTweet"
                                                                 tweetId="102389292"
                                                 />
                                 </div>
                 </div>
                 <div
-                                id="second-tweet"
+                                id="second-tweet "
                 >
                                 <div>
                                                 <SubHeader
@@ -4652,6 +4667,7 @@ ShallowWrapper {
                                                                 subHeaderText="Most Negative Tweet"
                                                 />
                                                 <TwitterTweetEmbed
+                                                                className="twitter-tweet tw-align-center"
                                                                 id="negativeTweet"
                                                                 tweetId="02392039420"
                                                 />
@@ -4743,7 +4759,7 @@ ShallowWrapper {
                                                                                   "sentiment": "Positive",
                                                                                 },
                                                                                 Object {
-                                                                                  "fill": "#FFFCEF",
+                                                                                  "fill": "#bfb7b7",
                                                                                   "percentage": 0,
                                                                                   "sentiment": "Neutral",
                                                                                 },
@@ -5339,7 +5355,7 @@ ShallowWrapper {
                                                                     "sentiment": "Positive",
                                                                   },
                                                                   Object {
-                                                                    "fill": "#FFFCEF",
+                                                                    "fill": "#bfb7b7",
                                                                     "percentage": 0,
                                                                     "sentiment": "Neutral",
                                                                   },
@@ -5889,7 +5905,7 @@ ShallowWrapper {
                           "sentiment": "Positive",
                         },
                         Object {
-                          "fill": "#FFFCEF",
+                          "fill": "#bfb7b7",
                           "percentage": 0,
                           "sentiment": "Neutral",
                         },
@@ -6501,7 +6517,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <div
-                    id="first-tweet"
+                    id="first-tweet "
 >
                     <div>
                                         <SubHeader
@@ -6509,13 +6525,14 @@ ShallowWrapper {
                                                             subHeaderText="Most Positive Tweet"
                                         />
                                         <TwitterTweetEmbed
+                                                            className="twitter-tweet tw-align-center"
                                                             id="positiveTweet"
                                                             tweetId="102389292"
                                         />
                     </div>
 </div>,
                   <div
-                    id="second-tweet"
+                    id="second-tweet "
 >
                     <div>
                                         <SubHeader
@@ -6523,6 +6540,7 @@ ShallowWrapper {
                                                             subHeaderText="Most Negative Tweet"
                                         />
                                         <TwitterTweetEmbed
+                                                            className="twitter-tweet tw-align-center"
                                                             id="negativeTweet"
                                                             tweetId="02392039420"
                                         />
@@ -6544,11 +6562,12 @@ ShallowWrapper {
                                             subHeaderText="Most Positive Tweet"
                       />
                       <TwitterTweetEmbed
+                                            className="twitter-tweet tw-align-center"
                                             id="positiveTweet"
                                             tweetId="102389292"
                       />
 </div>,
-                    "id": "first-tweet",
+                    "id": "first-tweet ",
                   },
                   "ref": null,
                   "rendered": Object {
@@ -6562,6 +6581,7 @@ ShallowWrapper {
                           subHeaderText="Most Positive Tweet"
 />,
                         <TwitterTweetEmbed
+                          className="twitter-tweet tw-align-center"
                           id="positiveTweet"
                           tweetId="102389292"
 />,
@@ -6586,6 +6606,7 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "class",
                         "props": Object {
+                          "className": "twitter-tweet tw-align-center",
                           "id": "positiveTweet",
                           "tweetId": "102389292",
                         },
@@ -6609,11 +6630,12 @@ ShallowWrapper {
                                             subHeaderText="Most Negative Tweet"
                       />
                       <TwitterTweetEmbed
+                                            className="twitter-tweet tw-align-center"
                                             id="negativeTweet"
                                             tweetId="02392039420"
                       />
 </div>,
-                    "id": "second-tweet",
+                    "id": "second-tweet ",
                   },
                   "ref": null,
                   "rendered": Object {
@@ -6627,6 +6649,7 @@ ShallowWrapper {
                           subHeaderText="Most Negative Tweet"
 />,
                         <TwitterTweetEmbed
+                          className="twitter-tweet tw-align-center"
                           id="negativeTweet"
                           tweetId="02392039420"
 />,
@@ -6651,6 +6674,7 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "class",
                         "props": Object {
+                          "className": "twitter-tweet tw-align-center",
                           "id": "negativeTweet",
                           "tweetId": "02392039420",
                         },

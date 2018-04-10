@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SubHeader from './SubHeader';
 import Sentiment from './Sentiment';
 import Button from './Button';
-import { VictoryBar, VictoryLabel, VictoryGroup } from 'victory';
+import { VictoryBar, VictoryLabel, VictoryChart } from 'victory';
 import WordCloud from 'react-d3-cloud';
 import { TwitterTweetEmbed } from 'react-twitter-embed';
 
@@ -85,17 +85,20 @@ class OutputView extends Component {
           </div>
           <div className="chart-container">
             <div id="bar-chart">
-              <VictoryBar
+              <VictoryChart
                 height={350}
-                domainPadding={20}
+                domainPadding={30}
                 animate={{ duration: 600, easing: 'bounce' }}
-                labels={d => d.y}
-                labelComponent={<VictoryLabel dy={30} />}
                 style={{ labels: { fill: 'black' } }}
-                data={data}
-                x="sentiment"
-                y="percentage"
-              />
+              >
+                <VictoryBar
+                  data={data}
+                  x="sentiment"
+                  y="percentage"
+                  labels={d => d.y}
+                  labelComponent={<VictoryLabel dy={30} />}
+                />
+              </VictoryChart>
             </div>
             <div id="word-cloud">
               <WordCloud
