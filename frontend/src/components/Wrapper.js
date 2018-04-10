@@ -34,7 +34,8 @@ class Wrapper extends Component {
     this.setState({
       average_sentiment: json.polarity,
       sentiments: json.sentiments,
-      top_tweets: json.top_tweets
+      top_tweets: json.top_tweets,
+      top_words: json.top_words
     });
   };
 
