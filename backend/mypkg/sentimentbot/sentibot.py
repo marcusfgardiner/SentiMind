@@ -11,7 +11,6 @@ from sklearn.svm import SVC, LinearSVC, NuSVC
 
 df = pd.DataFrame(pd.read_csv('shuffleddata.csv', encoding='latin-1'))
 
-
 sentiment_column = (df.iloc[:, [1]])
 sentiment_array = sentiment_column.values
 
@@ -79,11 +78,6 @@ classifier = nltk.NaiveBayesClassifier.train(training_set)
 print("MultinomialNB accuracy percent:",nltk.classify.accuracy(classifier, testing_set))
 
 # print (classifier.show_most_informative_features(32))
-
-test_tweet = 'fantastic awful butts'
-processed_test_tweet = extract_features(test_tweet.split())
-
-print (classifier.classify(processed_test_tweet))
 
 f = open('my_classifier.pickle', 'wb')
 pickle.dump(classifier, f)

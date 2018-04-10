@@ -48,7 +48,6 @@ def get_word_features(wordlist):
     word_features = wordlist.keys()
     return word_features
 
-
 word_features = get_word_features(get_words_in_tweets(tweets))
 
 # print(word_features)
@@ -62,9 +61,30 @@ def extract_features(text):
         features['contains(%s)' % word] = (word in text_words)
     return features
 
+def process_tweet_for_classification(tweet):
+    return extract_features(tweet.split())
 
+# ----------------------------------------------------------------------
+# Final classification methods
+# ----------------------------------------------------------------------
 
+def classify_tweet(tweet):
+    processed_tweet = process_tweet_for_classification(tweet)
+    return classifier.classify(processed_tweet)
 
-test_tweet = 'poor'
+def probability_positive(tweet):
+    processed_tweet = process_tweet_for_classification(tweet)
+    dist = classifier.prob_classify(processed_tweet)
+    for label in dist.samples():
+        if label == 4:
+            return dist.prob(label)
 
-print (classifier.classify(extract_features(test_tweet.split())))
+# ----------------------------------------------------------------------
+# Testing the ML model
+# ----------------------------------------------------------------------
+
+test_tweet = 'angry mean horrible awful'
+
+print(classify_tweet(test_tweet))
+
+print(probability_positive(test_tweet))
