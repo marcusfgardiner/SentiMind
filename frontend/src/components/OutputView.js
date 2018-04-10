@@ -23,6 +23,7 @@ class OutputView extends Component {
           />
           <TwitterTweetEmbed
             id="positiveTweet"
+            className="twitter-tweet tw-align-center"
             tweetId={this.props.top_tweets.positive}
           />
         </div>
@@ -41,6 +42,7 @@ class OutputView extends Component {
             subHeaderText="Most Negative Tweet"
           />
           <TwitterTweetEmbed
+            className="twitter-tweet tw-align-center"
             id="negativeTweet"
             tweetId={this.props.top_tweets.negative}
           />
@@ -60,7 +62,7 @@ class OutputView extends Component {
       {
         sentiment: 'Neutral',
         percentage: this.props.sentiments.neutral,
-        fill: '#FFFCEF'
+        fill: '#bfb7b7'
       },
       {
         sentiment: 'Negative',
@@ -81,7 +83,7 @@ class OutputView extends Component {
             />
             <Sentiment average_sentiment={this.props.average_sentiment} />
           </div>
-          <div className="bar-chart-container">
+          <div className="chart-container">
             <div id="bar-chart">
               <VictoryBar
                 height={350}
@@ -109,6 +111,10 @@ class OutputView extends Component {
               />
             </div>
           </div>
+          <div className="tweets-container">
+            <div id="first-tweet ">{this.firstTweet()}</div>
+            <div id="second-tweet ">{this.secondTweet()}</div>
+          </div>
 
           <Button
             buttonText="Choose another topic"
@@ -116,9 +122,6 @@ class OutputView extends Component {
           />
         </div>
         <br />
-        <div id="firstTweet">{this.firstTweet()}</div>
-
-        {this.secondTweet()}
       </div>
     );
   }
