@@ -129,6 +129,13 @@ describe('Wrapper', () => {
           wrapper.state('top_tweets')
         );
       });
+
+      it('passes top_words down to OutputView', () => {
+        wrapper.setState({ top_words });
+        expect(wrapper.find('OutputView').prop('top_words')).toBe(
+          wrapper.state('top_words')
+        );
+      });
     });
 
     describe('sentiment props', () => {
