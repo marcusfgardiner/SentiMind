@@ -5,6 +5,7 @@ import Button from './Button';
 import { VictoryBar, VictoryLabel, VictoryChart } from 'victory';
 import WordCloud from 'react-d3-cloud';
 import { TwitterTweetEmbed } from 'react-twitter-embed';
+import { RingLoader } from 'react-spinners';
 
 class OutputView extends Component {
   componentWillUnmount() {
@@ -12,43 +13,35 @@ class OutputView extends Component {
   }
 
   firstTweet = () => {
-    if (this.props.top_tweets === undefined) {
-      return <h4>loading tweets...</h4>;
-    } else {
-      return (
-        <div>
-          <SubHeader
-            id="positiveTweet-subheader"
-            subHeaderText="Most Positive Tweet"
-          />
-          <TwitterTweetEmbed
-            id="positiveTweet"
-            className="twitter-tweet tw-align-center"
-            tweetId={this.props.top_tweets.positive}
-          />
-        </div>
-      );
-    }
+    return (
+      <div>
+        <SubHeader
+          id="positiveTweet-subheader"
+          subHeaderText="Most Positive Tweet"
+        />
+        <TwitterTweetEmbed
+          id="positiveTweet"
+          className="twitter-tweet tw-align-center"
+          tweetId={this.props.top_tweets.positive}
+        />
+      </div>
+    );
   };
 
   secondTweet = () => {
-    if (this.props.top_tweets === undefined) {
-      return <h4>loading tweets...</h4>;
-    } else {
-      return (
-        <div>
-          <SubHeader
-            id="negativeTweet-subheader"
-            subHeaderText="Most Negative Tweet"
-          />
-          <TwitterTweetEmbed
-            className="twitter-tweet tw-align-center"
-            id="negativeTweet"
-            tweetId={this.props.top_tweets.negative}
-          />
-        </div>
-      );
-    }
+    return (
+      <div>
+        <SubHeader
+          id="negativeTweet-subheader"
+          subHeaderText="Most Negative Tweet"
+        />
+        <TwitterTweetEmbed
+          className="twitter-tweet tw-align-center"
+          id="negativeTweet"
+          tweetId={this.props.top_tweets.negative}
+        />
+      </div>
+    );
   };
   render() {
     const fontSizeMapper = word => Math.log2(word.value) * 5;
@@ -71,7 +64,11 @@ class OutputView extends Component {
       }
     ];
     if (this.props.top_tweets === undefined) {
-      return <h1>Loading...</h1>;
+      return (
+        <div id="loader">
+          <RingLoader color={'#123abc'} />
+        </div>
+      );
     }
     return (
       <div>

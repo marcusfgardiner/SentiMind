@@ -37,6 +37,13 @@ body {
   width: 80%;
 }
 
+#loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* #main-subheader {
   margin-bottom: 20px;
   padding-bottom: 50px;
