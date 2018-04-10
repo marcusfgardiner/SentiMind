@@ -53,7 +53,6 @@ word_features = get_word_features(get_words_in_tweets(tweets))
 
 # print(word_features)
 
-
 def extract_features(text):
     # this creates a unique immutable set of words from the one fed in document 'text'
     text_words = set(text)
@@ -66,6 +65,6 @@ def extract_features(text):
 
 
 
-test_tweet = 'jquery museum'
+test_tweet = 'poor'
 
 print (classifier.classify(extract_features(test_tweet.split())))

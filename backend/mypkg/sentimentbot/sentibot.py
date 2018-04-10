@@ -6,14 +6,14 @@ import sklearn as skl
 import pickle
 
 
-df = pd.DataFrame(pd.read_csv('testdata.csv'))
+df = pd.DataFrame(pd.read_csv('shuffleddata.csv', encoding='latin-1'))
 
 
-sentiment_column = (df.iloc[:, [0]])
+sentiment_column = (df.iloc[:, [1]])
 sentiment_array = sentiment_column.values
 
 
-text_column = (df.iloc[:, [5]])
+text_column = (df.iloc[:, [6]])
 text_array = text_column.values
 
 text = []
