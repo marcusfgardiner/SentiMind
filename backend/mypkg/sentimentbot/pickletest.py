@@ -5,6 +5,10 @@ import numpy
 import sklearn as skl
 import pickle
 
+f = open('my_classifier.pickle', 'rb')
+classifier = pickle.load(f)
+f.close
+
 
 df = pd.DataFrame(pd.read_csv('testdata.csv'))
 
@@ -60,20 +64,8 @@ def extract_features(text):
     return features
 
 
-# print (extract_features(['love','reading','incredibly']))
 
-training_set = nltk.classify.apply_features(extract_features, tweets)
-
-# print (training_set)
-
-classifier = nltk.NaiveBayesClassifier.train(training_set)
-
-# print (classifier.show_most_informative_features(32))
 
 test_tweet = 'jquery museum'
 
 print (classifier.classify(extract_features(test_tweet.split())))
-
-f = open('my_classifier.pickle', 'wb')
-pickle.dump(classifier, f)
-f.close()
