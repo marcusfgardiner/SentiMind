@@ -164,6 +164,10 @@ describe('Wrapper', () => {
     it('sets the top_tweets state to top_tweets response', () => {
       expect(wrapper.state('top_tweets')).toEqual(top_tweets);
     });
+
+    it('sets the top_words state to top_words response', () => {
+      expect(wrapper.state('top_words')).toEqual(top_words);
+    });
   });
 
   describe('handleSubmit()', () => {
