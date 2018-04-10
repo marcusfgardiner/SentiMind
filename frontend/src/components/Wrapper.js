@@ -12,7 +12,8 @@ class Wrapper extends Component {
       buttonClicked: false,
       average_sentiment: undefined,
       sentiments: { positive: 0, neutral: 0, negative: 0 },
-      top_tweets: undefined
+      top_tweets: undefined,
+      top_words: undefined
     };
   }
 

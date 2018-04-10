@@ -5,11 +5,13 @@ import Wrapper from '../../components/Wrapper';
 describe('Wrapper', () => {
   const sentiments = { positive: 3, neutral: 3, negative: 4 };
   const top_tweets = { positive: '124434343', negative: '12435532222' };
+  const top_words = { hello: 4, goodbye: 3, again: 2 };
   fetch.mockResponse(
     JSON.stringify({
       polarity: 'good',
       sentiments,
-      top_tweets
+      top_tweets,
+      top_words
     })
   );
   let wrapper = shallow(<Wrapper />);
@@ -77,6 +79,10 @@ describe('Wrapper', () => {
           positive: undefined,
           negative: undefined
         });
+      });
+
+      it('has a `top_words` state initialized as object', () => {
+        expect(wrapper.state('top_words')).toEqual(undefined);
       });
     });
   });
