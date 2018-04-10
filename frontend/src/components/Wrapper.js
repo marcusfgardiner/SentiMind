@@ -83,6 +83,7 @@ class Wrapper extends Component {
           average_sentiment={this.state.average_sentiment}
           sentiments={this.state.sentiments}
           top_tweets={this.state.top_tweets}
+          top_words={this.state.top_words}
         />
       )
     };
