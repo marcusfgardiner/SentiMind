@@ -11,7 +11,6 @@ class Wrapper extends Component {
       query: undefined,
       buttonClicked: false,
       average_sentiment: undefined,
-      positivity_percentage: 0,
       sentiments: { positive: 0, neutral: 0, negative: 0 },
       top_tweets: undefined
     };
@@ -33,7 +32,6 @@ class Wrapper extends Component {
     const json = await request.json();
     this.setState({
       average_sentiment: json.polarity,
-      positivity_percentage: json.positivity_percentage,
       sentiments: json.sentiments,
       top_tweets: json.top_tweets
     });
@@ -45,7 +43,6 @@ class Wrapper extends Component {
       buttonClicked: !buttonClicked,
       query: undefined,
       average_sentiment: undefined,
-      positivity_percentage: 0,
       sentiments: { positive: 0, neutral: 0, negative: 0 },
       top_tweets: undefined
     });
@@ -82,7 +79,6 @@ class Wrapper extends Component {
           handleSubmit={this.handleSubmit}
           average_sentiment={this.state.average_sentiment}
           sentiments={this.state.sentiments}
-          positivity_percentage={this.state.positivity_percentage}
           top_tweets={this.state.top_tweets}
         />
       )

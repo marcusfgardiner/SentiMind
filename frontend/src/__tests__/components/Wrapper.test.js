@@ -8,7 +8,6 @@ describe('Wrapper', () => {
   fetch.mockResponse(
     JSON.stringify({
       polarity: 'good',
-      positivity_percentage: 30,
       sentiments,
       top_tweets
     })
@@ -118,13 +117,6 @@ describe('Wrapper', () => {
         );
       });
 
-      it('passes positivity_percentage down to OutputView', () => {
-        wrapper.setState({ sentiments });
-        expect(wrapper.find('OutputView').prop('positivity_percentage')).toBe(
-          wrapper.state('positivity_percentage')
-        );
-      });
-
       it('passes top_tweets down to OutputView', () => {
         wrapper.setState({ sentiments });
         expect(wrapper.find('OutputView').prop('top_tweets')).toBe(
@@ -157,10 +149,6 @@ describe('Wrapper', () => {
     });
     it('sets the sentiment state to the response received', () => {
       expect(wrapper.state('average_sentiment')).toEqual('good');
-    });
-
-    it('sets the positivity_percentage state to the response received', () => {
-      expect(wrapper.state('positivity_percentage')).toEqual(30);
     });
 
     it('sets the sentiments state to sentiments response', () => {
@@ -211,10 +199,6 @@ describe('Wrapper', () => {
 
         it('changes `top_tweets` to 0', () => {
           expect(wrapper.state('top_tweets')).toEqual(undefined);
-        });
-
-        it('changes `positivity_percentage` to 0', () => {
-          expect(wrapper.state('positivity_percentage')).toBe(0);
         });
       });
     });
