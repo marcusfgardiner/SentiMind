@@ -2,18 +2,11 @@ import React, { Component } from 'react';
 import SubHeader from './SubHeader';
 import Sentiment from './Sentiment';
 import Button from './Button';
-import { VictoryBar, VictoryChart, VictoryAxis } from 'victory';
+import { VictoryBar, VictoryLabel, VictoryGroup } from 'victory';
+import WordCloud from 'react-d3-cloud';
 import { TwitterTweetEmbed } from 'react-twitter-embed';
 
 class OutputView extends Component {
-  // <PieChart
-  //   labels
-  //   data={[
-  //     { key: 'Positive', value: this.props.positivity_percentage },
-  //     { key: 'Negative', value: 100 - this.props.positivity_percentage }
-  //   ]}
-  // />
-
   componentWillUnmount() {
     window.clearInterval(this.setStateInterval);
   }
@@ -56,6 +49,8 @@ class OutputView extends Component {
     }
   };
   render() {
+    const fontSizeMapper = word => Math.log2(word.value) * 5;
+    const rotate = word => word.value % 360;
     const data = [
       {
         sentiment: 'Positive',
@@ -77,49 +72,42 @@ class OutputView extends Component {
       return <h1>Loading...</h1>;
     }
     return (
-      <div className="container">
-        {this.firstTweet()}
-        <div>
-          <SubHeader
-            id="main-subheader"
-            subHeaderText="So, the world thinks..."
-          />
-          <Sentiment average_sentiment={this.props.average_sentiment} />
-          <div id="bar-chart">
-            <VictoryChart
-              domainPadding={20}
-              width={350}
-              height={250}
-              animate={{ duration: 600, easing: 'bounce' }}
-            >
-              <VictoryAxis
-                style={{
-                  axis: { stroke: '#E0F2F1' },
-                  axisLabel: { fontSize: 16, fill: '#E0F2F1' },
-                  ticks: { stroke: '#ccc' },
-                  tickLabels: {
-                    fontSize: 14,
-                    fill: '#E0F2F1',
-                    fontWeight: 'bold'
-                  },
-                  grid: { stroke: '#B3E5FC', strokeWidth: 0.25 }
-                }}
-                dependentAxis
+      <div>
+        <div className="container">
+          <div className="top-card">
+            <SubHeader
+              id="main-subheader"
+              subHeaderText="So, the world thinks..."
+            />
+            <Sentiment average_sentiment={this.props.average_sentiment} />
+          </div>
+          <div className="bar-chart-container">
+            <div id="bar-chart">
+              <VictoryBar
+                height={350}
+                domainPadding={20}
+                animate={{ duration: 600, easing: 'bounce' }}
+                labels={d => d.y}
+                labelComponent={<VictoryLabel dy={30} />}
+                style={{ labels: { fill: 'black' } }}
+                data={data}
+                x="sentiment"
+                y="percentage"
               />
-              <VictoryAxis
-                style={{
-                  axis: { stroke: '#E0F2F1' },
-                  axisLabel: { fontSize: 16 },
-                  ticks: { stroke: '#ccc' },
-                  tickLabels: {
-                    fontSize: 10,
-                    fill: '#E0F2F1',
-                    fontWeight: 'bold'
-                  }
-                }}
+            </div>
+            <div id="word-cloud">
+              <WordCloud
+                data={[
+                  { text: 'Hey', value: 1000 },
+                  { text: 'lol', value: 200 },
+                  { text: 'first impression', value: 800 },
+                  { text: 'very cool', value: 1000000 },
+                  { text: 'duck', value: 10 }
+                ]}
+                fontSizeMapper={fontSizeMapper}
+                rotate={rotate}
               />
-              <VictoryBar data={data} x="sentiment" y="percentage" />
-            </VictoryChart>
+            </div>
           </div>
 
           <Button
@@ -127,6 +115,9 @@ class OutputView extends Component {
             handleSubmit={this.props.handleSubmit}
           />
         </div>
+        <br />
+        <div id="firstTweet">{this.firstTweet()}</div>
+
         {this.secondTweet()}
       </div>
     );

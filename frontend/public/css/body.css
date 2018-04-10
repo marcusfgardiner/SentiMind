@@ -2,17 +2,30 @@ body {
   font-family: 'Roboto', sans-serif;
   text-align: center;
   color: #f2e8e8;
-  height: 100%;
   background: #2193b0;
   background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
   background: linear-gradient(to right, #6dd5ed, #2193b0);
   background-repeat: no-repeat;
+  background-position: center;
+
+  background-size: cover;
   background-attachment: fixed;
+  margin: 0;
 }
 
-.container {
+.top-card {
+  padding-bottom: 80px;
+}
+
+.bar-chart-container {
   display: grid;
-  grid-template-columns: 25% 50% 25%;
+  grid-template-columns: 50% 50%;
+  border: solid #e0dbdb 2px;
+  background-color: #e7e7e7;
+}
+
+#bar-chart {
+  border: 1px solid #dbd2d2;
 }
 
 /* #main-subheader {
