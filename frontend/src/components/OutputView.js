@@ -11,7 +11,7 @@ class OutputView extends Component {
       return <h4>loading tweets...</h4>;
     } else {
       return (
-        <div className="item item-1">
+        <div>
           <SubHeader
             id="positiveTweet-subheader"
             subHeaderText="Most Positive Tweet"
@@ -30,7 +30,7 @@ class OutputView extends Component {
       return <h4>loading tweets...</h4>;
     } else {
       return (
-        <div className="item item-3">
+        <div>
           <SubHeader
             id="negativeTweet-subheader"
             subHeaderText="Most Negative Tweet"
@@ -47,14 +47,13 @@ class OutputView extends Component {
     return (
       <div className="container">
         {this.firstTweet()}
-        <div className="item item-2">
+        <div>
           <SubHeader
             id="main-subheader"
             subHeaderText="So, the world thinks..."
           />
           <Sentiment average_sentiment={this.props.average_sentiment} />
           <BarChart
-            axes
             height={350}
             width={650}
             data={[
@@ -75,6 +74,11 @@ class OutputView extends Component {
               }
             ]}
           />
+          <div className="inner-grid">
+            <p>{this.props.sentiments.positive}</p>
+            <p>{this.props.sentiments.neutral}</p>
+            <p>{this.props.sentiments.negative}</p>
+          </div>
           <PieChart
             labels
             data={[

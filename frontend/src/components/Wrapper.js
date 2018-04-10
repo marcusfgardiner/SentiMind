@@ -47,7 +47,7 @@ class Wrapper extends Component {
       average_sentiment: undefined,
       positivity_percentage: 0,
       sentiments: { positive: 0, neutral: 0, negative: 0 },
-      top_tweets: { positive: '0', negative: '0' }
+      top_tweets: undefined
     });
   };
 

@@ -14,3 +14,18 @@ body {
   display: grid;
   grid-template-columns: 25% 50% 25%;
 }
+
+.inner-grid {
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  padding-bottom: 20px;
+}
+
+/* #main-subheader {
+  margin-bottom: 20px;
+  padding-bottom: 50px;
+} */
+
+/* #landing-subheader {
+  margin-top: -100px;
+} */

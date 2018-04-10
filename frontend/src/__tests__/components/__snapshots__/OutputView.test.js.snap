@@ -34,14 +34,6 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <SubHeader
-          id="main-subheader"
-          subHeaderText="So, the world thinks..."
-/>,
-        <Sentiment
-          average_sentiment="negative"
-/>,
-        <br />,
         <div>
           <SubHeader
                     id="positiveTweet-subheader"
@@ -51,7 +43,92 @@ ShallowWrapper {
                     id="positiveTweet"
                     tweetId="102389292"
           />
-          <br />
+</div>,
+        <div>
+          <SubHeader
+                    id="main-subheader"
+                    subHeaderText="So, the world thinks..."
+          />
+          <Sentiment
+                    average_sentiment="negative"
+          />
+          <BarChart
+                    axes={false}
+                    axisLabels={
+                              Object {
+                                        "x": "",
+                                        "y": "",
+                                      }
+                    }
+                    barWidth={10}
+                    clickHandler={[Function]}
+                    data={
+                              Array [
+                                        Object {
+                                          "color": "green",
+                                          "x": "Positive",
+                                          "y": 0,
+                                        },
+                                        Object {
+                                          "color": "yellow",
+                                          "x": "Neutral",
+                                          "y": 0,
+                                        },
+                                        Object {
+                                          "color": "red",
+                                          "x": "Negative",
+                                          "y": 0,
+                                        },
+                                      ]
+                    }
+                    datePattern="%d-%b-%y"
+                    height={350}
+                    interpolate="linear"
+                    lineData={Array []}
+                    mouseMoveHandler={[Function]}
+                    mouseOutHandler={[Function]}
+                    mouseOverHandler={[Function]}
+                    width={650}
+                    xType="text"
+                    y2Type="linear"
+                    yType="linear"
+          />
+          <div
+                    className="inner-grid"
+          >
+                    <p />
+                    <p />
+                    <p />
+          </div>
+          <PieChart
+                    clickHandler={[Function]}
+                    data={
+                              Array [
+                                        Object {
+                                          "key": "Positive",
+                                          "value": undefined,
+                                        },
+                                        Object {
+                                          "key": "Negative",
+                                          "value": NaN,
+                                        },
+                                      ]
+                    }
+                    innerHoleSize={0}
+                    labels={true}
+                    mouseMoveHandler={[Function]}
+                    mouseOutHandler={[Function]}
+                    mouseOverHandler={[Function]}
+                    padding={2}
+                    size={400}
+                    styles={Object {}}
+          />
+          <Button
+                    buttonText="Choose another topic"
+                    handleSubmit={[Function]}
+          />
+</div>,
+        <div>
           <SubHeader
                     id="negativeTweet-subheader"
                     subHeaderText="Most Negative Tweet"
@@ -61,110 +138,11 @@ ShallowWrapper {
                     tweetId="02392039420"
           />
 </div>,
-        <BarChart
-          axes={true}
-          axisLabels={
-                    Object {
-                              "x": "",
-                              "y": "",
-                            }
-          }
-          barWidth={10}
-          clickHandler={[Function]}
-          data={
-                    Array [
-                              Object {
-                                "color": "green",
-                                "x": "Positive",
-                                "y": 0,
-                              },
-                              Object {
-                                "color": "yellow",
-                                "x": "Neutral",
-                                "y": 0,
-                              },
-                              Object {
-                                "color": "red",
-                                "x": "Negative",
-                                "y": 0,
-                              },
-                            ]
-          }
-          datePattern="%d-%b-%y"
-          height={350}
-          interpolate="linear"
-          lineData={Array []}
-          mouseMoveHandler={[Function]}
-          mouseOutHandler={[Function]}
-          mouseOverHandler={[Function]}
-          width={650}
-          xType="text"
-          y2Type="linear"
-          yType="linear"
-/>,
-        <PieChart
-          clickHandler={[Function]}
-          data={
-                    Array [
-                              Object {
-                                "key": "Positive",
-                                "value": undefined,
-                              },
-                              Object {
-                                "key": "Negative",
-                                "value": NaN,
-                              },
-                            ]
-          }
-          innerHoleSize={0}
-          labels={true}
-          mouseMoveHandler={[Function]}
-          mouseOutHandler={[Function]}
-          mouseOverHandler={[Function]}
-          padding={2}
-          size={400}
-          styles={Object {}}
-/>,
-        <Button
-          buttonText="Choose another topic"
-          handleSubmit={[Function]}
-/>,
       ],
+      "className": "container",
     },
     "ref": null,
     "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "id": "main-subheader",
-          "subHeaderText": "So, the world thinks...",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "average_sentiment": "negative",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": "br",
-      },
       Object {
         "instance": null,
         "key": undefined,
@@ -178,15 +156,6 @@ ShallowWrapper {
             <TwitterTweetEmbed
               id="positiveTweet"
               tweetId="102389292"
-/>,
-            <br />,
-            <SubHeader
-              id="negativeTweet-subheader"
-              subHeaderText="Most Negative Tweet"
-/>,
-            <TwitterTweetEmbed
-              id="negativeTweet"
-              tweetId="02392039420"
 />,
           ],
         },
@@ -216,15 +185,281 @@ ShallowWrapper {
             "rendered": null,
             "type": [Function],
           },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <SubHeader
+              id="main-subheader"
+              subHeaderText="So, the world thinks..."
+/>,
+            <Sentiment
+              average_sentiment="negative"
+/>,
+            <BarChart
+              axes={false}
+              axisLabels={
+                            Object {
+                                          "x": "",
+                                          "y": "",
+                                        }
+              }
+              barWidth={10}
+              clickHandler={[Function]}
+              data={
+                            Array [
+                                          Object {
+                                            "color": "green",
+                                            "x": "Positive",
+                                            "y": 0,
+                                          },
+                                          Object {
+                                            "color": "yellow",
+                                            "x": "Neutral",
+                                            "y": 0,
+                                          },
+                                          Object {
+                                            "color": "red",
+                                            "x": "Negative",
+                                            "y": 0,
+                                          },
+                                        ]
+              }
+              datePattern="%d-%b-%y"
+              height={350}
+              interpolate="linear"
+              lineData={Array []}
+              mouseMoveHandler={[Function]}
+              mouseOutHandler={[Function]}
+              mouseOverHandler={[Function]}
+              width={650}
+              xType="text"
+              y2Type="linear"
+              yType="linear"
+/>,
+            <div
+              className="inner-grid"
+>
+              <p />
+              <p />
+              <p />
+</div>,
+            <PieChart
+              clickHandler={[Function]}
+              data={
+                            Array [
+                                          Object {
+                                            "key": "Positive",
+                                            "value": undefined,
+                                          },
+                                          Object {
+                                            "key": "Negative",
+                                            "value": NaN,
+                                          },
+                                        ]
+              }
+              innerHoleSize={0}
+              labels={true}
+              mouseMoveHandler={[Function]}
+              mouseOutHandler={[Function]}
+              mouseOverHandler={[Function]}
+              padding={2}
+              size={400}
+              styles={Object {}}
+/>,
+            <Button
+              buttonText="Choose another topic"
+              handleSubmit={[Function]}
+/>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "id": "main-subheader",
+              "subHeaderText": "So, the world thinks...",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "average_sentiment": "negative",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "axes": false,
+              "axisLabels": Object {
+                "x": "",
+                "y": "",
+              },
+              "barWidth": 10,
+              "clickHandler": [Function],
+              "data": Array [
+                Object {
+                  "color": "green",
+                  "x": "Positive",
+                  "y": 0,
+                },
+                Object {
+                  "color": "yellow",
+                  "x": "Neutral",
+                  "y": 0,
+                },
+                Object {
+                  "color": "red",
+                  "x": "Negative",
+                  "y": 0,
+                },
+              ],
+              "datePattern": "%d-%b-%y",
+              "height": 350,
+              "interpolate": "linear",
+              "lineData": Array [],
+              "mouseMoveHandler": [Function],
+              "mouseOutHandler": [Function],
+              "mouseOverHandler": [Function],
+              "width": 650,
+              "xType": "text",
+              "y2Type": "linear",
+              "yType": "linear",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
-            "props": Object {},
+            "props": Object {
+              "children": Array [
+                <p />,
+                <p />,
+                <p />,
+              ],
+              "className": "inner-grid",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 0,
+                },
+                "ref": null,
+                "rendered": 0,
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 0,
+                },
+                "ref": null,
+                "rendered": 0,
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 0,
+                },
+                "ref": null,
+                "rendered": 0,
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "clickHandler": [Function],
+              "data": Array [
+                Object {
+                  "key": "Positive",
+                  "value": undefined,
+                },
+                Object {
+                  "key": "Negative",
+                  "value": NaN,
+                },
+              ],
+              "innerHoleSize": 0,
+              "labels": true,
+              "mouseMoveHandler": [Function],
+              "mouseOutHandler": [Function],
+              "mouseOverHandler": [Function],
+              "padding": 2,
+              "size": 400,
+              "styles": Object {},
+            },
             "ref": null,
             "rendered": null,
-            "type": "br",
+            "type": [Function],
           },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "buttonText": "Choose another topic",
+              "handleSubmit": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <SubHeader
+              id="negativeTweet-subheader"
+              subHeaderText="Most Negative Tweet"
+/>,
+            <TwitterTweetEmbed
+              id="negativeTweet"
+              tweetId="02392039420"
+/>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
           Object {
             "instance": null,
             "key": undefined,
@@ -252,92 +487,6 @@ ShallowWrapper {
         ],
         "type": "div",
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "axes": true,
-          "axisLabels": Object {
-            "x": "",
-            "y": "",
-          },
-          "barWidth": 10,
-          "clickHandler": [Function],
-          "data": Array [
-            Object {
-              "color": "green",
-              "x": "Positive",
-              "y": 0,
-            },
-            Object {
-              "color": "yellow",
-              "x": "Neutral",
-              "y": 0,
-            },
-            Object {
-              "color": "red",
-              "x": "Negative",
-              "y": 0,
-            },
-          ],
-          "datePattern": "%d-%b-%y",
-          "height": 350,
-          "interpolate": "linear",
-          "lineData": Array [],
-          "mouseMoveHandler": [Function],
-          "mouseOutHandler": [Function],
-          "mouseOverHandler": [Function],
-          "width": 650,
-          "xType": "text",
-          "y2Type": "linear",
-          "yType": "linear",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "clickHandler": [Function],
-          "data": Array [
-            Object {
-              "key": "Positive",
-              "value": undefined,
-            },
-            Object {
-              "key": "Negative",
-              "value": NaN,
-            },
-          ],
-          "innerHoleSize": 0,
-          "labels": true,
-          "mouseMoveHandler": [Function],
-          "mouseOutHandler": [Function],
-          "mouseOverHandler": [Function],
-          "padding": 2,
-          "size": 400,
-          "styles": Object {},
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "buttonText": "Choose another topic",
-          "handleSubmit": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
     ],
     "type": "div",
   },
@@ -348,14 +497,6 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <SubHeader
-            id="main-subheader"
-            subHeaderText="So, the world thinks..."
-/>,
-          <Sentiment
-            average_sentiment="negative"
-/>,
-          <br />,
           <div>
             <SubHeader
                         id="positiveTweet-subheader"
@@ -365,7 +506,92 @@ ShallowWrapper {
                         id="positiveTweet"
                         tweetId="102389292"
             />
-            <br />
+</div>,
+          <div>
+            <SubHeader
+                        id="main-subheader"
+                        subHeaderText="So, the world thinks..."
+            />
+            <Sentiment
+                        average_sentiment="negative"
+            />
+            <BarChart
+                        axes={false}
+                        axisLabels={
+                                    Object {
+                                                "x": "",
+                                                "y": "",
+                                              }
+                        }
+                        barWidth={10}
+                        clickHandler={[Function]}
+                        data={
+                                    Array [
+                                                Object {
+                                                  "color": "green",
+                                                  "x": "Positive",
+                                                  "y": 0,
+                                                },
+                                                Object {
+                                                  "color": "yellow",
+                                                  "x": "Neutral",
+                                                  "y": 0,
+                                                },
+                                                Object {
+                                                  "color": "red",
+                                                  "x": "Negative",
+                                                  "y": 0,
+                                                },
+                                              ]
+                        }
+                        datePattern="%d-%b-%y"
+                        height={350}
+                        interpolate="linear"
+                        lineData={Array []}
+                        mouseMoveHandler={[Function]}
+                        mouseOutHandler={[Function]}
+                        mouseOverHandler={[Function]}
+                        width={650}
+                        xType="text"
+                        y2Type="linear"
+                        yType="linear"
+            />
+            <div
+                        className="inner-grid"
+            >
+                        <p />
+                        <p />
+                        <p />
+            </div>
+            <PieChart
+                        clickHandler={[Function]}
+                        data={
+                                    Array [
+                                                Object {
+                                                  "key": "Positive",
+                                                  "value": undefined,
+                                                },
+                                                Object {
+                                                  "key": "Negative",
+                                                  "value": NaN,
+                                                },
+                                              ]
+                        }
+                        innerHoleSize={0}
+                        labels={true}
+                        mouseMoveHandler={[Function]}
+                        mouseOutHandler={[Function]}
+                        mouseOverHandler={[Function]}
+                        padding={2}
+                        size={400}
+                        styles={Object {}}
+            />
+            <Button
+                        buttonText="Choose another topic"
+                        handleSubmit={[Function]}
+            />
+</div>,
+          <div>
             <SubHeader
                         id="negativeTweet-subheader"
                         subHeaderText="Most Negative Tweet"
@@ -375,110 +601,11 @@ ShallowWrapper {
                         tweetId="02392039420"
             />
 </div>,
-          <BarChart
-            axes={true}
-            axisLabels={
-                        Object {
-                                    "x": "",
-                                    "y": "",
-                                  }
-            }
-            barWidth={10}
-            clickHandler={[Function]}
-            data={
-                        Array [
-                                    Object {
-                                      "color": "green",
-                                      "x": "Positive",
-                                      "y": 0,
-                                    },
-                                    Object {
-                                      "color": "yellow",
-                                      "x": "Neutral",
-                                      "y": 0,
-                                    },
-                                    Object {
-                                      "color": "red",
-                                      "x": "Negative",
-                                      "y": 0,
-                                    },
-                                  ]
-            }
-            datePattern="%d-%b-%y"
-            height={350}
-            interpolate="linear"
-            lineData={Array []}
-            mouseMoveHandler={[Function]}
-            mouseOutHandler={[Function]}
-            mouseOverHandler={[Function]}
-            width={650}
-            xType="text"
-            y2Type="linear"
-            yType="linear"
-/>,
-          <PieChart
-            clickHandler={[Function]}
-            data={
-                        Array [
-                                    Object {
-                                      "key": "Positive",
-                                      "value": undefined,
-                                    },
-                                    Object {
-                                      "key": "Negative",
-                                      "value": NaN,
-                                    },
-                                  ]
-            }
-            innerHoleSize={0}
-            labels={true}
-            mouseMoveHandler={[Function]}
-            mouseOutHandler={[Function]}
-            mouseOverHandler={[Function]}
-            padding={2}
-            size={400}
-            styles={Object {}}
-/>,
-          <Button
-            buttonText="Choose another topic"
-            handleSubmit={[Function]}
-/>,
         ],
+        "className": "container",
       },
       "ref": null,
       "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "id": "main-subheader",
-            "subHeaderText": "So, the world thinks...",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "average_sentiment": "negative",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": "br",
-        },
         Object {
           "instance": null,
           "key": undefined,
@@ -492,15 +619,6 @@ ShallowWrapper {
               <TwitterTweetEmbed
                 id="positiveTweet"
                 tweetId="102389292"
-/>,
-              <br />,
-              <SubHeader
-                id="negativeTweet-subheader"
-                subHeaderText="Most Negative Tweet"
-/>,
-              <TwitterTweetEmbed
-                id="negativeTweet"
-                tweetId="02392039420"
 />,
             ],
           },
@@ -530,15 +648,281 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <SubHeader
+                id="main-subheader"
+                subHeaderText="So, the world thinks..."
+/>,
+              <Sentiment
+                average_sentiment="negative"
+/>,
+              <BarChart
+                axes={false}
+                axisLabels={
+                                Object {
+                                                "x": "",
+                                                "y": "",
+                                              }
+                }
+                barWidth={10}
+                clickHandler={[Function]}
+                data={
+                                Array [
+                                                Object {
+                                                  "color": "green",
+                                                  "x": "Positive",
+                                                  "y": 0,
+                                                },
+                                                Object {
+                                                  "color": "yellow",
+                                                  "x": "Neutral",
+                                                  "y": 0,
+                                                },
+                                                Object {
+                                                  "color": "red",
+                                                  "x": "Negative",
+                                                  "y": 0,
+                                                },
+                                              ]
+                }
+                datePattern="%d-%b-%y"
+                height={350}
+                interpolate="linear"
+                lineData={Array []}
+                mouseMoveHandler={[Function]}
+                mouseOutHandler={[Function]}
+                mouseOverHandler={[Function]}
+                width={650}
+                xType="text"
+                y2Type="linear"
+                yType="linear"
+/>,
+              <div
+                className="inner-grid"
+>
+                <p />
+                <p />
+                <p />
+</div>,
+              <PieChart
+                clickHandler={[Function]}
+                data={
+                                Array [
+                                                Object {
+                                                  "key": "Positive",
+                                                  "value": undefined,
+                                                },
+                                                Object {
+                                                  "key": "Negative",
+                                                  "value": NaN,
+                                                },
+                                              ]
+                }
+                innerHoleSize={0}
+                labels={true}
+                mouseMoveHandler={[Function]}
+                mouseOutHandler={[Function]}
+                mouseOverHandler={[Function]}
+                padding={2}
+                size={400}
+                styles={Object {}}
+/>,
+              <Button
+                buttonText="Choose another topic"
+                handleSubmit={[Function]}
+/>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "id": "main-subheader",
+                "subHeaderText": "So, the world thinks...",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "average_sentiment": "negative",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "axes": false,
+                "axisLabels": Object {
+                  "x": "",
+                  "y": "",
+                },
+                "barWidth": 10,
+                "clickHandler": [Function],
+                "data": Array [
+                  Object {
+                    "color": "green",
+                    "x": "Positive",
+                    "y": 0,
+                  },
+                  Object {
+                    "color": "yellow",
+                    "x": "Neutral",
+                    "y": 0,
+                  },
+                  Object {
+                    "color": "red",
+                    "x": "Negative",
+                    "y": 0,
+                  },
+                ],
+                "datePattern": "%d-%b-%y",
+                "height": 350,
+                "interpolate": "linear",
+                "lineData": Array [],
+                "mouseMoveHandler": [Function],
+                "mouseOutHandler": [Function],
+                "mouseOverHandler": [Function],
+                "width": 650,
+                "xType": "text",
+                "y2Type": "linear",
+                "yType": "linear",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
-              "props": Object {},
+              "props": Object {
+                "children": Array [
+                  <p />,
+                  <p />,
+                  <p />,
+                ],
+                "className": "inner-grid",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 0,
+                  },
+                  "ref": null,
+                  "rendered": 0,
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 0,
+                  },
+                  "ref": null,
+                  "rendered": 0,
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 0,
+                  },
+                  "ref": null,
+                  "rendered": 0,
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "clickHandler": [Function],
+                "data": Array [
+                  Object {
+                    "key": "Positive",
+                    "value": undefined,
+                  },
+                  Object {
+                    "key": "Negative",
+                    "value": NaN,
+                  },
+                ],
+                "innerHoleSize": 0,
+                "labels": true,
+                "mouseMoveHandler": [Function],
+                "mouseOutHandler": [Function],
+                "mouseOverHandler": [Function],
+                "padding": 2,
+                "size": 400,
+                "styles": Object {},
+              },
               "ref": null,
               "rendered": null,
-              "type": "br",
+              "type": [Function],
             },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "buttonText": "Choose another topic",
+                "handleSubmit": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <SubHeader
+                id="negativeTweet-subheader"
+                subHeaderText="Most Negative Tweet"
+/>,
+              <TwitterTweetEmbed
+                id="negativeTweet"
+                tweetId="02392039420"
+/>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
             Object {
               "instance": null,
               "key": undefined,
@@ -565,92 +949,6 @@ ShallowWrapper {
             },
           ],
           "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "axes": true,
-            "axisLabels": Object {
-              "x": "",
-              "y": "",
-            },
-            "barWidth": 10,
-            "clickHandler": [Function],
-            "data": Array [
-              Object {
-                "color": "green",
-                "x": "Positive",
-                "y": 0,
-              },
-              Object {
-                "color": "yellow",
-                "x": "Neutral",
-                "y": 0,
-              },
-              Object {
-                "color": "red",
-                "x": "Negative",
-                "y": 0,
-              },
-            ],
-            "datePattern": "%d-%b-%y",
-            "height": 350,
-            "interpolate": "linear",
-            "lineData": Array [],
-            "mouseMoveHandler": [Function],
-            "mouseOutHandler": [Function],
-            "mouseOverHandler": [Function],
-            "width": 650,
-            "xType": "text",
-            "y2Type": "linear",
-            "yType": "linear",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "clickHandler": [Function],
-            "data": Array [
-              Object {
-                "key": "Positive",
-                "value": undefined,
-              },
-              Object {
-                "key": "Negative",
-                "value": NaN,
-              },
-            ],
-            "innerHoleSize": 0,
-            "labels": true,
-            "mouseMoveHandler": [Function],
-            "mouseOutHandler": [Function],
-            "mouseOverHandler": [Function],
-            "padding": 2,
-            "size": 400,
-            "styles": Object {},
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "buttonText": "Choose another topic",
-            "handleSubmit": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
         },
       ],
       "type": "div",

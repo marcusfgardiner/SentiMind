@@ -22,6 +22,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <SubHeader
+          id="landing-subheader"
           subHeaderText="Type in a topic, find out what the twitter-verse thinks"
 />,
         <InputBox
@@ -42,6 +43,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "id": "landing-subheader",
           "subHeaderText": "Type in a topic, find out what the twitter-verse thinks",
         },
         "ref": null,
@@ -91,6 +93,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <SubHeader
+            id="landing-subheader"
             subHeaderText="Type in a topic, find out what the twitter-verse thinks"
 />,
           <InputBox
@@ -111,6 +114,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "id": "landing-subheader",
             "subHeaderText": "Type in a topic, find out what the twitter-verse thinks",
           },
           "ref": null,

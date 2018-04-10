@@ -210,10 +210,7 @@ describe('Wrapper', () => {
         });
 
         it('changes `top_tweets` to 0', () => {
-          expect(wrapper.state('top_tweets')).toEqual({
-            positive: '0',
-            negative: '0'
-          });
+          expect(wrapper.state('top_tweets')).toEqual(undefined);
         });
 
         it('changes `positivity_percentage` to 0', () => {
