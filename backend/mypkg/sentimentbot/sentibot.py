@@ -24,4 +24,20 @@ for words in text:
     tweet = (words, sentiment_array[count][0])
     count += 1
     tweets.append(tweet)
-print(tweets)
+# print(tweets)
+
+def get_words_in_tweets(tweets):
+    all_words = []
+    for (words, sentiment) in tweets:
+        all_words.extend(words)
+    return all_words
+# print (get_words_in_tweets(tweets))
+
+def get_word_features(wordlist):
+    wordlist = nltk.FreqDist(wordlist)
+    word_features = wordlist.keys()
+    return word_features
+
+word_features = get_word_features(get_words_in_tweets(tweets))
+
+print(word_features)
