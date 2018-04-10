@@ -9,7 +9,8 @@ from nltk.classify.scikitlearn import SklearnClassifier
 from sklearn.linear_model import LogisticRegression,SGDClassifier
 from sklearn.svm import SVC, LinearSVC, NuSVC
 
-df = pd.DataFrame(pd.read_csv('testdata.csv'))
+df = pd.DataFrame(pd.read_csv('shuffleddata.csv', encoding='latin-1'))
+
 
 sentiment_column = (df.iloc[:, [1]])
 sentiment_array = sentiment_column.values
@@ -92,34 +93,34 @@ f.close()
 # ------------------ ------------------ ------------------ ------------------ ------------------ ------------------
 
 # Other models
-
-print("Original Naive Bayes Algo accuracy percent:", (nltk.classify.accuracy(classifier, testing_set))*100)
-classifier.show_most_informative_features(15)
-
-MNB_classifier = SklearnClassifier(MultinomialNB())
-MNB_classifier.train(training_set)
-print("MultinomialNB accuracy percent:",nltk.classify.accuracy(MNB_classifier, testing_set))
-
-BNB_classifier = SklearnClassifier(BernoulliNB())
-BNB_classifier.train(training_set)
-print("BernoulliNB accuracy percent:",nltk.classify.accuracy(BNB_classifier, testing_set))
-
-LogisticRegression_classifier = SklearnClassifier(LogisticRegression())
-LogisticRegression_classifier.train(training_set)
-print("LogisticRegression_classifier accuracy percent:", (nltk.classify.accuracy(LogisticRegression_classifier, testing_set))*100)
-
-SGDClassifier_classifier = SklearnClassifier(SGDClassifier())
-SGDClassifier_classifier.train(training_set)
-print("SGDClassifier_classifier accuracy percent:", (nltk.classify.accuracy(SGDClassifier_classifier, testing_set))*100)
-
-SVC_classifier = SklearnClassifier(SVC())
-SVC_classifier.train(training_set)
-print("SVC_classifier accuracy percent:", (nltk.classify.accuracy(SVC_classifier, testing_set))*100)
-
-LinearSVC_classifier = SklearnClassifier(LinearSVC())
-LinearSVC_classifier.train(training_set)
-print("LinearSVC_classifier accuracy percent:", (nltk.classify.accuracy(LinearSVC_classifier, testing_set))*100)
-
-NuSVC_classifier = SklearnClassifier(NuSVC())
-NuSVC_classifier.train(training_set)
-print("NuSVC_classifier accuracy percent:", (nltk.classify.accuracy(NuSVC_classifier, testing_set))*100)
+#
+# print("Original Naive Bayes Algo accuracy percent:", (nltk.classify.accuracy(classifier, testing_set))*100)
+# classifier.show_most_informative_features(15)
+#
+# MNB_classifier = SklearnClassifier(MultinomialNB())
+# MNB_classifier.train(training_set)
+# print("MultinomialNB accuracy percent:",nltk.classify.accuracy(MNB_classifier, testing_set))
+#
+# BNB_classifier = SklearnClassifier(BernoulliNB())
+# BNB_classifier.train(training_set)
+# print("BernoulliNB accuracy percent:",nltk.classify.accuracy(BNB_classifier, testing_set))
+#
+# LogisticRegression_classifier = SklearnClassifier(LogisticRegression())
+# LogisticRegression_classifier.train(training_set)
+# print("LogisticRegression_classifier accuracy percent:", (nltk.classify.accuracy(LogisticRegression_classifier, testing_set))*100)
+#
+# SGDClassifier_classifier = SklearnClassifier(SGDClassifier())
+# SGDClassifier_classifier.train(training_set)
+# print("SGDClassifier_classifier accuracy percent:", (nltk.classify.accuracy(SGDClassifier_classifier, testing_set))*100)
+#
+# SVC_classifier = SklearnClassifier(SVC())
+# SVC_classifier.train(training_set)
+# print("SVC_classifier accuracy percent:", (nltk.classify.accuracy(SVC_classifier, testing_set))*100)
+#
+# LinearSVC_classifier = SklearnClassifier(LinearSVC())
+# LinearSVC_classifier.train(training_set)
+# print("LinearSVC_classifier accuracy percent:", (nltk.classify.accuracy(LinearSVC_classifier, testing_set))*100)
+#
+# NuSVC_classifier = SklearnClassifier(NuSVC())
+# NuSVC_classifier.train(training_set)
+# print("NuSVC_classifier accuracy percent:", (nltk.classify.accuracy(NuSVC_classifier, testing_set))*100)
