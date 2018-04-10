@@ -4,12 +4,15 @@ import nltk
 import numpy
 import sklearn as skl
 
-df =pd.DataFrame(pd.read_csv('testdata.csv'))
 
-sentiment_column = (df.iloc[:,[0]])
+df = pd.DataFrame(pd.read_csv('testdata.csv'))
+
+
+sentiment_column = (df.iloc[:, [0]])
 sentiment_array = sentiment_column.values
 
-text_column = (df.iloc[:,[5]])
+
+text_column = (df.iloc[:, [5]])
 text_array = text_column.values
 
 text = []
@@ -26,6 +29,7 @@ for words in text:
     tweets.append(tweet)
 # print(tweets)
 
+
 def get_words_in_tweets(tweets):
     all_words = []
     for (words, sentiment) in tweets:
@@ -33,11 +37,26 @@ def get_words_in_tweets(tweets):
     return all_words
 # print (get_words_in_tweets(tweets))
 
+
 def get_word_features(wordlist):
     wordlist = nltk.FreqDist(wordlist)
     word_features = wordlist.keys()
     return word_features
 
+
 word_features = get_word_features(get_words_in_tweets(tweets))
 
-print(word_features)
+# print(word_features)
+
+
+def extract_features(text):
+    # this creates a unique immutable set of words from the one fed in document 'text'
+    text_words = set(text)
+    features = {}
+    # this iterates through all unique words in the text and adds it to the features hash
+    for word in word_features:
+        features['contains(%s)' % word] = (word in text_words)
+    return features
+
+
+print (extract_features(['love','reading','incredibly']))

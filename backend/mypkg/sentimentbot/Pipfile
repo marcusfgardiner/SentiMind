@@ -12,6 +12,7 @@ pandas = "*"
 scikit-learn = "*"
 wheel = "*"
 scipy = "*"
+sklearn = "*"
 
 [dev-packages]
 
