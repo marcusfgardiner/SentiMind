@@ -10,12 +10,7 @@ body {
   background-attachment: fixed;
 }
 
-body,
-html {
-  height: 100%;
+.container {
   display: grid;
-}
-
-#input {
-  margin: auto;
+  grid-template-columns: 25% 50% 25%;
 }
