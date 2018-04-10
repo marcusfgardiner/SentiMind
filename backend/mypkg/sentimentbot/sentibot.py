@@ -4,6 +4,7 @@ import nltk
 import numpy
 import sklearn as skl
 import pickle
+import re
 from sklearn.naive_bayes import MultinomialNB,BernoulliNB
 from nltk.classify.scikitlearn import SklearnClassifier
 from sklearn.linear_model import LogisticRegression,SGDClassifier
@@ -18,11 +19,27 @@ sentiment_array = sentiment_column.values
 text_column = (df.iloc[:, [6]])
 text_array = text_column.values
 
+# print(text_array)
+
+def regex_cleaner(tweet_text):
+  tweet_text = re.sub("(f\*ck)", "fuck", tweet_text)
+  tweet_text = re.sub("(sh\*t)", "shit", tweet_text)
+  tweet_text = ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)", " ", tweet_text).split())
+  return tweet_text
+
+cleaned_array = []
+
+for x in text_array:
+    cleaned_tweet = [regex_cleaner(x[0])]
+    cleaned_array.append(cleaned_tweet)
+
 text = []
 
-for words in text_array:
+for words in cleaned_array:
     words_filtered = [e.lower() for e in words[0].split() if len(e) >= 3]
     text.append((words_filtered))
+
+# print (text)
 
 tweets = []
 count = 0
