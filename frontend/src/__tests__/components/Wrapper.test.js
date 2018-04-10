@@ -210,6 +210,10 @@ describe('Wrapper', () => {
         it('changes `top_tweets` to 0', () => {
           expect(wrapper.state('top_tweets')).toEqual(undefined);
         });
+
+        it('changes `top_words` to undefined', () => {
+          expect(wrapper.state('top_words')).toBe(undefined);
+        });
       });
     });
   });
