@@ -1,6 +1,9 @@
 from .tweet_parser import TweetParser
 from .twitter_req import *
 from .polarity import *
+import nltk
+from nltk.corpus import stopwords
+from collections import Counter
 import json
 
 class SentimentAnalyser:
@@ -24,11 +27,13 @@ class SentimentAnalyser:
         tweets = self.populate(query)
         average = self.average_polarity(tweets)
         top_tweets = self.top_tweets(tweets)
+        top_words = self.top_words(tweets)
         sentiments = self.sentiment_counter(tweets)
         result = polarity_result(average)
         positivity_percentage = self.polarity_converter(average)
         json_string = {"sentiments": sentiments,
                        "top_tweets": top_tweets,
+                       "top_words": top_words,
                        "polarity": "%(result)s" % locals(),
                        "positivity_percentage": "%(positivity_percentage)s" % locals()
                        }
@@ -44,6 +49,19 @@ class SentimentAnalyser:
           negative_tweet = tweet
       top_tweets = {"positive": str(positive_tweet.id), "negative": str(negative_tweet.id)}
       return top_tweets
+
+    def top_words(self, tweets):
+      combined_words = ""
+      for tweet in tweets:
+        combined_words = combined_words + ' ' + tweet.text
+      combined_words_array = combined_words.split(' ')
+      self.filter_stop_words(combined_words_array)
+      return Counter(combined_words_array)
+
+    def filter_stop_words(self, combined_words_array):
+      stop_words = set(stopwords.words('english'))
+      filtered_sentence = [word for word in combined_words_array if not word in stop_words]
+      return filtered_sentence
 
     def sentiment_counter(self, tweets):
       result = { "positive": 0, "neutral": 0, "negative": 0}
