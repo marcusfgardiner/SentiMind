@@ -10,7 +10,7 @@ from nltk.classify.scikitlearn import SklearnClassifier
 from sklearn.linear_model import LogisticRegression,SGDClassifier
 from sklearn.svm import SVC, LinearSVC, NuSVC
 
-df = pd.DataFrame(pd.read_csv('shuffleddata.csv', encoding='latin-1'))
+df = pd.DataFrame(pd.read_csv('onehundredandtwentyfivethousand.csv', encoding='latin-1'))
 
 sentiment_column = (df.iloc[:, [1]])
 sentiment_array = sentiment_column.values
@@ -84,19 +84,25 @@ def extract_features(text):
 full_data_set = nltk.classify.apply_features(extract_features, tweets)
 
 # set that we'll train our classifier with
-training_set = full_data_set[:400]
+training_set = full_data_set
 
 # set that we'll test against.
-testing_set = full_data_set[400:]
+# testing_set = full_data_set[400:]
 
 # print (training_set)
 
-classifier = nltk.NaiveBayesClassifier.train(training_set)
-print("MultinomialNB accuracy percent:",nltk.classify.accuracy(classifier, testing_set))
+# classifier = nltk.NaiveBayesClassifier.train(training_set)
+# mnb = MultinomialNB(x_train, y_train)
+# classifier = nltk.NaiveBayesClassifier.train(training_set)
+
+classifier = SklearnClassifier(MultinomialNB())
+classifier.train(training_set)
+
+# print("MultinomialNB accuracy percent:",nltk.classify.accuracy(classifier, testing_set))
 
 # print (classifier.show_most_informative_features(32))
 
-f = open('my_classifier.pickle', 'wb')
+f = open('mg_model.pickle', 'wb')
 pickle.dump(classifier, f)
 f.close()
 

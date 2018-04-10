@@ -5,7 +5,7 @@ import numpy
 import sklearn as skl
 import pickle
 
-f = open('my_classifier.pickle', 'rb')
+f = open('mg_model.pickle', 'rb')
 classifier = pickle.load(f)
 f.close
 
