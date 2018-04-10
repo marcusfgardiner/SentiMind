@@ -31,7 +31,7 @@ def test_top_tweets():
   tweets = [pos_tweet, neut_tweet, neg_tweet]
   sentiment_analyser = SentimentAnalyser()
   result = sentiment_analyser.top_tweets(tweets)
-  assert result["negative"] == 967824267948773379
+  assert result["positive"] == "967824267948773377"
 
 def test_sentiment_counter():
   tweet = Tweet("@dumb", "heyo", 967824267948773377)
