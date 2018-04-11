@@ -48,7 +48,7 @@ describe('OutputView', () => {
     describe('SubHeader props', () => {
       it('passes flexible SubHeaderText down to main-subheader', () => {
         expect(outputView.find('#main-subheader').prop('subHeaderText')).toBe(
-          'The sentiment on "Donald Trump" is:'
+          'The sentiment on "Donald Trump" is generally:'
         );
       });
 

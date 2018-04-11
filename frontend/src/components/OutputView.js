@@ -58,7 +58,9 @@ class OutputView extends Component {
   render() {
     const fontSizeMapper = word => Math.log2(word.value) * 5;
     const rotate = word => word.value % 360;
-    const mainSubheaderText = `The sentiment on "${this.props.query}" is:`;
+    const mainSubheaderText = `The sentiment on "${
+      this.props.query
+    }" is generally:`;
     const data = [
       {
         sentiment: 'Positive',
