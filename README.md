@@ -9,12 +9,26 @@ Or just check the world's general sentiment on kittens and rainbows.
 
 # Warning
 
-## Local host currently hardcoded in /hello route
-## Deployment: can we deploy in one server and remove CORS from production enviornment?
+### Local host currently hardcoded in /hello route
+### Deployment: can we deploy in one server and remove CORS from production enviornment?
 
 ## Tech Stack
 
+### Backend/Frontend
+* Python/Flask
+* React
 
+### Testing
+* Jest/Enzyme
+* Pytest
+
+### Deployment
+* Docker
+* AWS
+
+### Libraries
+* Tweepy -- to make calls to the Twitter API
+* NLTK -- a toolkit used for Natural Language Processing
 
 ## How To Use
 
