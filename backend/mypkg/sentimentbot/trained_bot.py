@@ -10,7 +10,7 @@ classifier = pickle.load(f)
 f.close
 
 
-df = pd.DataFrame(pd.read_csv('testdata.csv'))
+df = pd.DataFrame(pd.read_csv('shuffleddata.csv'))
 
 
 sentiment_column = (df.iloc[:, [0]])
@@ -77,7 +77,7 @@ def probability_positive(tweet):
     dist = classifier.prob_classify(processed_tweet)
     for label in dist.samples():
         if label == 4:
-            return dist.prob(label)
+            return (((dist.prob(label))*2)-1)
 
 # ----------------------------------------------------------------------
 # Testing the ML model
