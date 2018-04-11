@@ -23,8 +23,14 @@ class Wrapper extends Component {
 
   fetchSentiment = async () => {
     let { query } = this.state;
+    let url;
     try {
-      const request = await fetch('http://localhost:5000/', {
+      if (window.location.href == 'http://localhost:3000/') {
+        url = 'http://localhost';
+      } else {
+        url = window.location.href;
+      }
+      const request = await fetch(`${url}:5000`, {
         method: 'POST',
         body: JSON.stringify(query),
         headers: new Headers({
