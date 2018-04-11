@@ -87,6 +87,7 @@ class Wrapper extends Component {
       ),
       output: (
         <OutputView
+          query={this.state.query}
           handleSubmit={this.handleSubmit}
           average_sentiment={this.state.average_sentiment}
           sentiments={this.state.sentiments}
