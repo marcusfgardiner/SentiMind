@@ -109,33 +109,38 @@ describe('Wrapper', () => {
     beforeEach(() => {
       wrapper.setState({ buttonClicked: true });
     });
-    describe('handleSubmit props', () => {
-      it('passes handleSubmit down to OutputView', () => {
-        expect(wrapper.find('OutputView').prop('handleSubmit')).toBe(
-          wrapper.instance().handleSubmit
-        );
-      });
+    it('passes handleSubmit down to OutputView', () => {
+      expect(wrapper.find('OutputView').prop('handleSubmit')).toBe(
+        wrapper.instance().handleSubmit
+      );
+    });
 
-      it('passes sentiments down to OutputView', () => {
-        wrapper.setState({ sentiments });
-        expect(wrapper.find('OutputView').prop('sentiments')).toBe(
-          wrapper.state('sentiments')
-        );
-      });
+    it('passes sentiments down to OutputView', () => {
+      wrapper.setState({ sentiments });
+      expect(wrapper.find('OutputView').prop('sentiments')).toBe(
+        wrapper.state('sentiments')
+      );
+    });
 
-      it('passes top_tweets down to OutputView', () => {
-        wrapper.setState({ sentiments });
-        expect(wrapper.find('OutputView').prop('top_tweets')).toBe(
-          wrapper.state('top_tweets')
-        );
-      });
+    it('passes top_tweets down to OutputView', () => {
+      wrapper.setState({ sentiments });
+      expect(wrapper.find('OutputView').prop('top_tweets')).toBe(
+        wrapper.state('top_tweets')
+      );
+    });
 
-      it('passes top_words down to OutputView', () => {
-        wrapper.setState({ top_words });
-        expect(wrapper.find('OutputView').prop('top_words')).toBe(
-          wrapper.state('top_words')
-        );
-      });
+    it('passes top_words down to OutputView', () => {
+      wrapper.setState({ top_words });
+      expect(wrapper.find('OutputView').prop('top_words')).toBe(
+        wrapper.state('top_words')
+      );
+    });
+
+    it('passes query down to OutputView', () => {
+      wrapper.setState({ query: 'hey' });
+      expect(wrapper.find('OutputView').prop('query')).toBe(
+        wrapper.state('query')
+      );
     });
 
     describe('sentiment props', () => {
