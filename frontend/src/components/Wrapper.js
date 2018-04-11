@@ -25,7 +25,7 @@ class Wrapper extends Component {
     let { query } = this.state;
     let url;
     try {
-      if (window.location.href == 'http://localhost:3000/') {
+      if (window.location.href === 'http://localhost:3000/') {
         url = 'http://localhost';
       } else {
         url = window.location.href;
