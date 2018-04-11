@@ -9,14 +9,15 @@ from sklearn.naive_bayes import MultinomialNB,BernoulliNB
 from nltk.classify.scikitlearn import SklearnClassifier
 from sklearn.linear_model import LogisticRegression,SGDClassifier
 from sklearn.svm import SVC, LinearSVC, NuSVC
+from sklearn.feature_extraction import DictVectorizer
 
-df = pd.DataFrame(pd.read_csv('onehundredandtwentyfivethousand.csv', encoding='latin-1'))
+df = pd.DataFrame(pd.read_csv('quartermillion.csv', encoding='latin-1'))
 
-sentiment_column = (df.iloc[:, [1]])
+sentiment_column = (df.iloc[:, [0]])
 sentiment_array = sentiment_column.values
 
 
-text_column = (df.iloc[:, [6]])
+text_column = (df.iloc[:, [5]])
 text_array = text_column.values
 
 # print(text_array)
@@ -84,7 +85,7 @@ def extract_features(text):
 full_data_set = nltk.classify.apply_features(extract_features, tweets)
 
 # set that we'll train our classifier with
-training_set = full_data_set
+training_set = full_data_set[:1000]
 
 # set that we'll test against.
 # testing_set = full_data_set[400:]
@@ -95,8 +96,22 @@ training_set = full_data_set
 # mnb = MultinomialNB(x_train, y_train)
 # classifier = nltk.NaiveBayesClassifier.train(training_set)
 
+# NLTK wrapper for sklearn
 classifier = SklearnClassifier(MultinomialNB())
 classifier.train(training_set)
+
+# REAL SK LEARN
+# vec = DictVectorizer()
+# print(vec.fit_transform(training_set).toarray())
+# print(vec.get_feature_names())
+
+
+# classifier = MultinomialNB()
+# for x_chunk, y_chunk in training_set:
+#     # classifier.partial_fit(x_chunk, y_chunk)
+#     print(x_chunk)
+#     print('--------')
+#     print(y_chunk)
 
 # print("MultinomialNB accuracy percent:",nltk.classify.accuracy(classifier, testing_set))
 
@@ -106,6 +121,29 @@ f = open('mg_model.pickle', 'wb')
 pickle.dump(classifier, f)
 f.close()
 
+# ------------------ ------------------ ------------------ ------------------ ------------------ ------------------
+
+# for x_chunk, y_chunk in training_set:
+#         print(x_chunk)
+#         print('---gap----')
+#         print(y_chunk)
+
+# def iter_minibatches(chunksize):
+#     # Provide chunks one by one
+#     chunkstartmarker = 0
+#     while chunkstartmarker < numtrainingpoints:
+#         chunkrows = range(chunkstartmarker,chunkstartmarker+chunksize)
+#         X_chunk, y_chunk = getrows(chunkrows)
+#         yield X_chunk, y_chunk
+#         chunkstartmarker += chunksize
+#
+# def main():
+#     batcherator = iter_minibatches(chunksize=1000)
+#     model = SGDRegressor()
+#
+#     # Train model
+#     for X_chunk, y_chunk in batcherator:
+#         model.partial_fit(X_chunk, y_chunk)
 
 # ------------------ ------------------ ------------------ ------------------ ------------------ ------------------
 

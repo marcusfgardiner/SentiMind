@@ -77,13 +77,13 @@ def probability_positive(tweet):
     dist = classifier.prob_classify(processed_tweet)
     for label in dist.samples():
         if label == 4:
-            return dist.prob(label)
+            return (((dist.prob(label))*2)-1)
 
 # ----------------------------------------------------------------------
 # Testing the ML model
 # ----------------------------------------------------------------------
 
-test_tweet = 'angry mean horrible awful'
+test_tweet = 'awful terrible disgusting'
 
 print(classify_tweet(test_tweet))
 
