@@ -14,38 +14,43 @@ Or just check the world's general sentiment on kittens and rainbows.
 
 ## Tech Stack
 
-### Backend/Frontend
+#### Backend/Frontend
 * Python/Flask
 * React
 
-### Testing
+#### Testing
 * Jest/Enzyme
 * Pytest
 
-### Deployment
+#### Deployment
 * Docker
 * AWS
 
-### Libraries
+#### Libraries
 * Tweepy -- to make calls to the Twitter API
 * NLTK -- a toolkit used for Natural Language Processing
 
-## How To Use
-
-In the terminal:
-
-1. `git clone https://github.com/marcusfgardiner/SentiMind.git`
-2. From the route of the directory `cd fullstack_template/static`
-3. npm install
+## How to run locally
 
 In order to run the server, you will need to [download python](https://www.python.org/downloads/) and then run: `pip3 install pipenv`
 
-once pipenv is installed, run `pipenv install requests` to download the dependencies.
+In the terminal:
 
-to run the server:
+1. clone the repository
+2. From the root folder of the directory `pipenv install requests` to download the python dependencies
+3. `pipenv shell`
+4. `cd frontend`
+5. `npm install` to download the react/npm dependencies
 
-1. `cd fullstack_template/server`
+To run the backend server:
+
+1. `cd backend`
 2. `python3 server.py`
+
+To run the frontend server:
+
+1. `cd frontend`
+2. `npm start`
 
 ## Tests
 
