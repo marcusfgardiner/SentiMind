@@ -7,6 +7,7 @@ describe('OutputView', () => {
   const props = {
     handleSubmit: mockHandleSubmit,
     average_sentiment: 'negative',
+    query: 'Donald Trump'
     sentiments: { positive: 0, neutral: 0, negative: 0 },
     top_tweets: { positive: '102389292', negative: '02392039420' },
     top_words: { hello: 4, goodbye: 3, again: 2 }
@@ -47,7 +48,7 @@ describe('OutputView', () => {
     describe('SubHeader props', () => {
       it('passes flexible SubHeaderText down to main-subheader', () => {
         expect(outputView.find('#main-subheader').prop('subHeaderText')).toBe(
-          'So, the world thinks...'
+          'The sentiment on Donald Trump is:'
         );
       });
 
