@@ -7,6 +7,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <OutputView
     average_sentiment="negative"
     handleSubmit={[Function]}
+    query="Donald Trump"
     sentiments={
         Object {
             "negative": 0,
@@ -49,7 +50,7 @@ ShallowWrapper {
           >
                     <SubHeader
                               id="main-subheader"
-                              subHeaderText="So, the world thinks..."
+                              subHeaderText="The sentiment on \\"Donald Trump\\" is:"
                     />
                     <Sentiment
                               average_sentiment="negative"
@@ -3344,7 +3345,7 @@ ShallowWrapper {
 >
               <SubHeader
                             id="main-subheader"
-                            subHeaderText="So, the world thinks..."
+                            subHeaderText="The sentiment on \\"Donald Trump\\" is:"
               />
               <Sentiment
                             average_sentiment="negative"
@@ -6635,7 +6636,7 @@ ShallowWrapper {
               "children": Array [
                 <SubHeader
                   id="main-subheader"
-                  subHeaderText="So, the world thinks..."
+                  subHeaderText="The sentiment on \\"Donald Trump\\" is:"
 />,
                 <Sentiment
                   average_sentiment="negative"
@@ -6651,7 +6652,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "id": "main-subheader",
-                  "subHeaderText": "So, the world thinks...",
+                  "subHeaderText": "The sentiment on \\"Donald Trump\\" is:",
                 },
                 "ref": null,
                 "rendered": null,
@@ -17130,7 +17131,7 @@ ShallowWrapper {
             >
                         <SubHeader
                                     id="main-subheader"
-                                    subHeaderText="So, the world thinks..."
+                                    subHeaderText="The sentiment on \\"Donald Trump\\" is:"
                         />
                         <Sentiment
                                     average_sentiment="negative"
@@ -20425,7 +20426,7 @@ ShallowWrapper {
 >
                 <SubHeader
                                 id="main-subheader"
-                                subHeaderText="So, the world thinks..."
+                                subHeaderText="The sentiment on \\"Donald Trump\\" is:"
                 />
                 <Sentiment
                                 average_sentiment="negative"
@@ -23716,7 +23717,7 @@ ShallowWrapper {
                 "children": Array [
                   <SubHeader
                     id="main-subheader"
-                    subHeaderText="So, the world thinks..."
+                    subHeaderText="The sentiment on \\"Donald Trump\\" is:"
 />,
                   <Sentiment
                     average_sentiment="negative"
@@ -23732,7 +23733,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "id": "main-subheader",
-                    "subHeaderText": "So, the world thinks...",
+                    "subHeaderText": "The sentiment on \\"Donald Trump\\" is:",
                   },
                   "ref": null,
                   "rendered": null,

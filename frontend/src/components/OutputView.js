@@ -58,6 +58,7 @@ class OutputView extends Component {
   render() {
     const fontSizeMapper = word => Math.log2(word.value) * 5;
     const rotate = word => word.value % 360;
+    const mainSubheaderText = `The sentiment on "${this.props.query}" is:`;
     const data = [
       {
         sentiment: 'Positive',
@@ -86,10 +87,7 @@ class OutputView extends Component {
       <div>
         <div className="container">
           <div className="top-card">
-            <SubHeader
-              id="main-subheader"
-              subHeaderText="So, the world thinks..."
-            />
+            <SubHeader id="main-subheader" subHeaderText={mainSubheaderText} />
             <Sentiment average_sentiment={this.props.average_sentiment} />
           </div>
           <div className="chart-container">
