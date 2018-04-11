@@ -48,7 +48,7 @@ class OutputView extends Component {
     let words_arr = [];
     for (var key in words) {
       if (words.hasOwnProperty(key)) {
-        if (words[key] > 1 && key.length > 3) {
+        if (words[key] > 1 && key.length > 2) {
           words_arr.push({ text: `${key}`, value: words[key] * 100 });
         }
       }

@@ -33,6 +33,12 @@ def test_top_tweets():
   result = sentiment_analyser.top_tweets(tweets)
   assert result["positive"] == "967824267948773377"
 
+def test_filter_stop_words():
+  unfiltered_sentence = "this is a foo bar sentence"
+  filtered_array = ["foo", "bar", "sentence"]
+  sentiment_analyser = SentimentAnalyser()
+  assert sentiment_analyser.filter_stop_words(unfiltered_sentence) == filtered_array
+
 def test_sentiment_counter():
   tweet = Tweet("@dumb", "heyo", 967824267948773377)
   tweet.sentiment = "positive"
