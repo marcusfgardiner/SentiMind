@@ -22,18 +22,25 @@ class Wrapper extends Component {
   };
 
   createUrl = () => {
-    let url;
-    return window.location.href === 'http://localhost:3000/'
-      ? (url = 'http://localhost')
-      : (url = window.location.href);
+    if (window.location.href === 'http://localhost:3000/') {
+      return 'http://localhost';
+    }
+    return window.location.href;
+  };
+
+  createState = json => {
+    this.setState({
+      average_sentiment: json.polarity,
+      sentiments: json.sentiments,
+      top_tweets: json.top_tweets,
+      top_words: json.top_words
+    });
   };
 
   fetchSentiment = async () => {
     let { query } = this.state;
-    let url;
     try {
-      this.createUrl();
-      const request = await fetch(`${url}:5000`, {
+      const request = await fetch(`${this.createUrl()}:5000`, {
         method: 'POST',
         body: JSON.stringify(query),
         headers: new Headers({
@@ -41,12 +48,7 @@ class Wrapper extends Component {
         })
       });
       const json = await request.json();
-      this.setState({
-        average_sentiment: json.polarity,
-        sentiments: json.sentiments,
-        top_tweets: json.top_tweets,
-        top_words: json.top_words
-      });
+      this.createState(json);
     } catch (err) {}
   };
 
