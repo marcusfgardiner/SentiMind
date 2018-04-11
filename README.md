@@ -70,7 +70,7 @@ for Testing our ReactJS front end we used Jest with enzyme. To run the tests:
 
 ## Process
 
-### Part 1 - planning
+### Planning
 
 > Give me six hours to chop down a tree and I will spend the first four sharpening the axe.
 
@@ -87,6 +87,26 @@ We knew we would approach this task in an agile way, building an MVP and iterati
 With these in mind, we decided that the best idea was to create a product first - using a pre-trained bot - and then replace this with our own bot once we had the finished product.
 
 This decision set the tone for the project. It allowed us space to relax, be creative, and really focus on building a great product first, and worrying about the potentially un-scalable hurdles (training our own bot) later.
+
+#### Ground Rules
+
+We felt that giving the day a bit of structure was important, but would also allow us to regularly check in with each other and understand exactly where each pair was in their development task.
+
+the structure was as follows:
+
+* 9:30am: Stand up. We begin with a morale check for each member of the team, to ensure we know and understand everyones energy and motivation levels for the day. It's also chance to discuss what needs to be done for the day and pair up accordingly.
+
+* 2:00pm: Check in. Check where the other pair is at in their task allocation, and see if there is need for a knowledge share, or a switch up/ re-prioritisation of tasks.
+
+* 5:00pm: Retro. A discussion on what went well, what didn't go so well, how everyone is feeling about the project, the team and their general situation. We tended to have a chat about XP values here, and pick one per retro that we think we particularly did well in that day and why.
+
+This basic structure meant that each member of the team knew exactly where each other person was both mentally and in project task / development terms. This focus on mental wellbeing and 'soft skills' was a huge reason why we were a successful, cohesive team.
+
+The morale check in the morning was a quick go-around where each person said a number out of 10 relating to their overall wellbeing, and a quick note on how they feel. We found this incredibly useful as a tool to quickly see what everyones levels were, and could adjust how we pair with them if needs be.
+
+#### The MVP
+
+We wanted to make our MVP in 2 days, and continue these mini-sprints for the full 10 days of the project. In order to get the application up and running as soon as possible, we split the tasks into frontend and back end, assigning a pair to each part of the stack.
 
 ## Challenges
 
