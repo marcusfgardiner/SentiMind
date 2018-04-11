@@ -23,20 +23,22 @@ class Wrapper extends Component {
 
   fetchSentiment = async () => {
     let { query } = this.state;
-    const request = await fetch('http://localhost:5000/', {
-      method: 'POST',
-      body: JSON.stringify(query),
-      headers: new Headers({
-        'Content-Type': 'application/json'
-      })
-    });
-    const json = await request.json();
-    this.setState({
-      average_sentiment: json.polarity,
-      sentiments: json.sentiments,
-      top_tweets: json.top_tweets,
-      top_words: json.top_words
-    });
+    try {
+      const request = await fetch('http://localhost:5000/', {
+        method: 'POST',
+        body: JSON.stringify(query),
+        headers: new Headers({
+          'Content-Type': 'application/json'
+        })
+      });
+      const json = await request.json();
+      this.setState({
+        average_sentiment: json.polarity,
+        sentiments: json.sentiments,
+        top_tweets: json.top_tweets,
+        top_words: json.top_words
+      });
+    } catch (err) {}
   };
 
   resetState = () => {
