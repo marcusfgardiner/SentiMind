@@ -54,8 +54,8 @@ class SentimentAnalyser:
       combined_words = ""
       for tweet in tweets:
         combined_words = combined_words + ' ' + tweet.text
-      filtered_array = self.filter_stop_words(combined_words)
-      return Counter(filtered_array)
+      filtered_array = Counter(self.filter_stop_words(combined_words))
+      return filtered_array
 
     def filter_stop_words(self, combined_words):
       stop_words = set(stopwords.words('english'))
