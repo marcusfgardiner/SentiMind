@@ -11,12 +11,11 @@ WORKDIR /app
 COPY . /app
 RUN npm install
 RUN npm install react-scripts@1.1.1 -g
-
-# Install any needed packages specified in requirements.txt
-# RUN npm install -r requirements.txt
+RUN npm run build
+RUN npm install -g serve
 
 # replace this with your application's default port
 EXPOSE 3000
 
 # start app
-CMD ["npm", "start"]
+CMD ["serve", "-s", "build"]
