@@ -1,7 +1,7 @@
 import wheel
 import pandas as pd
 import nltk
-import numpy
+import numpy as np
 import sklearn as skl
 import pickle
 import re
@@ -11,13 +11,13 @@ from sklearn.linear_model import LogisticRegression,SGDClassifier
 from sklearn.svm import SVC, LinearSVC, NuSVC
 from sklearn.feature_extraction import DictVectorizer
 
-df = pd.DataFrame(pd.read_csv('quartermillion.csv', encoding='latin-1'))
+df = pd.DataFrame(pd.read_csv('shuffleddata.csv', encoding='latin-1'))
 
-sentiment_column = (df.iloc[:, [0]])
+sentiment_column = (df.iloc[:, [1]])
 sentiment_array = sentiment_column.values
 
 
-text_column = (df.iloc[:, [5]])
+text_column = (df.iloc[:, [6]])
 text_array = text_column.values
 
 # print(text_array)
@@ -85,7 +85,7 @@ def extract_features(text):
 full_data_set = nltk.classify.apply_features(extract_features, tweets)
 
 # set that we'll train our classifier with
-training_set = full_data_set[:1000]
+training_set = full_data_set[:10]
 
 # set that we'll test against.
 # testing_set = full_data_set[400:]
@@ -97,18 +97,31 @@ training_set = full_data_set[:1000]
 # classifier = nltk.NaiveBayesClassifier.train(training_set)
 
 # NLTK wrapper for sklearn
-classifier = SklearnClassifier(MultinomialNB())
-classifier.train(training_set)
+# classifier = SklearnClassifier(MultinomialNB())
+# classifier.train(training_set)
 
 # REAL SK LEARN
-# vec = DictVectorizer()
-# print(vec.fit_transform(training_set).toarray())
+vec = DictVectorizer()
+x_training_set = []
+y_training_set = []
 # print(vec.get_feature_names())
+for x_chunk, y_chunk in training_set:
+    x_vectors = vec.fit_transform(x_chunk).toarray()
+    x_training_set = vec.get_feature_names()
+    y_training_set.append(y_chunk)
+
+# print(classes=np.unique(y_training))
 
 
+# print(x_training_set)
+# print(y_training_set)
+classifier = MultinomialNB()
+classifier.partial_fit(x_training_set, y_training_set, classes=np.array([0, 1]))
+
+#
 # classifier = MultinomialNB()
 # for x_chunk, y_chunk in training_set:
-#     # classifier.partial_fit(x_chunk, y_chunk)
+#     classifier.partial_fit(x_chunk, y_chunk)
 #     print(x_chunk)
 #     print('--------')
 #     print(y_chunk)
