@@ -108,6 +108,14 @@ The morale check in the morning was a quick go-around where each person said a n
 
 We wanted to make our MVP in 2 days, and continue these mini-sprints for the full 10 days of the project. In order to get the application up and running as soon as possible, we split the tasks into frontend and back end, assigning a pair to each part of the stack.
 
+We often stayed in these pairs for the full 2 days, to ensure maximum productivity during the mini sprint, as often it took the majority of a day to become comfortable with the new tasks and technologies, so it made sense to keep the pairs together working on the same task.
+
+#### TDD and SOLID
+
+At the start of the project we made sure we would hold each other accountable when it came to sticking to best practices, in order to build the best possible product we could in the 10 days, and to learn as much as we could too.
+
+For us, this meant sticking to TDD throughout the project, and ensuring that our code was built using the SOLID object oriented design principles we had been taught and honing throughout Makers Academy.
+
 ## Challenges
 
 * Sticking to the single responsibility principle while designing the GET request -method using Tweepy
