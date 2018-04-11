@@ -30,11 +30,7 @@ describe('OutputView', () => {
   });
 
   it('renders a BarChart component', () => {
-    expect(outputView.find('BarChart').exists()).toBe(true);
-  });
-
-  it('renders a PieChart component', () => {
-    expect(outputView.find('PieChart').exists()).toBe(true);
+    expect(outputView.find('VictoryChart').exists()).toBe(true);
   });
 
   describe('tweets', () => {
@@ -93,9 +89,9 @@ describe('OutputView', () => {
       it('correctly formats json data', () => {
         const json_data = { hello: 4, goodbye: 3, again: 2 };
         const formatted_data = [
-          { text: 'hello', value: 4 },
-          { text: 'goodbye', value: 3 },
-          { text: 'again', value: 2 }
+          { text: 'hello', value: 400 },
+          { text: 'goodbye', value: 300 },
+          { text: 'again', value: 200 }
         ];
         expect(outputView.instance().formatTopWords(json_data)).toEqual(
           formatted_data
