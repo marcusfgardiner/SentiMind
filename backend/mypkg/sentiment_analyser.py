@@ -1,8 +1,7 @@
 from .tweet_parser import TweetParser
 from .twitter_req import *
 from .polarity import *
-import nltk
-from nltk.corpus import stopwords
+from .stopwords import stopwords
 from collections import Counter
 import json
 
@@ -58,7 +57,7 @@ class SentimentAnalyser:
       return filtered_array
 
     def filter_stop_words(self, combined_words):
-      stop_words = set(stopwords.words('english'))
+      stop_words = stopwords
       unfiltered_words_array = combined_words.lower().split(' ')
       filtered_sentence = [word for word in unfiltered_words_array if not word in stop_words]
       return filtered_sentence
