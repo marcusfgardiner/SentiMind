@@ -21,15 +21,18 @@ class Wrapper extends Component {
     this.setState({ query: event.target.value });
   };
 
+  createUrl = () => {
+    let url;
+    return window.location.href === 'http://localhost:3000/'
+      ? (url = 'http://localhost')
+      : (url = window.location.href);
+  };
+
   fetchSentiment = async () => {
     let { query } = this.state;
     let url;
     try {
-      if (window.location.href === 'http://localhost:3000/') {
-        url = 'http://localhost';
-      } else {
-        url = window.location.href;
-      }
+      this.createUrl();
       const request = await fetch(`${url}:5000`, {
         method: 'POST',
         body: JSON.stringify(query),

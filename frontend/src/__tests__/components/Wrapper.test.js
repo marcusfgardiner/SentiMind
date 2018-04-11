@@ -161,6 +161,12 @@ describe('Wrapper', () => {
     });
   });
 
+  describe('createUrl()', () => {
+    it('returns window location if not on http://localhost:3000', () => {
+      expect(wrapper.instance().createUrl()).toEqual(window.location.href);
+    });
+  });
+
   describe('fetchSentiment()', () => {
     beforeEach(async () => {
       await wrapper.instance().fetchSentiment();
