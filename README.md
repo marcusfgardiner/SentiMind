@@ -56,8 +56,9 @@ To run the frontend server:
 
 ### For testing our ReactJS frontend we used Jest with enzyme. To run the tests:
 
-1. `cd frontend`
-2. `npm test`
+1. Ensure you have run `npm install` to download dependencies
+2. `cd frontend`
+3. `npm test`
 
 ### For testing our Python backend we used Pytest. To run the tests:
 
