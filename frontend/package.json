@@ -22,6 +22,14 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js",
+      "!src/tempPolyfills.js",
+      "!src/components/styled_components/*.js"
+    ]
+  },
   "optionalDependencies": {
     "fsevents": "*"
   },
