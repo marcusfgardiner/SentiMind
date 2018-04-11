@@ -88,7 +88,7 @@ With these in mind, we decided that the best idea was to create a product first 
 
 This decision set the tone for the project. It allowed us space to relax, be creative, and really focus on building a great product first, and worrying about the potentially un-scalable hurdles (training our own bot) later.
 
-#### Ground Rules
+#### Daily Structure
 
 We felt that giving the day a bit of structure was important, but would also allow us to regularly check in with each other and understand exactly where each pair was in their development task.
 
