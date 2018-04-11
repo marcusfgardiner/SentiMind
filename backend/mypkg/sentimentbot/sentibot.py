@@ -10,7 +10,7 @@ from nltk.classify.scikitlearn import SklearnClassifier
 from sklearn.linear_model import LogisticRegression,SGDClassifier
 from sklearn.svm import SVC, LinearSVC, NuSVC
 
-df = pd.DataFrame(pd.read_csv('quartermillion.csv', encoding='latin-1'))
+df = pd.DataFrame(pd.read_csv('shuffleddata.csv', encoding='latin-1'))
 
 sentiment_column = (df.iloc[:, [1]])
 sentiment_array = sentiment_column.values
@@ -84,7 +84,7 @@ def extract_features(text):
 full_data_set = nltk.classify.apply_features(extract_features, tweets)
 
 # set that we'll train our classifier with
-training_set = full_data_set[:5000]
+training_set = full_data_set
 
 # set that we'll test against.
 testing_set = full_data_set[400:]

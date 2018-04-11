@@ -5,19 +5,18 @@ import numpy
 import sklearn as skl
 import pickle
 
-f = open('my_classifier.pickle', 'rb')
+f = open('fiftythousand_classifier.pickle', 'rb')
 classifier = pickle.load(f)
 f.close
 
+df = pd.DataFrame(pd.read_csv('testingdataset.csv'))
 
-df = pd.DataFrame(pd.read_csv('shuffleddata.csv'))
 
-
-sentiment_column = (df.iloc[:, [0]])
+sentiment_column = (df.iloc[:, [1]])
 sentiment_array = sentiment_column.values
 
 
-text_column = (df.iloc[:, [5]])
+text_column = (df.iloc[:, [6]])
 text_array = text_column.values
 
 text = []
@@ -26,13 +25,12 @@ for words in text_array:
     words_filtered = [e.lower() for e in words[0].split() if len(e) >= 3]
     text.append((words_filtered))
 
-tweets = []
+testing_tweets = []
 count = 0
 for words in text:
     tweet = (words, sentiment_array[count][0])
     count += 1
-    tweets.append(tweet)
-# print(tweets)
+    testing_tweets.append(tweet)
 
 
 def get_words_in_tweets(tweets):
@@ -48,7 +46,7 @@ def get_word_features(wordlist):
     word_features = wordlist.keys()
     return word_features
 
-word_features = get_word_features(get_words_in_tweets(tweets))
+word_features = get_word_features(get_words_in_tweets(testing_tweets))
 
 # print(word_features)
 
@@ -83,8 +81,16 @@ def probability_positive(tweet):
 # Testing the ML model
 # ----------------------------------------------------------------------
 
-test_tweet = 'angry mean horrible awful'
+test_tweet = 'horrible disgusting fuck you asshole bitch fucker'
 
 print(classify_tweet(test_tweet))
 
 print(probability_positive(test_tweet))
+
+# ----------------------------------------------------------------------
+# Accuracy of the ML model
+# ----------------------------------------------------------------------
+
+testing_set = nltk.classify.apply_features(extract_features, testing_tweets)
+
+print("MultinomialNB accuracy percent:", nltk.classify.accuracy(classifier, testing_set))
