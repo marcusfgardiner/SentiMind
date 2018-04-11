@@ -1,11 +1,17 @@
 # SentiMind
 
+[Daniel Keen](https://github.com/DKeen0123) || [Marcus Gardiner](https://github.com/marcusfgardiner) || [Carlos Trapet](https://github.com/CarlosTrapet) || [Stephen Tilley](https://github.com/stilley85)
+
 A twitter sentiment analysis web app based on a hashtag (using machine learning to assess sentiment)
 
 # Warning
 
 ## Local host currently hardcoded in /hello route
 ## Deployment: can we deploy in one server and remove CORS from production enviornment?
+
+## Tech Stack
+
+
 
 ## How To Use
 
