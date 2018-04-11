@@ -28,7 +28,7 @@ class SentimentAnalyser:
         top_tweets = self.top_tweets(tweets)
         top_words = self.top_words(tweets)
         sentiments = self.sentiment_counter(tweets)
-        result = polarity_result(average)
+        result = polarity_result(average).capitalize()
         positivity_percentage = self.polarity_converter(average)
         json_string = {"sentiments": sentiments,
                        "top_tweets": top_tweets,
