@@ -7,6 +7,8 @@ A twitter sentiment analysis web app based on a hashtag (using machine learning 
 You can find out what the world thinks about a topic of your choice on [sentimind.co.uk](http://sentimind.co.uk/).
 Or just check the world's general sentiment on kittens and rainbows.
 
+![SentiMind in action](https://media.giphy.com/media/5UvtFkTLx39wcZTyYY/giphy.gif)
+
 # Warning
 
 ### Local host currently hardcoded in /hello route
