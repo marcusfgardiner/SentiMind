@@ -5,11 +5,11 @@ import numpy
 import sklearn as skl
 import pickle
 
-f = open('Bernoulliclassifier.pickle', 'rb')
+f = open('./mypkg/Bernoulliclassifier.pickle', 'rb')
 classifier = pickle.load(f)
 f.close
 
-df = pd.DataFrame(pd.read_csv('testingdataset.csv'))
+df = pd.DataFrame(pd.read_csv('./mypkg/testingdataset.csv'))
 
 
 sentiment_column = (df.iloc[:, [1]])
@@ -77,20 +77,20 @@ def probability_positive(tweet):
         if label == 4:
             return (((dist.prob(label))*2)-1)
 
-# ----------------------------------------------------------------------
-# Testing the ML model
-# ----------------------------------------------------------------------
-
-test_tweet = 'horrible fucking stupid shitty idiot'
-
-print(classify_tweet(test_tweet))
-
-print(probability_positive(test_tweet))
-
-# ----------------------------------------------------------------------
-# Accuracy of the ML model
-# ----------------------------------------------------------------------
-
-testing_set = nltk.classify.apply_features(extract_features, testing_tweets)
-
-print("MultinomialNB accuracy percent:", nltk.classify.accuracy(classifier, testing_set))
+# # ----------------------------------------------------------------------
+# # Testing the ML model
+# # ----------------------------------------------------------------------
+#
+# test_tweet = 'horrible fucking stupid shitty idiot'
+#
+# print(classify_tweet(test_tweet))
+#
+# print(probability_positive(test_tweet))
+#
+# # ----------------------------------------------------------------------
+# # Accuracy of the ML model
+# # ----------------------------------------------------------------------
+#
+# testing_set = nltk.classify.apply_features(extract_features, testing_tweets)
+#
+# print("MultinomialNB accuracy percent:", nltk.classify.accuracy(classifier, testing_set))
