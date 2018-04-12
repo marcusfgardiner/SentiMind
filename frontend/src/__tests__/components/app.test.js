@@ -10,6 +10,10 @@ describe('app', () => {
   });
 
   it('renders a Wrapper component', () => {
-    expect(app.find('Wrapper').exists()).toBe(true)
-  })
+    expect(app.find('Wrapper').exists()).toBe(true);
+  });
+
+  it('renders a Footer component', () => {
+    expect(app.find('Footer').exists()).toBe(true);
+  });
 });
