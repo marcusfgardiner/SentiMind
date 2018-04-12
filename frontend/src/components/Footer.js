@@ -14,7 +14,7 @@ const Footer = () => {
         machine learning
       </p>
 
-      <p>
+      <p id="tech-stack">
         Powered by{' '}
         <img
           className="logos"
