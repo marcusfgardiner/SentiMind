@@ -40,7 +40,7 @@ class Wrapper extends Component {
   fetchSentiment = async () => {
     let { query } = this.state;
     try {
-      const request = await fetch('http://sentimind.co.uk:5000/', {
+      const request = await fetch(`${this.createUrl()}:5000/`, {
         method: 'POST',
         body: JSON.stringify(query),
         headers: new Headers({
@@ -86,12 +86,14 @@ class Wrapper extends Component {
     const VIEWS = {
       input: (
         <InputView
+          id="body"
           handleQueryInput={this.handleQueryInput}
           handleSubmit={this.handleSubmit}
         />
       ),
       output: (
         <OutputView
+          id="body"
           query={this.state.query}
           handleSubmit={this.handleSubmit}
           average_sentiment={this.state.average_sentiment}

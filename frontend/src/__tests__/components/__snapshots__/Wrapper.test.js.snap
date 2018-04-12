@@ -22,6 +22,7 @@ ShallowWrapper {
         <InputView
           handleQueryInput={[Function]}
           handleSubmit={[Function]}
+          id="body"
 />,
       ],
     },
@@ -43,6 +44,7 @@ ShallowWrapper {
         "props": Object {
           "handleQueryInput": [Function],
           "handleSubmit": [Function],
+          "id": "body",
         },
         "ref": null,
         "rendered": null,
@@ -62,6 +64,7 @@ ShallowWrapper {
           <InputView
             handleQueryInput={[Function]}
             handleSubmit={[Function]}
+            id="body"
 />,
         ],
       },
@@ -83,6 +86,7 @@ ShallowWrapper {
           "props": Object {
             "handleQueryInput": [Function],
             "handleSubmit": [Function],
+            "id": "body",
           },
           "ref": null,
           "rendered": null,

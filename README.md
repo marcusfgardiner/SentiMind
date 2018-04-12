@@ -8,6 +8,8 @@
 
 ### You can find out what the world thinks about a topic of your choice on [sentimind.co.uk](http://sentimind.co.uk/). Visualise the world's sentiment on everything from Donald Trump to kittens and rainbows!
 
+![SentiMind in action](https://media.giphy.com/media/5UvtFkTLx39wcZTyYY/giphy.gif)
+
 ## Tech Stack
 
 #### Backend/Frontend
