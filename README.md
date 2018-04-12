@@ -79,8 +79,15 @@ With both servers running - you can visit 'localhost:3000' in your browser to us
 
 For Testing our ReactJS front-end we used Jest with enzyme. To run the tests:
 
-1.  `cd fullstack_template/static`
+1.  `cd frontend`
 2.  `npm run test`
+
+If you get the error 'Error watching file for changes: EMFILE', run the following commands to fix your install of watchman:
+```
+brew uninstall watchman
+brew link automake
+brew install --HEAD watchman
+```
 
 For Testing our Python back-end we used Nose and Pytest. To run the tests:
 
