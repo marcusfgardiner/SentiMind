@@ -68,6 +68,11 @@ body {
 
 #footer {
   position: absolute;
+  display: grid;
+  grid-template-columns: 30% 70%;
   bottom: 0;
   width: 100%;
+  min-height: 100px;
+  background-color: #0f7589;
+  padding-left: 20px;
 }
