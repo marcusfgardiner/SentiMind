@@ -8,6 +8,10 @@
 
 ### You can find out what the world thinks about a topic of your choice on [sentimind.co.uk](http://sentimind.co.uk/). Visualise the world's sentiment on everything from Donald Trump to kittens and rainbows!
 
+### Our motivations for the project were to explore both Machine Learning and ReactJS. To do so, we aimed to harness a live stream of twitter data and analyse, visualise and extract meaning from the result.
+
+### We hope you enjoy the project and let us know if you have any questions
+
 ![SentiMind in action](https://media.giphy.com/media/5UvtFkTLx39wcZTyYY/giphy.gif)
 
 ## Tech Stack
