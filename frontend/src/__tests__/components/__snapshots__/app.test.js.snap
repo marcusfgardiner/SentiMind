@@ -21,6 +21,7 @@ ShallowWrapper {
         <Wrapper />,
         <Footer />,
       ],
+      "id": "top-container",
     },
     "ref": null,
     "rendered": Array [
@@ -55,6 +56,7 @@ ShallowWrapper {
           <Wrapper />,
           <Footer />,
         ],
+        "id": "top-container",
       },
       "ref": null,
       "rendered": Array [

@@ -17,23 +17,396 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <h3>
-        Footer
-</h3>,
+      "children": Array [
+        <p
+          id="sentibot-info"
+>
+          <em>
+                    * SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning
+          </em>
+</p>,
+        <p
+          id="tech-stack"
+>
+          Powered by
+           
+          <a
+                    href="https://reactjs.org/"
+                    target="_blank"
+          >
+                    <img
+                              alt="react logo"
+                              className="logos"
+                              height="40"
+                              src="react-original.svg"
+                              width="40"
+                    />
+          </a>
+           
+          and
+           
+          <a
+                    href="https://www.python.org/"
+                    target="_blank"
+          >
+                    <img
+                              alt="python logo"
+                              className="logos"
+                              height="40"
+                              src="python-original.svg"
+                              width="40"
+                    />
+          </a>
+           
+          Deployed with
+           
+          <a
+                    href="https://www.docker.com/"
+                    target="_blank"
+          >
+                    <img
+                              alt="python logo"
+                              className="logos"
+                              height="40"
+                              src="docker-original.svg"
+                              width="40"
+                    />
+          </a>
+           
+          and
+           
+          <a
+                    href="https://aws.amazon.com/"
+                    target="_blank"
+          >
+                    <img
+                              alt="python logo"
+                              className="logos"
+                              height="40"
+                              src="amazonwebservices-original.svg"
+                              width="40"
+                    />
+          </a>
+           
+          Check our
+           
+          <a
+                    href="https://github.com/marcusfgardiner/SentiMind"
+                    target="_blank"
+          >
+                    <img
+                              alt="python logo"
+                              className="logos"
+                              height="40"
+                              src="github-original.svg"
+                              width="40"
+                    />
+          </a>
+           
+          for more info.
+</p>,
+      ],
+      "id": "footer",
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": "Footer",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <em>
+            * SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning
+</em>,
+          "id": "sentibot-info",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "* SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning",
+          },
+          "ref": null,
+          "rendered": "* SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning",
+          "type": "em",
+        },
+        "type": "p",
       },
-      "ref": null,
-      "rendered": "Footer",
-      "type": "h3",
-    },
-    "type": "div",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Powered by",
+            " ",
+            <a
+              href="https://reactjs.org/"
+              target="_blank"
+>
+              <img
+                            alt="react logo"
+                            className="logos"
+                            height="40"
+                            src="react-original.svg"
+                            width="40"
+              />
+</a>,
+            " ",
+            "and",
+            " ",
+            <a
+              href="https://www.python.org/"
+              target="_blank"
+>
+              <img
+                            alt="python logo"
+                            className="logos"
+                            height="40"
+                            src="python-original.svg"
+                            width="40"
+              />
+</a>,
+            " ",
+            "Deployed with",
+            " ",
+            <a
+              href="https://www.docker.com/"
+              target="_blank"
+>
+              <img
+                            alt="python logo"
+                            className="logos"
+                            height="40"
+                            src="docker-original.svg"
+                            width="40"
+              />
+</a>,
+            " ",
+            "and",
+            " ",
+            <a
+              href="https://aws.amazon.com/"
+              target="_blank"
+>
+              <img
+                            alt="python logo"
+                            className="logos"
+                            height="40"
+                            src="amazonwebservices-original.svg"
+                            width="40"
+              />
+</a>,
+            " ",
+            "Check our",
+            " ",
+            <a
+              href="https://github.com/marcusfgardiner/SentiMind"
+              target="_blank"
+>
+              <img
+                            alt="python logo"
+                            className="logos"
+                            height="40"
+                            src="github-original.svg"
+                            width="40"
+              />
+</a>,
+            " ",
+            "for more info.",
+          ],
+          "id": "tech-stack",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Powered by",
+          " ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                alt="react logo"
+                className="logos"
+                height="40"
+                src="react-original.svg"
+                width="40"
+/>,
+              "href": "https://reactjs.org/",
+              "target": "_blank",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "react logo",
+                "className": "logos",
+                "height": "40",
+                "src": "react-original.svg",
+                "width": "40",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "a",
+          },
+          " ",
+          "and",
+          " ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                alt="python logo"
+                className="logos"
+                height="40"
+                src="python-original.svg"
+                width="40"
+/>,
+              "href": "https://www.python.org/",
+              "target": "_blank",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "python logo",
+                "className": "logos",
+                "height": "40",
+                "src": "python-original.svg",
+                "width": "40",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "a",
+          },
+          " ",
+          "Deployed with",
+          " ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                alt="python logo"
+                className="logos"
+                height="40"
+                src="docker-original.svg"
+                width="40"
+/>,
+              "href": "https://www.docker.com/",
+              "target": "_blank",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "python logo",
+                "className": "logos",
+                "height": "40",
+                "src": "docker-original.svg",
+                "width": "40",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "a",
+          },
+          " ",
+          "and",
+          " ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                alt="python logo"
+                className="logos"
+                height="40"
+                src="amazonwebservices-original.svg"
+                width="40"
+/>,
+              "href": "https://aws.amazon.com/",
+              "target": "_blank",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "python logo",
+                "className": "logos",
+                "height": "40",
+                "src": "amazonwebservices-original.svg",
+                "width": "40",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "a",
+          },
+          " ",
+          "Check our",
+          " ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                alt="python logo"
+                className="logos"
+                height="40"
+                src="github-original.svg"
+                width="40"
+/>,
+              "href": "https://github.com/marcusfgardiner/SentiMind",
+              "target": "_blank",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "python logo",
+                "className": "logos",
+                "height": "40",
+                "src": "github-original.svg",
+                "width": "40",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "a",
+          },
+          " ",
+          "for more info.",
+        ],
+        "type": "p",
+      },
+    ],
+    "type": "footer",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -41,23 +414,396 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <h3>
-          Footer
-</h3>,
+        "children": Array [
+          <p
+            id="sentibot-info"
+>
+            <em>
+                        * SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning
+            </em>
+</p>,
+          <p
+            id="tech-stack"
+>
+            Powered by
+             
+            <a
+                        href="https://reactjs.org/"
+                        target="_blank"
+            >
+                        <img
+                                    alt="react logo"
+                                    className="logos"
+                                    height="40"
+                                    src="react-original.svg"
+                                    width="40"
+                        />
+            </a>
+             
+            and
+             
+            <a
+                        href="https://www.python.org/"
+                        target="_blank"
+            >
+                        <img
+                                    alt="python logo"
+                                    className="logos"
+                                    height="40"
+                                    src="python-original.svg"
+                                    width="40"
+                        />
+            </a>
+             
+            Deployed with
+             
+            <a
+                        href="https://www.docker.com/"
+                        target="_blank"
+            >
+                        <img
+                                    alt="python logo"
+                                    className="logos"
+                                    height="40"
+                                    src="docker-original.svg"
+                                    width="40"
+                        />
+            </a>
+             
+            and
+             
+            <a
+                        href="https://aws.amazon.com/"
+                        target="_blank"
+            >
+                        <img
+                                    alt="python logo"
+                                    className="logos"
+                                    height="40"
+                                    src="amazonwebservices-original.svg"
+                                    width="40"
+                        />
+            </a>
+             
+            Check our
+             
+            <a
+                        href="https://github.com/marcusfgardiner/SentiMind"
+                        target="_blank"
+            >
+                        <img
+                                    alt="python logo"
+                                    className="logos"
+                                    height="40"
+                                    src="github-original.svg"
+                                    width="40"
+                        />
+            </a>
+             
+            for more info.
+</p>,
+        ],
+        "id": "footer",
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Footer",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <em>
+              * SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning
+</em>,
+            "id": "sentibot-info",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "* SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning",
+            },
+            "ref": null,
+            "rendered": "* SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning",
+            "type": "em",
+          },
+          "type": "p",
         },
-        "ref": null,
-        "rendered": "Footer",
-        "type": "h3",
-      },
-      "type": "div",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Powered by",
+              " ",
+              <a
+                href="https://reactjs.org/"
+                target="_blank"
+>
+                <img
+                                alt="react logo"
+                                className="logos"
+                                height="40"
+                                src="react-original.svg"
+                                width="40"
+                />
+</a>,
+              " ",
+              "and",
+              " ",
+              <a
+                href="https://www.python.org/"
+                target="_blank"
+>
+                <img
+                                alt="python logo"
+                                className="logos"
+                                height="40"
+                                src="python-original.svg"
+                                width="40"
+                />
+</a>,
+              " ",
+              "Deployed with",
+              " ",
+              <a
+                href="https://www.docker.com/"
+                target="_blank"
+>
+                <img
+                                alt="python logo"
+                                className="logos"
+                                height="40"
+                                src="docker-original.svg"
+                                width="40"
+                />
+</a>,
+              " ",
+              "and",
+              " ",
+              <a
+                href="https://aws.amazon.com/"
+                target="_blank"
+>
+                <img
+                                alt="python logo"
+                                className="logos"
+                                height="40"
+                                src="amazonwebservices-original.svg"
+                                width="40"
+                />
+</a>,
+              " ",
+              "Check our",
+              " ",
+              <a
+                href="https://github.com/marcusfgardiner/SentiMind"
+                target="_blank"
+>
+                <img
+                                alt="python logo"
+                                className="logos"
+                                height="40"
+                                src="github-original.svg"
+                                width="40"
+                />
+</a>,
+              " ",
+              "for more info.",
+            ],
+            "id": "tech-stack",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Powered by",
+            " ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <img
+                  alt="react logo"
+                  className="logos"
+                  height="40"
+                  src="react-original.svg"
+                  width="40"
+/>,
+                "href": "https://reactjs.org/",
+                "target": "_blank",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "react logo",
+                  "className": "logos",
+                  "height": "40",
+                  "src": "react-original.svg",
+                  "width": "40",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": "a",
+            },
+            " ",
+            "and",
+            " ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <img
+                  alt="python logo"
+                  className="logos"
+                  height="40"
+                  src="python-original.svg"
+                  width="40"
+/>,
+                "href": "https://www.python.org/",
+                "target": "_blank",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "python logo",
+                  "className": "logos",
+                  "height": "40",
+                  "src": "python-original.svg",
+                  "width": "40",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": "a",
+            },
+            " ",
+            "Deployed with",
+            " ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <img
+                  alt="python logo"
+                  className="logos"
+                  height="40"
+                  src="docker-original.svg"
+                  width="40"
+/>,
+                "href": "https://www.docker.com/",
+                "target": "_blank",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "python logo",
+                  "className": "logos",
+                  "height": "40",
+                  "src": "docker-original.svg",
+                  "width": "40",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": "a",
+            },
+            " ",
+            "and",
+            " ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <img
+                  alt="python logo"
+                  className="logos"
+                  height="40"
+                  src="amazonwebservices-original.svg"
+                  width="40"
+/>,
+                "href": "https://aws.amazon.com/",
+                "target": "_blank",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "python logo",
+                  "className": "logos",
+                  "height": "40",
+                  "src": "amazonwebservices-original.svg",
+                  "width": "40",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": "a",
+            },
+            " ",
+            "Check our",
+            " ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <img
+                  alt="python logo"
+                  className="logos"
+                  height="40"
+                  src="github-original.svg"
+                  width="40"
+/>,
+                "href": "https://github.com/marcusfgardiner/SentiMind",
+                "target": "_blank",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "python logo",
+                  "className": "logos",
+                  "height": "40",
+                  "src": "github-original.svg",
+                  "width": "40",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": "a",
+            },
+            " ",
+            "for more info.",
+          ],
+          "type": "p",
+        },
+      ],
+      "type": "footer",
     },
   ],
   Symbol(enzyme.__options__): Object {

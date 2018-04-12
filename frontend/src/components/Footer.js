@@ -37,7 +37,7 @@ const Footer = () => {
             src={pythonLogo}
           />
         </a>{' '}
-        deployed with{' '}
+        Deployed with{' '}
         <a target="_blank" href="https://www.docker.com/">
           <img
             className="logos"
@@ -57,7 +57,7 @@ const Footer = () => {
             src={amazonLogo}
           />
         </a>{' '}
-        check our{' '}
+        Check our{' '}
         <a target="_blank" href="https://github.com/marcusfgardiner/SentiMind">
           <img
             className="logos"
