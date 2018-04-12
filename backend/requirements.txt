@@ -4,3 +4,9 @@ tweepy
 flask-cors
 nose
 pytest
+wheel
+pandas
+nltk
+numpy
+sklearn
+scipy
