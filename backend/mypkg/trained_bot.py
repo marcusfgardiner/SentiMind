@@ -5,7 +5,7 @@ import numpy
 import sklearn as skl
 import pickle
 
-f = open('./mypkg/Bernoulliclassifier.pickle', 'rb')
+f = open('./mypkg/bananoulli_20k.pickle', 'rb')
 classifier = pickle.load(f)
 f.close
 
@@ -77,11 +77,11 @@ def probability_positive(tweet):
         if label == 4:
             return (((dist.prob(label))*2)-1)
 
-# # ----------------------------------------------------------------------
-# # Testing the ML model
-# # ----------------------------------------------------------------------
-#
-# test_tweet = 'horrible fucking stupid shitty idiot'
+# ----------------------------------------------------------------------
+# Testing the ML model
+# ----------------------------------------------------------------------
+
+# test_tweet = 'lovely happy beautiful joy'
 #
 # print(classify_tweet(test_tweet))
 #
