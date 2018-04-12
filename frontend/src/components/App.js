@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Wrapper from './Wrapper';
+import Footer from './Footer';
 
 class App extends Component {
-  render () {
+  render() {
     return (
-        <div>
-          <Wrapper />
-        </div>
+      <div>
+        <Wrapper />
+        <Footer />
+      </div>
     );
   }
 }
