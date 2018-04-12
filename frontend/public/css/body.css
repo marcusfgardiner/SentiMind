@@ -74,11 +74,11 @@ body {
   width: 100%;
   min-height: 100px;
   background-color: #0f7589;
-  padding-left: 100px;
+  padding-left: 85px;
+  padding-top: 10px;
 }
 
 #tech-stack {
-  padding-top: 10px;
   font-size: 20px;
 }
 
@@ -90,4 +90,13 @@ img.logos {
   margin-bottom: -12px;
   margin-left: 3px;
   margin-right: 3px;
+}
+
+img.logos:hover {
+  cursor: pointer;
+  transition-duration: 0.5s;
+  transition-property: all;
+  transform: scale(1.5, 1.5);
+  margin-left: 6px;
+  margin-right: 6px;
 }

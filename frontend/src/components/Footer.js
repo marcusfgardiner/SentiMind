@@ -18,45 +18,55 @@ const Footer = () => {
 
       <p id="tech-stack">
         Powered by{' '}
-        <img
-          className="logos"
-          alt="react logo"
-          width="40"
-          height="40"
-          src={reactLogo}
-        />{' '}
+        <a target="_blank" href="https://reactjs.org/">
+          <img
+            className="logos"
+            alt="react logo"
+            width="40"
+            height="40"
+            src={reactLogo}
+          />
+        </a>{' '}
         and{' '}
-        <img
-          className="logos"
-          alt="python logo"
-          width="40"
-          height="40"
-          src={pythonLogo}
-        />{' '}
+        <a target="_blank" href="https://www.python.org/">
+          <img
+            className="logos"
+            alt="python logo"
+            width="40"
+            height="40"
+            src={pythonLogo}
+          />
+        </a>{' '}
         deployed with{' '}
-        <img
-          className="logos"
-          alt="python logo"
-          width="40"
-          height="40"
-          src={dockerLogo}
-        />{' '}
+        <a target="_blank" href="https://www.docker.com/">
+          <img
+            className="logos"
+            alt="python logo"
+            width="40"
+            height="40"
+            src={dockerLogo}
+          />
+        </a>{' '}
         and{' '}
-        <img
-          className="logos"
-          alt="python logo"
-          width="40"
-          height="40"
-          src={amazonLogo}
-        />{' '}
+        <a target="_blank" href="https://aws.amazon.com/">
+          <img
+            className="logos"
+            alt="python logo"
+            width="40"
+            height="40"
+            src={amazonLogo}
+          />
+        </a>{' '}
         check our{' '}
-        <img
-          className="logos"
-          alt="python logo"
-          width="40"
-          height="40"
-          src={githubLogo}
-        />{' '}
+        <a target="_blank" href="https://github.com/marcusfgardiner/SentiMind">
+          <img
+            className="logos"
+            alt="python logo"
+            width="40"
+            height="40"
+            src={githubLogo}
+          />
+        </a>{' '}
         for more info.
       </p>
     </footer>
