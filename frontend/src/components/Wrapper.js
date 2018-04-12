@@ -86,12 +86,14 @@ class Wrapper extends Component {
     const VIEWS = {
       input: (
         <InputView
+          id="body"
           handleQueryInput={this.handleQueryInput}
           handleSubmit={this.handleSubmit}
         />
       ),
       output: (
         <OutputView
+          id="body"
           query={this.state.query}
           handleSubmit={this.handleSubmit}
           average_sentiment={this.state.average_sentiment}
