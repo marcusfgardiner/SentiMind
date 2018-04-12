@@ -8,10 +8,12 @@ import githubLogo from '../images/github-original.svg';
 const Footer = () => {
   return (
     <footer id="footer">
-      <p>
-        SentiMind analyses and visualises the sentiment (frequency and polarity)
-        of the latest 100 tweets using SentiBot, an algorithm trained using
-        machine learning
+      <p id="sentibot-info">
+        <em>
+          * SentiMind analyses and visualises the sentiment (frequency and
+          polarity) of the latest 100 tweets using SentiBot, an algorithm
+          trained using machine learning
+        </em>
       </p>
 
       <p id="tech-stack">

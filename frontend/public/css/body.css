@@ -79,10 +79,14 @@ body {
 
 #tech-stack {
   padding-top: 10px;
+  font-size: 20px;
+}
+
+#sentibot-info {
+  font-size: 14px;
 }
 
 img.logos {
-  /* padding-top: 10px; */
   margin-bottom: -12px;
   margin-left: 3px;
   margin-right: 3px;
