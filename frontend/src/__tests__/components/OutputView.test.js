@@ -7,8 +7,10 @@ describe('OutputView', () => {
   const props = {
     handleSubmit: mockHandleSubmit,
     average_sentiment: 'negative',
+    query: 'Donald Trump',
     sentiments: { positive: 0, neutral: 0, negative: 0 },
-    top_tweets: { positive: '102389292', negative: '02392039420' }
+    top_tweets: { positive: '102389292', negative: '02392039420' },
+    top_words: { hello: 4, goodbye: 3, again: 2 }
   };
   const outputView = shallow(<OutputView {...props} />);
 
@@ -29,11 +31,7 @@ describe('OutputView', () => {
   });
 
   it('renders a BarChart component', () => {
-    expect(outputView.find('BarChart').exists()).toBe(true);
-  });
-
-  it('renders a PieChart component', () => {
-    expect(outputView.find('PieChart').exists()).toBe(true);
+    expect(outputView.find('VictoryChart').exists()).toBe(true);
   });
 
   describe('tweets', () => {
@@ -50,7 +48,7 @@ describe('OutputView', () => {
     describe('SubHeader props', () => {
       it('passes flexible SubHeaderText down to main-subheader', () => {
         expect(outputView.find('#main-subheader').prop('subHeaderText')).toBe(
-          'So, the world thinks...'
+          'The sentiment on "Donald Trump" is generally:'
         );
       });
 
@@ -84,6 +82,20 @@ describe('OutputView', () => {
       it('handle submit function down to Button', () => {
         expect(outputView.find('Button').prop('handleSubmit')).toBe(
           mockHandleSubmit
+        );
+      });
+    });
+
+    describe('formatTopWords()', () => {
+      it('correctly formats json data', () => {
+        const json_data = { hello: 4, goodbye: 3, again: 2 };
+        const formatted_data = [
+          { text: 'hello', value: 400 },
+          { text: 'goodbye', value: 300 },
+          { text: 'again', value: 200 }
+        ];
+        expect(outputView.instance().formatTopWords(json_data)).toEqual(
+          formatted_data
         );
       });
     });

@@ -5,12 +5,13 @@ import Wrapper from '../../components/Wrapper';
 describe('Wrapper', () => {
   const sentiments = { positive: 3, neutral: 3, negative: 4 };
   const top_tweets = { positive: '124434343', negative: '12435532222' };
+  const top_words = { hello: 4, goodbye: 3, again: 2 };
   fetch.mockResponse(
     JSON.stringify({
       polarity: 'good',
-      positivity_percentage: 30,
       sentiments,
-      top_tweets
+      top_tweets,
+      top_words
     })
   );
   let wrapper = shallow(<Wrapper />);
@@ -79,6 +80,10 @@ describe('Wrapper', () => {
           negative: undefined
         });
       });
+
+      it('has a `top_words` state initialized as object', () => {
+        expect(wrapper.state('top_words')).toEqual(undefined);
+      });
     });
   });
 
@@ -104,33 +109,38 @@ describe('Wrapper', () => {
     beforeEach(() => {
       wrapper.setState({ buttonClicked: true });
     });
-    describe('handleSubmit props', () => {
-      it('passes handleSubmit down to OutputView', () => {
-        expect(wrapper.find('OutputView').prop('handleSubmit')).toBe(
-          wrapper.instance().handleSubmit
-        );
-      });
+    it('passes handleSubmit down to OutputView', () => {
+      expect(wrapper.find('OutputView').prop('handleSubmit')).toBe(
+        wrapper.instance().handleSubmit
+      );
+    });
 
-      it('passes sentiments down to OutputView', () => {
-        wrapper.setState({ sentiments });
-        expect(wrapper.find('OutputView').prop('sentiments')).toBe(
-          wrapper.state('sentiments')
-        );
-      });
+    it('passes sentiments down to OutputView', () => {
+      wrapper.setState({ sentiments });
+      expect(wrapper.find('OutputView').prop('sentiments')).toBe(
+        wrapper.state('sentiments')
+      );
+    });
 
-      it('passes positivity_percentage down to OutputView', () => {
-        wrapper.setState({ sentiments });
-        expect(wrapper.find('OutputView').prop('positivity_percentage')).toBe(
-          wrapper.state('positivity_percentage')
-        );
-      });
+    it('passes top_tweets down to OutputView', () => {
+      wrapper.setState({ sentiments });
+      expect(wrapper.find('OutputView').prop('top_tweets')).toBe(
+        wrapper.state('top_tweets')
+      );
+    });
 
-      it('passes top_tweets down to OutputView', () => {
-        wrapper.setState({ sentiments });
-        expect(wrapper.find('OutputView').prop('top_tweets')).toBe(
-          wrapper.state('top_tweets')
-        );
-      });
+    it('passes top_words down to OutputView', () => {
+      wrapper.setState({ top_words });
+      expect(wrapper.find('OutputView').prop('top_words')).toBe(
+        wrapper.state('top_words')
+      );
+    });
+
+    it('passes query down to OutputView', () => {
+      wrapper.setState({ query: 'hey' });
+      expect(wrapper.find('OutputView').prop('query')).toBe(
+        wrapper.state('query')
+      );
     });
 
     describe('sentiment props', () => {
@@ -151,6 +161,12 @@ describe('Wrapper', () => {
     });
   });
 
+  describe('createUrl()', () => {
+    it('returns window location if not on http://localhost:3000', () => {
+      expect(wrapper.instance().createUrl()).toEqual(window.location.href);
+    });
+  });
+
   describe('fetchSentiment()', () => {
     beforeEach(async () => {
       await wrapper.instance().fetchSentiment();
@@ -159,16 +175,16 @@ describe('Wrapper', () => {
       expect(wrapper.state('average_sentiment')).toEqual('good');
     });
 
-    it('sets the positivity_percentage state to the response received', () => {
-      expect(wrapper.state('positivity_percentage')).toEqual(30);
-    });
-
     it('sets the sentiments state to sentiments response', () => {
       expect(wrapper.state('sentiments')).toEqual(sentiments);
     });
 
     it('sets the top_tweets state to top_tweets response', () => {
       expect(wrapper.state('top_tweets')).toEqual(top_tweets);
+    });
+
+    it('sets the top_words state to top_words response', () => {
+      expect(wrapper.state('top_words')).toEqual(top_words);
     });
   });
 
@@ -210,14 +226,11 @@ describe('Wrapper', () => {
         });
 
         it('changes `top_tweets` to 0', () => {
-          expect(wrapper.state('top_tweets')).toEqual({
-            positive: '0',
-            negative: '0'
-          });
+          expect(wrapper.state('top_tweets')).toEqual(undefined);
         });
 
-        it('changes `positivity_percentage` to 0', () => {
-          expect(wrapper.state('positivity_percentage')).toBe(0);
+        it('changes `top_words` to undefined', () => {
+          expect(wrapper.state('top_words')).toBe(undefined);
         });
       });
     });

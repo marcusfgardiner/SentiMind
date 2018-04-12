@@ -11,9 +11,9 @@ class Wrapper extends Component {
       query: undefined,
       buttonClicked: false,
       average_sentiment: undefined,
-      positivity_percentage: 0,
       sentiments: { positive: 0, neutral: 0, negative: 0 },
-      top_tweets: undefined
+      top_tweets: undefined,
+      top_words: undefined
     };
   }
 
@@ -21,22 +21,35 @@ class Wrapper extends Component {
     this.setState({ query: event.target.value });
   };
 
-  fetchSentiment = async () => {
-    let { query } = this.state;
-    const request = await fetch('http://localhost:5000/', {
-      method: 'POST',
-      body: JSON.stringify(query),
-      headers: new Headers({
-        'Content-Type': 'application/json'
-      })
-    });
-    const json = await request.json();
+  createUrl = () => {
+    if (window.location.href === 'http://localhost:3000/') {
+      return 'http://localhost';
+    }
+    return window.location.href;
+  };
+
+  createState = json => {
     this.setState({
       average_sentiment: json.polarity,
-      positivity_percentage: json.positivity_percentage,
       sentiments: json.sentiments,
-      top_tweets: json.top_tweets
+      top_tweets: json.top_tweets,
+      top_words: json.top_words
     });
+  };
+
+  fetchSentiment = async () => {
+    let { query } = this.state;
+    try {
+      const request = await fetch(`${this.createUrl()}:5000/`, {
+        method: 'POST',
+        body: JSON.stringify(query),
+        headers: new Headers({
+          'Content-Type': 'application/json'
+        })
+      });
+      const json = await request.json();
+      this.createState(json);
+    } catch (err) {}
   };
 
   resetState = () => {
@@ -45,9 +58,9 @@ class Wrapper extends Component {
       buttonClicked: !buttonClicked,
       query: undefined,
       average_sentiment: undefined,
-      positivity_percentage: 0,
       sentiments: { positive: 0, neutral: 0, negative: 0 },
-      top_tweets: { positive: '0', negative: '0' }
+      top_tweets: undefined,
+      top_words: undefined
     });
   };
 
@@ -73,17 +86,20 @@ class Wrapper extends Component {
     const VIEWS = {
       input: (
         <InputView
+          id="body"
           handleQueryInput={this.handleQueryInput}
           handleSubmit={this.handleSubmit}
         />
       ),
       output: (
         <OutputView
+          id="body"
+          query={this.state.query}
           handleSubmit={this.handleSubmit}
           average_sentiment={this.state.average_sentiment}
           sentiments={this.state.sentiments}
-          positivity_percentage={this.state.positivity_percentage}
           top_tweets={this.state.top_tweets}
+          top_words={this.state.top_words}
         />
       )
     };

@@ -31,7 +31,23 @@ def test_top_tweets():
   tweets = [pos_tweet, neut_tweet, neg_tweet]
   sentiment_analyser = SentimentAnalyser()
   result = sentiment_analyser.top_tweets(tweets)
-  assert result["negative"] == 967824267948773379
+  assert result["positive"] == "967824267948773377"
+
+def test_top_words():
+  pos_tweet = Tweet("@dumb", "absolute devops", 967824267948773377)
+  neut_tweet = Tweet("@dumb", "absolute devops", 967824267948773378)
+  neg_tweet = Tweet("@dumb", "neg", 967824267948773379)
+  sentiment_analyser = SentimentAnalyser()
+  tweets = [pos_tweet, neut_tweet, neg_tweet]
+  expected_result = { "absolute": 2, "devops": 2, "": 1, "neg": 1 }
+  print(sentiment_analyser.top_words(tweets))
+  assert sentiment_analyser.top_words(tweets) == expected_result
+
+def test_filter_stop_words():
+  unfiltered_sentence = "this is a foo bar sentence"
+  filtered_array = ["foo", "bar", "sentence"]
+  sentiment_analyser = SentimentAnalyser()
+  assert sentiment_analyser.filter_stop_words(unfiltered_sentence) == filtered_array
 
 def test_sentiment_counter():
   tweet = Tweet("@dumb", "heyo", 967824267948773377)

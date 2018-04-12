@@ -1,7 +1,12 @@
 import React from 'react';
+import StyledSentiment from './styled_components/Sentiment';
 
 const Sentiment = props => {
-  return <h2 id="sentiment">{props.average_sentiment}</h2>;
+  return (
+    <StyledSentiment>
+      <p id="sentiment">{props.average_sentiment}</p>
+    </StyledSentiment>
+  );
 };
 
 export default Sentiment;

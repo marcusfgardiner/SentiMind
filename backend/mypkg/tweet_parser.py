@@ -14,6 +14,11 @@ class TweetParser:
         return new_tweet
 
     def clean_tweet(self, tweet):
-        tweet_string = tweet.text
-        tweet.text = ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)", " ", tweet_string).split())
+        tweet.text = self.regex_cleaner(tweet.text)
         return tweet.text
+
+    def regex_cleaner(self, tweet_text):
+      tweet_text = re.sub("(f\*ck)", "fuck", tweet_text)
+      tweet_text = re.sub("(sh\*t)", "shit", tweet_text)
+      tweet_text = ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)", " ", tweet_text).split())
+      return tweet_text

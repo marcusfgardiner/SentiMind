@@ -1,21 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   text-align: center;
   color: #f2e8e8;
-  height: 100%;
   background: #2193b0;
   background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
   background: linear-gradient(to right, #6dd5ed, #2193b0);
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-attachment: fixed;
+  margin: 0;
+  padding: 0;
 }
 
-body,
-html {
+html,
+body {
   height: 100%;
-  display: grid;
+  position: relative;
 }
 
-#input {
-  margin: auto;
+.top-card {
+  padding-bottom: 80px;
+}
+
+.chart-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: white;
+}
+
+.tweets-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 2em;
+  padding-top: 30px;
+  margin: 20px;
+  padding-left: 120px;
+}
+
+.tweets-container > div {
+  justify-content: center;
+  width: 80%;
+}
+
+#loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#top-container {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px; /* height of your footer */
+}
+
+#footer {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  bottom: 0;
+  width: 100%;
+  min-height: 100px;
+  background-color: #0f7589;
+  padding-left: 85px;
+  padding-top: 10px;
+}
+
+#tech-stack {
+  font-size: 20px;
+}
+
+#sentibot-info {
+  font-size: 14px;
+}
+
+img.logos {
+  margin-bottom: -12px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+img.logos:hover {
+  cursor: pointer;
+  transition-duration: 0.5s;
+  transition-property: all;
+  transform: scale(1.5, 1.5);
+  margin-left: 6px;
+  margin-right: 6px;
 }
