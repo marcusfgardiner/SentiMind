@@ -71,3 +71,35 @@ To run the frontend server:
 
 * Sticking to the single responsibility principle while designing the GET request -method using Tweepy
 * Hard coding the word "sad" into the query for test purposes and then forget we did it, causing a minor breakdown and assuming "Twitter is just a really depressing place"
+
+## Future Features (aka. to be added in order of priority)
+
+The fact that we followed Agile methodologies since the get-go and decided on MVP v1, v2 and v3 at the very start of the project made sure that our app is easily extendable and scalable. 
+Adding features like the ones explained below is therefore easily achievable without having to modify the codebase too much.
+
+* Refactoring: clean-up the backend code to optimise the way the different methods (polarity checker, top tweets, top words, etc.) are looping through the tweets.
+
+* "History of sentiment":
+Sentiment search linked to time. User can search for the positivity perception now vs. an earlier period of time.
+
+* Search by users: hero or troll? General sentiment on Twitter-users where the SentiMind user can see what the Twitterverse thinks about someone.
+
+* Responsive web design: considering the time put into UI, UX and deploying our product, we would like to improve SentiMind's user interface plasticity, as well as the overall user experience, eg. by including flexible grids and images.
+
+* Search history: add database & login functionality so that users can have a list of previously searched keywords.
+
+#### Improve bot accuracy
+
+One of the most impactful learnings we had this week was finding out that using Machine Learning to train a bot can take a day or a year; accuracy can always be improved. 
+
+Due to time constraints and the fact that we wanted to have a usable product by the end of the week, the dataset that we trained the bot with was limited to 20,000 tweets. Some examples on how to improve bot-accuracy:
+
+* Use NLTK to add a list of adverbs and adjectives that modify the proceeding noun phrases' polarity
+
+* Add context-based analysis
+
+* Add smiley/emoji -based analysis
+
+* Add arrays of easily identifiable positive/negative noun phrases that weigh the polarity of the sentence
+
+* Add sarcasm detection via emoji and sarcastic noun-phrase identification
