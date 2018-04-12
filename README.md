@@ -2,7 +2,7 @@
 
 [Daniel Keen](https://github.com/DKeen0123) || [Marcus Gardiner](https://github.com/marcusfgardiner) || [Carlos Trapet](https://github.com/CarlosTrapet) || [Stephen Tilley](https://github.com/stilley85)
 
-### SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning
+### SentiMind analyses and visualises the live sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, a bot trained using a machine learning algorithm (Bernoulli Naive Bayes Algorithm)
 
 ### SentiBot is powered by ReactJS and Python, and is deployed using Docker and AWS
 
