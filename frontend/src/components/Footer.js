@@ -12,13 +12,17 @@ const Footer = () => {
         <em>
           * SentiMind analyses and visualises the sentiment (frequency and
           polarity) of the latest 100 tweets using SentiBot, an algorithm
-          trained using machine learning
+          trained using machine learning.
         </em>
       </p>
 
       <p id="tech-stack">
         Powered by{' '}
-        <a target="_blank" href="https://reactjs.org/">
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://reactjs.org/"
+        >
           <img
             className="logos"
             alt="react logo"
@@ -28,7 +32,11 @@ const Footer = () => {
           />
         </a>{' '}
         and{' '}
-        <a target="_blank" href="https://www.python.org/">
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://www.python.org/"
+        >
           <img
             className="logos"
             alt="python logo"
@@ -38,7 +46,11 @@ const Footer = () => {
           />
         </a>{' '}
         Deployed with{' '}
-        <a target="_blank" href="https://www.docker.com/">
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://www.docker.com/"
+        >
           <img
             className="logos"
             alt="python logo"
@@ -48,7 +60,11 @@ const Footer = () => {
           />
         </a>{' '}
         and{' '}
-        <a target="_blank" href="https://aws.amazon.com/">
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://aws.amazon.com/"
+        >
           <img
             className="logos"
             alt="python logo"
@@ -58,7 +74,11 @@ const Footer = () => {
           />
         </a>{' '}
         Check our{' '}
-        <a target="_blank" href="https://github.com/marcusfgardiner/SentiMind">
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://github.com/marcusfgardiner/SentiMind"
+        >
           <img
             className="logos"
             alt="python logo"

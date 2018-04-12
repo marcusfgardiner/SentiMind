@@ -22,7 +22,7 @@ ShallowWrapper {
           id="sentibot-info"
 >
           <em>
-                    * SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning
+                    * SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning.
           </em>
 </p>,
         <p
@@ -32,6 +32,7 @@ ShallowWrapper {
            
           <a
                     href="https://reactjs.org/"
+                    rel="noopener noreferrer"
                     target="_blank"
           >
                     <img
@@ -47,6 +48,7 @@ ShallowWrapper {
            
           <a
                     href="https://www.python.org/"
+                    rel="noopener noreferrer"
                     target="_blank"
           >
                     <img
@@ -62,6 +64,7 @@ ShallowWrapper {
            
           <a
                     href="https://www.docker.com/"
+                    rel="noopener noreferrer"
                     target="_blank"
           >
                     <img
@@ -77,6 +80,7 @@ ShallowWrapper {
            
           <a
                     href="https://aws.amazon.com/"
+                    rel="noopener noreferrer"
                     target="_blank"
           >
                     <img
@@ -92,6 +96,7 @@ ShallowWrapper {
            
           <a
                     href="https://github.com/marcusfgardiner/SentiMind"
+                    rel="noopener noreferrer"
                     target="_blank"
           >
                     <img
@@ -116,7 +121,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <em>
-            * SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning
+            * SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning.
 </em>,
           "id": "sentibot-info",
         },
@@ -126,10 +131,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "* SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning",
+            "children": "* SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning.",
           },
           "ref": null,
-          "rendered": "* SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning",
+          "rendered": "* SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning.",
           "type": "em",
         },
         "type": "p",
@@ -144,6 +149,7 @@ ShallowWrapper {
             " ",
             <a
               href="https://reactjs.org/"
+              rel="noopener noreferrer"
               target="_blank"
 >
               <img
@@ -159,6 +165,7 @@ ShallowWrapper {
             " ",
             <a
               href="https://www.python.org/"
+              rel="noopener noreferrer"
               target="_blank"
 >
               <img
@@ -174,6 +181,7 @@ ShallowWrapper {
             " ",
             <a
               href="https://www.docker.com/"
+              rel="noopener noreferrer"
               target="_blank"
 >
               <img
@@ -189,6 +197,7 @@ ShallowWrapper {
             " ",
             <a
               href="https://aws.amazon.com/"
+              rel="noopener noreferrer"
               target="_blank"
 >
               <img
@@ -204,6 +213,7 @@ ShallowWrapper {
             " ",
             <a
               href="https://github.com/marcusfgardiner/SentiMind"
+              rel="noopener noreferrer"
               target="_blank"
 >
               <img
@@ -236,6 +246,7 @@ ShallowWrapper {
                 width="40"
 />,
               "href": "https://reactjs.org/",
+              "rel": "noopener noreferrer",
               "target": "_blank",
             },
             "ref": null,
@@ -272,6 +283,7 @@ ShallowWrapper {
                 width="40"
 />,
               "href": "https://www.python.org/",
+              "rel": "noopener noreferrer",
               "target": "_blank",
             },
             "ref": null,
@@ -308,6 +320,7 @@ ShallowWrapper {
                 width="40"
 />,
               "href": "https://www.docker.com/",
+              "rel": "noopener noreferrer",
               "target": "_blank",
             },
             "ref": null,
@@ -344,6 +357,7 @@ ShallowWrapper {
                 width="40"
 />,
               "href": "https://aws.amazon.com/",
+              "rel": "noopener noreferrer",
               "target": "_blank",
             },
             "ref": null,
@@ -380,6 +394,7 @@ ShallowWrapper {
                 width="40"
 />,
               "href": "https://github.com/marcusfgardiner/SentiMind",
+              "rel": "noopener noreferrer",
               "target": "_blank",
             },
             "ref": null,
@@ -419,7 +434,7 @@ ShallowWrapper {
             id="sentibot-info"
 >
             <em>
-                        * SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning
+                        * SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning.
             </em>
 </p>,
           <p
@@ -429,6 +444,7 @@ ShallowWrapper {
              
             <a
                         href="https://reactjs.org/"
+                        rel="noopener noreferrer"
                         target="_blank"
             >
                         <img
@@ -444,6 +460,7 @@ ShallowWrapper {
              
             <a
                         href="https://www.python.org/"
+                        rel="noopener noreferrer"
                         target="_blank"
             >
                         <img
@@ -459,6 +476,7 @@ ShallowWrapper {
              
             <a
                         href="https://www.docker.com/"
+                        rel="noopener noreferrer"
                         target="_blank"
             >
                         <img
@@ -474,6 +492,7 @@ ShallowWrapper {
              
             <a
                         href="https://aws.amazon.com/"
+                        rel="noopener noreferrer"
                         target="_blank"
             >
                         <img
@@ -489,6 +508,7 @@ ShallowWrapper {
              
             <a
                         href="https://github.com/marcusfgardiner/SentiMind"
+                        rel="noopener noreferrer"
                         target="_blank"
             >
                         <img
@@ -513,7 +533,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <em>
-              * SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning
+              * SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning.
 </em>,
             "id": "sentibot-info",
           },
@@ -523,10 +543,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "* SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning",
+              "children": "* SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning.",
             },
             "ref": null,
-            "rendered": "* SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning",
+            "rendered": "* SentiMind analyses and visualises the sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, an algorithm trained using machine learning.",
             "type": "em",
           },
           "type": "p",
@@ -541,6 +561,7 @@ ShallowWrapper {
               " ",
               <a
                 href="https://reactjs.org/"
+                rel="noopener noreferrer"
                 target="_blank"
 >
                 <img
@@ -556,6 +577,7 @@ ShallowWrapper {
               " ",
               <a
                 href="https://www.python.org/"
+                rel="noopener noreferrer"
                 target="_blank"
 >
                 <img
@@ -571,6 +593,7 @@ ShallowWrapper {
               " ",
               <a
                 href="https://www.docker.com/"
+                rel="noopener noreferrer"
                 target="_blank"
 >
                 <img
@@ -586,6 +609,7 @@ ShallowWrapper {
               " ",
               <a
                 href="https://aws.amazon.com/"
+                rel="noopener noreferrer"
                 target="_blank"
 >
                 <img
@@ -601,6 +625,7 @@ ShallowWrapper {
               " ",
               <a
                 href="https://github.com/marcusfgardiner/SentiMind"
+                rel="noopener noreferrer"
                 target="_blank"
 >
                 <img
@@ -633,6 +658,7 @@ ShallowWrapper {
                   width="40"
 />,
                 "href": "https://reactjs.org/",
+                "rel": "noopener noreferrer",
                 "target": "_blank",
               },
               "ref": null,
@@ -669,6 +695,7 @@ ShallowWrapper {
                   width="40"
 />,
                 "href": "https://www.python.org/",
+                "rel": "noopener noreferrer",
                 "target": "_blank",
               },
               "ref": null,
@@ -705,6 +732,7 @@ ShallowWrapper {
                   width="40"
 />,
                 "href": "https://www.docker.com/",
+                "rel": "noopener noreferrer",
                 "target": "_blank",
               },
               "ref": null,
@@ -741,6 +769,7 @@ ShallowWrapper {
                   width="40"
 />,
                 "href": "https://aws.amazon.com/",
+                "rel": "noopener noreferrer",
                 "target": "_blank",
               },
               "ref": null,
@@ -777,6 +806,7 @@ ShallowWrapper {
                   width="40"
 />,
                 "href": "https://github.com/marcusfgardiner/SentiMind",
+                "rel": "noopener noreferrer",
                 "target": "_blank",
               },
               "ref": null,
