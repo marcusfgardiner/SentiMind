@@ -12,7 +12,7 @@
 
 ### We hope you enjoy the project and let us know if you have any questions
 
-![SentiMind in action](https://media.giphy.com/media/5UvtFkTLx39wcZTyYY/giphy.gif)
+![SentiMind in action](https://media.giphy.com/media/8ciRu44tZk6M8sx77E/giphy.gif)
 
 ## Tech Stack
 
