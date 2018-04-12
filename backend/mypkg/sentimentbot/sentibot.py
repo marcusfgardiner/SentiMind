@@ -10,7 +10,7 @@ from nltk.classify.scikitlearn import SklearnClassifier
 from sklearn.linear_model import LogisticRegression,SGDClassifier
 from sklearn.svm import SVC, LinearSVC, NuSVC
 
-df = pd.DataFrame(pd.read_csv('shuffleddata.csv', encoding='latin-1'))
+df = pd.DataFrame(pd.read_csv('20000data.csv', encoding='latin-1'))
 
 sentiment_column = (df.iloc[:, [1]])
 sentiment_array = sentiment_column.values

@@ -5,7 +5,7 @@ import numpy
 import sklearn as skl
 import pickle
 
-f = open('fiftythousand_classifier.pickle', 'rb')
+f = open('Bernoulliclassifier.pickle', 'rb')
 classifier = pickle.load(f)
 f.close
 
@@ -81,7 +81,7 @@ def probability_positive(tweet):
 # Testing the ML model
 # ----------------------------------------------------------------------
 
-test_tweet = 'horrible disgusting fuck you asshole bitch fucker'
+test_tweet = 'horrible fucking stupid shitty idiot'
 
 print(classify_tweet(test_tweet))
 
