@@ -40,7 +40,7 @@ class Wrapper extends Component {
   fetchSentiment = async () => {
     let { query } = this.state;
     try {
-      const request = await fetch('sentiment.co.uk:5000', {
+      const request = await fetch('sentimind.co.uk:5000', {
         method: 'POST',
         body: JSON.stringify(query),
         headers: new Headers({
