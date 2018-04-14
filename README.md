@@ -2,15 +2,20 @@
 
 [Daniel Keen](https://github.com/DKeen0123) || [Marcus Gardiner](https://github.com/marcusfgardiner) || [Carlos Trapet](https://github.com/CarlosTrapet) || [Stephen Tilley](https://github.com/stilley85)
 
-### SentiMind analyses and visualises the live sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, a bot trained using a machine learning algorithm (Bernoulli Naive Bayes Algorithm)
+#### To use SentiMind, visit: [sentimind.co.uk](http://sentimind.co.uk/)
 
-### SentiBot is powered by ReactJS and Python, and is deployed using Docker and AWS
+#### SentiMind analyses and visualises the live sentiment (frequency and polarity) of the latest 100 tweets using SentiBot, a bot trained using a machine learning algorithm (Bernoulli Naive Bayes Algorithm)
 
-### You can find out what the world thinks about a topic of your choice on [sentimind.co.uk](http://sentimind.co.uk/). Visualise the world's sentiment on everything from Donald Trump to kittens and rainbows!
+#### SentiBot is powered by ReactJS and Python, and is deployed using Docker and AWS
 
-### Our motivations for the project were to explore both Machine Learning and ReactJS. To do so, we aimed to harness a live stream of twitter data and analyse, visualise and extract meaning from the result.
+#### You can find out what the world thinks about a topic of your choice on [sentimind.co.uk](http://sentimind.co.uk/). Visualise the world's sentiment on everything from Donald Trump to kittens and rainbows!
 
-### We hope you enjoy the project and let us know if you have any questions
+#### Our motivations for the project were to explore both Machine Learning and ReactJS. To do so, we aimed to harness a live stream of twitter data and analyse, visualise and extract meaning from the result.
+
+#### View our final project presentation deck at: [SentiMind Presentation](https://slides.com/marcusgardiner/deck-1#/)
+
+
+#### We hope you enjoy the project and let us know if you have any questions
 
 ![SentiMind in action](https://media.giphy.com/media/5UvtFkTLx39wcZTyYY/giphy.gif)
 
