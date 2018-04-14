@@ -40,6 +40,8 @@ class Wrapper extends Component {
   fetchSentiment = async () => {
     let { query } = this.state;
     try {
+      // in development ensure the fetch url is: `${this.createUrl()}:5000`
+      // in production fetch url is: 'http://sentimind.co.uk'
       const request = await fetch(`${this.createUrl()}:5000`, {
         method: 'POST',
         body: JSON.stringify(query),
