@@ -9,7 +9,6 @@ textblob = "*"
 pylint = "*"
 pytest = "*"
 flask = "*"
-nose = "*"
 tweepy = "*"
 flask-cors = "*"
 

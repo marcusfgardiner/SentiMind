@@ -94,13 +94,13 @@ brew link automake
 brew install --HEAD watchman
 ```
 
-For Testing our Python back-end we used Nose and Pytest. To run the tests:
+For Testing our Python back-end we used Pytest. To run the tests:
 
 To run python tests:
 
 1.  Ensure you have run 'pipenv install requests' and 'npm install' as above to download dependencies
 2.  'pipenv shell' to set up the python environment
-3.  'nosetests' to run tests from the 'backend' folder
+3.  cd to backend folder and use 'pytest' in the terminal to run tests
 
 # Reflecting on our project:
 
