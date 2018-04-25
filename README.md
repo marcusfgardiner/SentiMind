@@ -48,7 +48,7 @@
 
 ## How to run locally
 
-Please note: to use the twitter API on your own computer, you will need to add a 'credentials.py' file to the folder backend/mypkg. This file can be of the following format, subbing in your twitter account credentials:
+Please note: to use the twitter API which is integral to this program, you will need to add a 'credentials.py' file to the folder backend/mypkg. This file can be of the following format, subbing in your twitter account credentials:
 
 consumer_key = YOUR_KEY
 consumer_secret = YOUR_SECRET
