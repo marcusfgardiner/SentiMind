@@ -48,6 +48,13 @@
 
 ## How to run locally
 
+Please note: to use the twitter API on your own computer, you will need to add a 'credentials.py' file to the folder backend/mypkg. This file can be of the following format, subbing in your twitter account credentials:
+
+consumer_key = YOUR_KEY
+consumer_secret = YOUR_SECRET
+access_token = YOUR_TOKEN
+access_token_secret = YOUR_TOKEN_SECRET
+
 ### Option 1: Using Docker
 
 * Install Docker (and docker-compose) from https://docs.docker.com/install/
@@ -94,13 +101,13 @@ brew link automake
 brew install --HEAD watchman
 ```
 
-For Testing our Python back-end we used Pytest. To run the tests:
+For Testing our Python back-end we used Pytest.
 
 To run python tests:
 
-1.  Ensure you have run 'pipenv install requests' and 'npm install' as above to download dependencies
+1.  Ensure you have run 'pipenv install requests' from the root folder and 'npm install' from the front end folder to download dependencies
 2.  'pipenv shell' to set up the python environment
-3.  cd to backend folder and use 'pytest' in the terminal to run tests
+3.  cd to backend folder and use 'pytest' to run tests
 
 # Reflecting on our project:
 
