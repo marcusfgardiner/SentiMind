@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "enzyme-adapter-react-16": "^1.1.1",
-    "npm": "^5.8.0",
+    "npm": "^6.13.4",
     "react": "^16.3.1",
     "react-bootstrap": "^0.31.0",
     "react-d3-cloud": "^0.6.0",
